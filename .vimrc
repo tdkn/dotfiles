@@ -8,16 +8,20 @@ filetype off "required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" github.com
 Bundle 'gmarik/vundle'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'JavaScript-syntax'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+
+" vim.org
+Bundle 'JavaScript-syntax'
 Bundle 'sudo.vim'
+
 filetype plugin indent on "required!
 
 "--------
