@@ -1,0 +1,10 @@
+[user]
+	name = tdkn
+	email = web@tedokon.com
+[credential]
+	helper = cache --timeout=3600
+[color]
+	ui = auto
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = /home/tdkn/.gitignore_global

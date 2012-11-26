@@ -17,6 +17,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+"Bundle 'vim-ruby/vim-ruby'
 
 " vim.org
 Bundle 'JavaScript-syntax'

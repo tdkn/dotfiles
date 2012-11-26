@@ -3,6 +3,7 @@
 autoload -U compinit
 compinit
 
+export PATH="$HOME/local/bin:$PATH"
 export LANG=ja_JP.UTF-8
 export EDITOR=/usr/bin/vim
 
@@ -53,9 +54,4 @@ bindkey -e
 bindkey "^[[3~" delete-char
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-source $HOME/.rbenv/completions/rbenv.zsh
 
