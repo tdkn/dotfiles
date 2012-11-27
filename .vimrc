@@ -47,6 +47,7 @@ set expandtab
 set clipboard+=unnamed
 set wildmenu
 set nobackup
+set backspace=indent,eol,start
 
 "--------
 " search
