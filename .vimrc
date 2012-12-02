@@ -18,6 +18,7 @@ Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'honza/snipmate-snippets'
+Bundle 'altercation/vim-colors-solarized'
 "Bundle 'vim-ruby/vim-ruby'
 
 " vim.org
@@ -30,10 +31,10 @@ filetype plugin indent on "required!
 "--------
 " visual
 "--------
+syntax on
+set t_Co=256
 colorscheme molokai
 set number
-set t_Co=256
-syntax on
 set showmatch
 set showcmd
 set laststatus=2
