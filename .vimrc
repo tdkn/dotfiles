@@ -52,6 +52,11 @@ set wildmenu
 set nobackup
 set backspace=indent,eol,start
 
+imap <c-h> <Left>
+imap <c-j> <Down>
+imap <c-k> <Up>
+imap <c-l> <Right>
+
 "--------
 " search
 "--------
