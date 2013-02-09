@@ -4,6 +4,7 @@ autoload -U compinit
 compinit
 
 # shell variables setting
+export RSENSE_HOME="$HOME/opt/rsense-0.3"
 export PATH="$HOME/local/bin:$PATH"
 export LANG=ja_JP.UTF-8
 export EDITOR=/usr/bin/vim

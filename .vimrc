@@ -19,6 +19,8 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'honza/snipmate-snippets'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdtree'
+Bundle 'thinca/vim-quickrun'
 "Bundle 'vim-ruby/vim-ruby'
 
 " vim.org
@@ -40,6 +42,8 @@ set showcmd
 set laststatus=2
 "set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]
 set notitle
+set splitbelow
+set splitright
 
 "--------
 " editor
@@ -51,6 +55,7 @@ set clipboard+=unnamed
 set wildmenu
 set nobackup
 set backspace=indent,eol,start
+set whichwrap+=<,>,[,]
 
 imap <c-h> <Left>
 imap <c-j> <Down>
@@ -104,3 +109,23 @@ endif
 " Tell Neosnippet about the othre snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
 
+"--------------------------------------------------NERDTree
+let file_name = expand("%")
+if has('vim_starting') &&  file_name == ""
+    autocmd VimEnter * NERDTree ./
+endif
+
+"--------------------------------------------------RSense
+let g:rsenseHome = expand('~/opt/rsense-0.3')
+let g:rsenseUseOmniFunc = 1
+" rubyの設定
+if !exists('g:neocomplcache_omni_functions')
+  let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby       = '[^. *\t]\.\w*\|\h\w*::'

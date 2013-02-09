@@ -8,5 +8,3 @@
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 	excludesfile = /home/tdkn/.gitignore_global
-[push]
-	default = simple
