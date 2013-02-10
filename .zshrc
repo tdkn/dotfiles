@@ -4,7 +4,7 @@ autoload -U compinit
 compinit
 
 # shell variables setting
-export PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/local/bin:$PATH"
 export LANG=ja_JP.UTF-8
 export EDITOR=/usr/bin/vim
 export LESS='-R'
