@@ -19,7 +19,7 @@ augroup SaveWindow
   function! s:save_window()
     let options = [
       \'set columns=' . &columns,
-      \'set_lines=' . &lines,
+      \'set lines=' . &lines,
       \'winpos ' . getwinposx() . ' ' . getwinposy(),
       \]
     call writefile(options, g:save_window_file)

@@ -5,6 +5,7 @@ compinit
 
 # shell variables setting
 export PATH="$HOME/bin:$HOME/local/bin:$PATH"
+export RSENSE_HOME="$HOME/opt/rsense-0.3"
 export LANG=ja_JP.UTF-8
 export EDITOR=/usr/bin/vim
 export LESS='-R'
