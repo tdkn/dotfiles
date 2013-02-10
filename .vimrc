@@ -128,3 +128,4 @@ let g:neocomplcache_omni_functions.ruby = 'RSenseCompleteFunction'
 
 "--------------------------------------------------Nginx
 autocmd BufRead,BufNewFile /etc/nginx/* set ft=nginx
+
