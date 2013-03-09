@@ -22,6 +22,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdtree'
+Bundle 'mattn/zencoding-vim'
 "Bundle 'vim-ruby/vim-ruby'
 
 " vim.org
