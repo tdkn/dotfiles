@@ -1,5 +1,9 @@
 # Created by newuser for 4.3.10
 
+if [ "$TERM" = "xterm" ]; then
+  TERM=xterm-256color
+fi
+
 autoload -U compinit
 compinit
 
