@@ -8,7 +8,7 @@ filetype off "required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" github.com
+"--------------------------------------------------github.com
 Bundle 'gmarik/vundle'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'pangloss/vim-javascript'
@@ -25,7 +25,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/zencoding-vim'
 "Bundle 'vim-ruby/vim-ruby'
 
-" vim.org
+"--------------------------------------------------vim.org
 Bundle 'JavaScript-syntax'
 Bundle 'sudo.vim'
 Bundle 'molokai'
@@ -38,7 +38,9 @@ filetype plugin indent on "required!
 "--------
 syntax on
 set t_Co=256
-colorscheme molokai
+set background=dark
+let g:solarized_termtrans=1
+colorscheme solarized
 set number
 set showmatch
 set showcmd
@@ -49,7 +51,7 @@ set splitbelow
 set splitright
 
 "--------
-" editor
+" edit
 "--------
 set tabstop=2
 set shiftwidth=2
