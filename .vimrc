@@ -24,6 +24,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'fuenor/im_control.vim'
+Bundle 'tpope/vim-surround'
 
 "--------------------------------------------------vim.org
 Bundle 'JavaScript-syntax'
