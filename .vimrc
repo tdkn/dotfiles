@@ -13,8 +13,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
-"Bundle 'Shougo/neosnippet'
-"Bundle 'honza/snipmate-snippets'
+Bundle 'Shougo/neosnippet'
+Bundle 'honza/snipmate-snippets'
 Bundle 'pangloss/vim-javascript'
 Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-endwise'
@@ -49,6 +49,8 @@ set laststatus=2
 set notitle
 set splitbelow
 set splitright
+set list
+set listchars=tab:>-,trail:_
 
 "--------
 " edit
@@ -122,22 +124,25 @@ inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 ""--------------------------------------------------neosnippet
 " Plugin key-mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
 " SuperTab like snippets behavior.
-"imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For snippet_complete marker.
-"if has('conceal')
-"  set conceallevel=2 concealcursor=i
-"endif
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" disavle preview window
+set completeopt-=preview
 
 "--------------------------------------------------snipmate-snippets
 " Tell Neosnippet about the othre snippets
-"let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
- 
+let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+
 "--------------------------------------------------NERDTree
 let file_name = expand("%")
 if has('vim_starting') && file_name == ""
