@@ -1,9 +1,16 @@
+"--------
+" Visual
+"--------
 set guioptions-=T
 set guioptions-=m
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 set guicursor=a:blinkon0
 
 "--------
-" font
+" Font
 "--------
 set guifont=Ricty\ 12
 
