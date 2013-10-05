@@ -14,7 +14,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-Bundle 'honza/snipmate-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'pangloss/vim-javascript'
 Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-endwise'
@@ -38,11 +38,6 @@ filetype plugin indent on "required!
 " visual
 "--------
 syntax on
-set t_Co=256
-set background=dark
-let g:solarized_termtrans=1
-colorscheme solarized
-"colorscheme molokai
 set number
 set showmatch
 set showcmd
@@ -51,7 +46,17 @@ set notitle
 set splitbelow
 set splitright
 set list
-set listchars=tab:>-,trail:_
+set listchars=trail:_,tab:▸\
+set t_Co=256
+set cursorcolumn
+set cursorline
+set nowrap
+colorscheme molokai
+
+"--------
+" system
+"--------
+set noswapfile
 
 "--------
 " edit
@@ -139,6 +144,9 @@ endif
 
 " disavle preview window
 set completeopt-=preview
+
+" fix
+let g:neosnippet#enable_snipmate_compatibility  =1
 
 "--------------------------------------------------snipmate-snippets
 " Tell Neosnippet about the othre snippets

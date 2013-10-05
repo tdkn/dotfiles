@@ -1,7 +1,10 @@
-# Created by newuser for 4.3.10
+# Title:  Zsh configuration
+# Author: tdkn
+# Date:   2013-10-05
 
 if [ "$TERM" = "xterm" ]; then
-  TERM=xterm-256color
+  #TERM="xterm-256color"
+  TERM="screen-256color"
 fi
 
 autoload -U compinit
@@ -34,9 +37,9 @@ case ${UID} in
 esac
 
 # command alias settings
-alias ls='ls --color=always'
-alias la='ls -a'
-alias ll='ls -al'
+alias ls='ls --group-directories-first --color=always'
+alias la='ls -al'
+alias ll='ls -l'
 alias rm='rm -i'
 
 # command-history settings
@@ -63,4 +66,3 @@ bindkey "^[[3~" delete-char
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-eval `dircolors ~/.dircolors`
