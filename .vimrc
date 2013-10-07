@@ -25,6 +25,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'fuenor/im_control.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'othree/html5.vim'
 
 "--------------------------------------------------vim.org
 Bundle 'JavaScript-syntax'
@@ -146,6 +147,7 @@ let file_name = expand("%")
 if has('vim_starting') && file_name == ""
   autocmd VimEnter * NERDTree ./
 endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "--------------------------------------------------RSense
 let g:rsenseHome = expand('~/opt/rsense-0.3')
