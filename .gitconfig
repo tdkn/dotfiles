@@ -7,6 +7,6 @@
 	ui = auto
 [core]
 	editor = vim -c \"set fenc=utf-8\"
-	excludesfile = /home/tdkn/.gitignore_global
+	excludesfile = ~/.gitignore
 [push]
 	default = simple
