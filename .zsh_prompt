@@ -1,0 +1,21 @@
+# Zsh prompt setting
+
+case ${UID} in
+  0)
+  PROMPT="%{[32m%}%n%%%{[m%} "
+  RPROMPT="[%~]"
+  PROMPT2="%B%{[32m%}%_#%{[m%}%b "
+  SPROMPT="%B%{[32m%}%r is correct? [n,y,a,e]:%{[m%}%b "
+  [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+  PROMPT="%{[37m%}${HOST%%.*} ${PROMPT}"
+  ;;
+  *)
+  PROMPT="%{[32m%}%n%%%{[m%} "
+  RPROMPT="[%~]"
+  PROMPT2="%{[32m%}%_%%%{[m%} "
+  SPROMPT="%{[32m%}%r is correct? [n,y,a,e]:%{[m%} "
+  [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+  PROMPT="%{[37m%}${HOST%%.*} ${PROMPT}"
+  ;;
+esac
+
