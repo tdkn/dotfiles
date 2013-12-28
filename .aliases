@@ -1,0 +1,6 @@
+# command alias settings
+alias ls='ls --group-directories-first --color=always'
+alias la='ls -al'
+alias ll='ls -l'
+alias rm='rm -i'
+
