@@ -1,32 +1,29 @@
 dotfiles
 ========
 
-使い方
+Useage
 ------
-何はともあれ git を入れます。
+Install dependencies.
 
-    $ sudo yum install git  
+    $ sudo aptitude install git vim
 
-プロジェクトをクローンします。
+Clone the repository.
+
+    $ cd
+
+    $ mkdir Projects && cd Projects
 
     $ git clone https://github.com/tdkn/dotfiles.git
 
-シンボリックリンクを貼ります。
+Make as a symlink.
 
-    $ ln -s ~/dotfiles/.zshrc ~/.zshrc
+    $ cd
 
-いろいろ入れておきます。
+    $ ln -s ~/Projects/dotfiles ~/.dotfiles
 
-    $ sudo yum install zsh vim gvim
+Execute bootstrap.sh to setup.
 
-Vim
----
-Vundle を導入しておきます。
+    $ cd .dotfiles
 
-    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    $ source bootstrap.sh
 
-Vimの初回起動でアレがない・コレがないと言われるので、以下を実行。
-
-    :BundleInstall!
-
-いろいろ入って、快適なVimライフ。
