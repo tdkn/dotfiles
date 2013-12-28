@@ -5,25 +5,30 @@ Useage
 ------
 Install dependencies.
 
-    $ sudo aptitude install git vim
+```bash
+sudo aptitude install git vim
+```
 
 Clone the repository.
 
-    $ cd
-
-    $ mkdir Projects && cd Projects
-
-    $ git clone https://github.com/tdkn/dotfiles.git
+```bash
+cd
+mkdir Projects && cd Projects
+git clone https://github.com/tdkn/dotfiles.git
+```
 
 Make as a symlink.
 
-    $ cd
-
-    $ ln -s ~/Projects/dotfiles ~/.dotfiles
+```bash
+cd
+ln -s ~/Projects/dotfiles ~/.dotfiles
+```
 
 Execute bootstrap.sh to setup.
 
-    $ cd .dotfiles
+```bash
+cd .dotfiles
+source bootstrap.sh
+```
 
-    $ source bootstrap.sh
-
+happy! xD
