@@ -1,6 +1,11 @@
 # command alias settings
 alias ls='ls --group-directories-first --color=always'
-alias la='ls -al'
-alias ll='ls -l'
+alias la='ls -alF'
+alias ll='ls -lF'
 alias rm='rm -i'
 
+if [ -x "`which aptitude`" ]; then
+  alias install="sudo aptitude install"
+  alias remove="sudo aptitude remove"
+  alias search="aptitude search"
+fi
