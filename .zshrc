@@ -1,6 +1,5 @@
 # Title:  Zsh configuration
 # Author: tdkn
-# Date:   2013-10-05
 
 if [ "$TERM" = "xterm" ]; then
   #TERM="xterm-256color"
