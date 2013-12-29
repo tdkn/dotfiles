@@ -30,5 +30,3 @@ Execute bootstrap.sh to setup.
 cd .dotfiles
 source bootstrap.sh
 ```
-
-happy! xD
