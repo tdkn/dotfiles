@@ -1,5 +1,4 @@
-# Shell variable exports
-
+typeset -U PATH
 export PATH="$HOME/bin:$PATH"
 export LANG=ja_JP.UTF-8
 export EDITOR="vim"
