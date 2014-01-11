@@ -1,27 +1,55 @@
 #!/usr/bin/env bash
 
-echo "home directory -> $HOME"
-echo ""
-echo "init dotfiles ..."
-echo ""
+DOTFILES_ROOT="`pwd`"
 
-rsync -av --no-perms \
-      --exclude ".git/" \
-      --exclude "README.md" \
-      --exclude "bootstrap.sh" . $HOME
+DOTFILES=`ls -A --ignore='[^.]*' --ignore='.git'`
 
-echo ""
-echo "init vim ..."
-echo ""
+TIME=`date +'~%Y-%m-%d-%H:%M:%S'`
 
-# VIM BUNDLE PATH
-VBP="$HOME/.vim/bundle"
+BUNDLER="$HOME/.vim/bundle"
 
-[ ! -d $VBP ] && mkdir -p $VBP && \
-  git clone github:Shougo/neobundle.vim $VBP/neobundle.vim && \
-  source $VBP/neobundle.vim/bin/neoinstall
+info () {
+  printf "\n$1\n\n"
+}
 
-echo ""
-echo "complete!"
-echo ""
+info 'Checking directory ...'
+
+# Create directory `$HOME/.dotfiles' if not exist
+if [ ! -d ~/.dotfiles ]; then
+  echo "NG, directory '~/.dotfiles' not found"
+  echo "Create symlink : ~/.dotfiles"
+  echo -e "\t-> $DOTFILES_ROOT"
+  ln -s . ~/.dotfiles
+else
+  echo "OK, directory '~/.dotfiles' found"
+fi
+
+info 'Symlinking dotfiles ...'
+
+# Create symlinks
+cd $HOME
+for file in $DOTFILES
+do
+  echo "Create symlink : ~/$file"
+  echo -e "\t-> ~/.dotfiles/$file"
+  ln -sb --suffix=$TIME .dotfiles/$file ~/$file
+done
+
+info 'Installing Vim plugin manager ...'
+
+# Setup Vim plugin manager
+if [ ! -d $BUNDLER ]; then
+  mkdir -p $BUNDLER
+  git clone github:Shougo/neobundle.vim $BUNDLER/neobundle.vim
+  source $BUNDLER/neobundle.vim/bin/neoinstall
+else
+  echo "Already installed."
+fi
+
+info 'Complete!'
+
+unset DOTFILES_ROOT
+unset DOTFILES
+unset TIME
+unset BUNDLER
 
