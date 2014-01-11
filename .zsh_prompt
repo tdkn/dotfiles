@@ -1,4 +1,6 @@
+#
 # Zsh prompt setting
+#
 
 case ${UID} in
   0)
@@ -19,3 +21,6 @@ case ${UID} in
   ;;
 esac
 
+#
+# vim: ft=zsh
+#
