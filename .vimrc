@@ -29,7 +29,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
@@ -237,4 +237,8 @@ inoremap <expr><silent> <CR> <SID>my_cr_function()
 function! s:my_cr_function()
   return pumvisible() ? neocomplcache#close_popup() . "\<CR>" : "\<CR>"
 endfunction
+
+"--------------------------------------------------vim-quickrun
+" horizontal split
+let g:quickrun_config={'*': {'split': ''}}
 
