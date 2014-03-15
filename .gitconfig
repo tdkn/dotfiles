@@ -22,3 +22,5 @@
 	insteadOf = "gist:"
 [push]
 	default = simple
+[alias]
+	co = checkout
