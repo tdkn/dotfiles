@@ -15,11 +15,11 @@ info () {
 info 'Checking directory ...'
 
 # Create directory `$HOME/.dotfiles' if not exist
-if [ ! -d ~/.dotfiles ]; then
+if [ ! -d $HOME/.dotfiles ]; then
   echo "NG, directory '~/.dotfiles' not found"
   echo "Create symlink : ~/.dotfiles"
   echo -e "\t-> $DOTFILES_ROOT"
-  ln -s . ~/.dotfiles
+  ln -s $DOTFILES_ROOT $HOME/.dotfiles
 else
   echo "OK, directory '~/.dotfiles' found"
 fi
@@ -32,15 +32,16 @@ for file in $DOTFILES
 do
   echo "Create symlink : ~/$file"
   echo -e "\t-> ~/.dotfiles/$file"
-  ln -sb --suffix=$TIME .dotfiles/$file ~/$file
+  ln -sb --suffix=$TIME .dotfiles/$file $HOME/$file
 done
 
-info 'Installing Vim plugin manager ...'
+info 'Installing Vim plugin ...'
 
 # Setup Vim plugin manager
 if [ ! -d $BUNDLER ]; then
   mkdir -p $BUNDLER
   git clone github:Shougo/neobundle.vim $BUNDLER/neobundle.vim
+  git clone github:Shougo/vimproc.vim $BUNDLER/vimproc.vim
   source $BUNDLER/neobundle.vim/bin/neoinstall
 else
   echo "Already installed."
