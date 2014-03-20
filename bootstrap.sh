@@ -32,12 +32,13 @@ do
   ln -sb --suffix=$SUFFIX .dotfiles/$file ~/$file
 done
 
-info 'Installing Vim plugin manager ...'
+info 'Installing Vim plugin ...'
 
 # Setup Vim plugin manager
 if [ ! -d $BUNDLER ]; then
   mkdir -p $BUNDLER
   git clone github:Shougo/neobundle.vim $BUNDLER/neobundle.vim
+  git clone github:Shougo/vimproc.vim $BUNDLER/vimproc.vim
   source $BUNDLER/neobundle.vim/bin/neoinstall
 else
   echo "Already installed."
