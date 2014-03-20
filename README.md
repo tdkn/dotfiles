@@ -17,9 +17,8 @@ mkdir Projects && cd Projects
 git clone https://github.com/tdkn/dotfiles.git
 ```
 
-Execute bootstrap.sh to setup.
+Execute bootstrap.sh
 
 ```bash
-cd .dotfiles
 bash bootstrap.sh
 ```
