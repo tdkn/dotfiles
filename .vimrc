@@ -12,7 +12,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
-NeoBundle 'Shougo/vimproc', {
+NeoBundle 'Shougo/vimproc.vim', {
  \ 'build' : {
  \     'windows' : 'make -f make_mingw32.mak',
  \     'cygwin' : 'make -f make_cygwin.mak',
@@ -26,6 +26,7 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'thinca/vim-quickrun'
