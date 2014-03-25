@@ -3,6 +3,8 @@ if [ "$TERM" = "xterm" ]; then
   TERM="screen-256color"
 fi
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 autoload -U compinit
 compinit
 
@@ -32,7 +34,7 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 # rbenv
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then
+  eval "$(rbenv init - zsh)"
+fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
