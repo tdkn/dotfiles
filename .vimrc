@@ -35,6 +35,8 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'othree/html5.vim'
 
@@ -222,6 +224,12 @@ let g:neosnippet#enable_snipmate_compatibility  =1
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 "--------------------------------------------------NERDTree
+" Plugin key-mapping.
+map <C-n> :NERDTreeToggle<CR>
+
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
+
 let file_name = expand("%")
 if has('vim_starting') && file_name == ""
   autocmd VimEnter * NERDTree ./
