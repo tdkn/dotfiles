@@ -37,4 +37,3 @@ bindkey "^N" history-beginning-search-forward-end
 if which rbenv > /dev/null; then
   eval "$(rbenv init - zsh)"
 fi
-
