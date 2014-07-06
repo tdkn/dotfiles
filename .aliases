@@ -2,6 +2,7 @@
 # command alias settings
 #
 
+alias l='ls'
 alias ls='ls --group-directories-first --color=always'
 alias la='ls -alF'
 alias ll='ls -lF'
