@@ -39,6 +39,17 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'othree/html5.vim'
+NeoBundle 'elzr/vim-json'
+
+" for TweetVim
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'basyura/twibill.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'basyura/bitly.vim'
+NeoBundle 'mattn/favstar-vim'
+NeoBundle 'basyura/TweetVim'
+
 
 "--------------------------------------------------vim.org
 NeoBundle 'JavaScript-syntax'
