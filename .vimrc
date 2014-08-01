@@ -70,7 +70,7 @@ set showmatch
 set showcmd
 set laststatus=2
 set list
-set listchars=trail:_,tab:▸\
+set listchars=trail:_
 set notitle
 set nowrap
 set number
