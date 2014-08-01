@@ -89,7 +89,7 @@ set noswapfile
 "---------------
 set autoindent
 set backspace=indent,eol,start
-set clipboard=unnamedplus,autoselect
+set clipboard=unnamed,unnamedplus,autoselect
 set expandtab
 set mouse=a
 set nobackup
