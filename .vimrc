@@ -1,16 +1,27 @@
 "---------------
 " Bundler
 "---------------
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 if has('vim_starting')
-  set nocompatible  " Be iMproved
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" My Bundles here:
+"--------------------------------------------------
 " Recommended to install
 NeoBundle 'Shougo/vimproc.vim', {
  \ 'build' : {
@@ -21,7 +32,6 @@ NeoBundle 'Shougo/vimproc.vim', {
  \    },
  \ }
 
-" My Bundles here:
 "--------------------------------------------------github.com
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
@@ -40,8 +50,9 @@ NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
+NeoBundle "tyru/caw.vim.git"
 
-" for TweetVim
+" Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'basyura/twibill.vim'
 NeoBundle 'mattn/webapi-vim'
@@ -50,16 +61,19 @@ NeoBundle 'basyura/bitly.vim'
 NeoBundle 'mattn/favstar-vim'
 NeoBundle 'basyura/TweetVim'
 
-
 "--------------------------------------------------vim.org
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'sudo.vim'
 NeoBundle 'nginx.vim'
 
-filetype plugin indent on     " Required!
+call neobundle#end()
 
-" Installation check.
-"NeoBundleCheck
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 "---------------
 " visual
@@ -89,7 +103,9 @@ set noswapfile
 "---------------
 set autoindent
 set backspace=indent,eol,start
-set clipboard=unnamed,unnamedplus,autoselect
+if $TMUX == ''
+  set clipboard=unnamed,autoselect
+endif
 set expandtab
 set mouse=a
 set nobackup
@@ -115,6 +131,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+vnoremap * "zy:let @/ = @z<CR>n
 
 "---------------
 " plugin
@@ -261,4 +278,9 @@ endfunction
 "--------------------------------------------------vim-quickrun
 " horizontal split
 let g:quickrun_config={'*': {'split': ''}}
+
+"--------------------------------------------------caw.vim
+" mapping \c : toggle comment
+nmap <Leader>c <Plug>(caw:i:toggle)
+vmap <Leader>c <Plug>(caw:i:toggle)
 
