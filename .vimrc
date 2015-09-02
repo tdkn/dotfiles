@@ -51,6 +51,9 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle "tyru/caw.vim.git"
+NeoBundle "kchmck/vim-coffee-script"
+NeoBundle "moll/vim-bbye"
+NeoBundle "editorconfig/editorconfig-vim"
 
 " Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
@@ -84,7 +87,7 @@ set showmatch
 set showcmd
 set laststatus=2
 set list
-set listchars=trail:_
+set listchars=trail:_,tab:>-
 set notitle
 set nowrap
 set number
