@@ -50,10 +50,11 @@ NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
-NeoBundle "tyru/caw.vim.git"
-NeoBundle "kchmck/vim-coffee-script"
-NeoBundle "moll/vim-bbye"
-NeoBundle "editorconfig/editorconfig-vim"
+NeoBundle 'tyru/caw.vim.git'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'moll/vim-bbye'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'cakebaker/scss-syntax.vim'
 
 " Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
