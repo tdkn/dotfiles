@@ -45,3 +45,12 @@ Thumbs.db
 # Server setting     #
 ######################
 .ht*
+
+# Cache Files        #
+######################
+**/.sass-cache/*
+
+# TAGS               #
+######################
+tags
+

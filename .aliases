@@ -7,7 +7,9 @@ alias ls='ls --group-directories-first --color=always'
 alias la='ls -alF'
 alias ll='ls -lF'
 alias rm='rm -i'
+alias tree='tree --charset=C -N'
 alias reload='exec $SHELL -l'
+alias less='less -N'
 
 if [ -x "`which aptitude`" ]; then
   alias install="sudo aptitude install"
