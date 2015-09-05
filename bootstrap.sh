@@ -37,8 +37,8 @@ info 'Installing Vim plugin ...'
 # Setup Vim plugin manager
 if [ ! -d $BUNDLER ]; then
   mkdir -p $BUNDLER
-  git clone github:Shougo/neobundle.vim $BUNDLER/neobundle.vim
-  git clone github:Shougo/vimproc.vim $BUNDLER/vimproc.vim
+  git clone https://github.com/Shougo/neobundle.vim $BUNDLER/neobundle.vim
+  git clone https://github.com/Shougo/vimproc.vim $BUNDLER/vimproc.vim
   source $BUNDLER/neobundle.vim/bin/neoinstall
 else
   echo "Already installed."

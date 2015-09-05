@@ -50,7 +50,11 @@ NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
-NeoBundle "tyru/caw.vim.git"
+NeoBundle 'tyru/caw.vim.git'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'moll/vim-bbye'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'cakebaker/scss-syntax.vim'
 
 " Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
@@ -84,7 +88,7 @@ set showmatch
 set showcmd
 set laststatus=2
 set list
-set listchars=trail:_
+set listchars=trail:_,tab:>-
 set notitle
 set nowrap
 set number
@@ -257,6 +261,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
 
 let file_name = expand("%")
 if has('vim_starting') && file_name == ""
