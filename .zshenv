@@ -1,8 +1,5 @@
 typeset -U PATH
 
-if which brew > /dev/null; then
-  PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-fi
 PATH="/usr/local/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 PATH="$HOME/.rbenv/bin:$PATH"
