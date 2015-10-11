@@ -55,6 +55,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'wavded/vim-stylus'
 
 " Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
