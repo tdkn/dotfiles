@@ -3,10 +3,14 @@ if [ "$TERM" = "xterm" ]; then
   TERM="screen-256color"
 fi
 
+#
+# zsh-completions
+# https://github.com/zsh-users/zsh-completions
+#
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 autoload -U compinit
-compinit
+compinit -u
 
 for file in ~/.{aliases,zsh_prompt}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
