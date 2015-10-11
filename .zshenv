@@ -5,7 +5,7 @@ PATH="$HOME/bin:$PATH"
 PATH="$HOME/.rbenv/bin:$PATH"
 PATH="$HOME/.rbenv/shims:$PATH"
 PATH="/usr/local/heroku/bin:$PATH"
-PATH="$HOME/Projects/scripts:$PATH"
+PATH="$HOME/.dotfiles/lib/bin:$PATH"
 export PATH
 
 export LANG=ja_JP.UTF-8
