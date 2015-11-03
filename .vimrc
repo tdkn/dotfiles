@@ -47,6 +47,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
@@ -55,6 +56,17 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'moll/vim-bbye'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'moll/vim-bbye'
+NeoBundle 'tyru/restart.vim'
+NeoBundle 'will133/vim-dirdiff'
+NeoBundle 'gregsexton/MatchTag'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'jdkanani/vim-material-theme'
+NeoBundle 'djoshea/vim-autoread'
+NeoBundle 'kristijanhusak/vim-hybrid-material'
+NeoBundle 'gorodinskiy/vim-coloresque'
+NeoBundle 'scrooloose/syntastic'
 
 " Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
@@ -66,9 +78,10 @@ NeoBundle 'mattn/favstar-vim'
 NeoBundle 'basyura/TweetVim'
 
 "--------------------------------------------------vim.org
-NeoBundle 'JavaScript-syntax'
+"NeoBundle 'JavaScript-syntax'
 NeoBundle 'sudo.vim'
 NeoBundle 'nginx.vim'
+NeoBundle 'matchit.zip'
 
 call neobundle#end()
 
@@ -82,7 +95,10 @@ NeoBundleCheck
 "---------------
 " visual
 "---------------
-silent! colorscheme molokai
+"set background=dark
+silent! colorscheme hybrid_material
+"let g:enable_bold_font = 1
+"silent! colorscheme molokai
 set cursorline
 set showmatch
 set showcmd
