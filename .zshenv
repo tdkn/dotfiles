@@ -20,3 +20,5 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=6000000
 export SAVEHIST=6000000
 
+# Android Studio
+export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk
