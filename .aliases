@@ -10,6 +10,7 @@ alias rm='rm -i'
 alias tree='tree --charset=C -N'
 alias reload='exec $SHELL -l'
 alias less='less -N'
+alias tig='tig --date-order --no-merges'
 
 if [ -x "`which aptitude`" ]; then
   alias install="sudo aptitude install"

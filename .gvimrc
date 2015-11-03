@@ -16,6 +16,6 @@ set guicursor=a:blinkon0
 "set guifont=Ricty\ 12
 "set guifont=Ricty\ B\ 12
 "set guifont=Ricty\ Discord\ 12
-set guifont=Ricty\ B\ Discord\ 11
+set guifont=Monaco:h10
 set linespace=-1
 

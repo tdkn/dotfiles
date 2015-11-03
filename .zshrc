@@ -41,3 +41,8 @@ bindkey "^N" history-beginning-search-forward-end
 if which rbenv > /dev/null; then
   eval "$(rbenv init - zsh)"
 fi
+
+# GNU Coreutils
+if which brew > /dev/null; then
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
