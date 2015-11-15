@@ -63,6 +63,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'gregsexton/MatchTag'
+NeoBundle 'gcmt/taboo.vim'
 
 " Colorscheme
 NeoBundle 'tomasr/molokai'
