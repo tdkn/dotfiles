@@ -70,6 +70,7 @@ NeoBundle 'kristijanhusak/vim-hybrid-material'
 NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-fugitive'
 
 " Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
