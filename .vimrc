@@ -58,6 +58,7 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 
 " Visual
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'gorodinskiy/vim-coloresque'
@@ -319,3 +320,16 @@ vmap <Leader>c <Plug>(caw:i:toggle)
 "--------------------------------------------------vim-airline
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+"--------------------------------------------------nerdtree-git-plugin
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "*",
+    \ "Staged"    : "+",
+    \ "Untracked" : "U",
+    \ "Renamed"   : "R",
+    \ "Unmerged"  : "=",
+    \ "Deleted"   : "D",
+    \ "Dirty"     : "x",
+    \ "Clean"     : "-",
+    \ "Unknown"   : "?"
+    \ }
