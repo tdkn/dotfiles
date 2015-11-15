@@ -19,3 +19,4 @@ set guicursor=a:blinkon0
 set guifont=Monaco:h10
 set linespace=-1
 
+set guioptions-=e
