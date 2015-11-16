@@ -34,6 +34,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 
 "--------------------------------------------------github.com
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
