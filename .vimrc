@@ -308,3 +308,10 @@ let g:quickrun_config={'*': {'split': ''}}
 nmap <Leader>c <Plug>(caw:i:toggle)
 vmap <Leader>c <Plug>(caw:i:toggle)
 
+
+"--------------------------------------------------TweetVim
+let g:tweetvim_display_icon = 1
+let g:tweetvim_open_buffer_cmd = 'vsplit!'
+
+" Open :Unite tweetvim
+nnoremap <silent> t :Unite tweetvim<CR>
