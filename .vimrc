@@ -160,7 +160,8 @@ set pastetoggle=<F12>
 "---------------
 " search
 "---------------
-nnoremap <C-L> :nohl<CR><C-L>
+" Make double-<Esc> clear search highlights
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 set hlsearch
 set ignorecase
 set incsearch
@@ -326,6 +327,7 @@ let g:tweetvim_open_buffer_cmd = 'vsplit!'
 
 " Open :Unite tweetvim
 nnoremap <silent> t :Unite tweetvim<CR>
+
 "--------------------------------------------------vim-airline
 let g:airline_left_sep=''
 let g:airline_right_sep=''
