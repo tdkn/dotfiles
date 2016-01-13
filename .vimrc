@@ -158,6 +158,15 @@ imap <F12> <nop>
 set pastetoggle=<F12>
 
 "---------------
+" moving
+"---------------
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+"---------------
 " search
 "---------------
 " Make double-<Esc> clear search highlights
