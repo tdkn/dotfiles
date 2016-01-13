@@ -114,7 +114,7 @@ NeoBundleCheck
 silent! colorscheme hybrid_material
 "let g:enable_bold_font = 1
 "silent! colorscheme molokai
-set cursorline
+set nocursorline
 set showmatch
 set showcmd
 set laststatus=2
