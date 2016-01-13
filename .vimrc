@@ -75,7 +75,7 @@ NeoBundle 'kristijanhusak/vim-hybrid-material'
 " Syntax
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
@@ -110,10 +110,7 @@ NeoBundleCheck
 "---------------
 " visual
 "---------------
-"set background=dark
 silent! colorscheme hybrid_material
-"let g:enable_bold_font = 1
-"silent! colorscheme molokai
 set nocursorline
 set showmatch
 set showcmd
