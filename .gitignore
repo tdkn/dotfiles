@@ -54,3 +54,6 @@ Thumbs.db
 ######################
 tags
 
+# Node.js            #
+######################
+node_modules
