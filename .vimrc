@@ -63,9 +63,9 @@ NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'gcmt/taboo.vim'
+NeoBundle 'ryanoasis/vim-devicons'
 
 " Colorscheme
 NeoBundle 'tomasr/molokai'
@@ -74,6 +74,8 @@ NeoBundle 'kristijanhusak/vim-hybrid-material'
 
 " Syntax
 NeoBundle 'scrooloose/syntastic'
+
+" Language
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -82,6 +84,10 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'vim-scripts/smarty-syntax'
 
 " Bundles for TweetVim
 NeoBundle 'tyru/open-browser.vim'
@@ -97,10 +103,13 @@ NeoBundle 'basyura/TweetVim'
 NeoBundle 'sudo.vim'
 NeoBundle 'nginx.vim'
 NeoBundle 'matchit.zip'
+NeoBundle 'copypath.vim'
 
 call neobundle#end()
 
 " Required:
+syntax on
+syntax enable
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
@@ -123,12 +132,12 @@ set number
 set splitbelow
 set splitright
 set t_Co=256
-syntax on
 
 "---------------
 " file
 "---------------
 set noswapfile
+set encoding=utf-8
 
 "---------------
 " edit
@@ -163,6 +172,10 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+set ttyfast
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
 
 "---------------
 " search
@@ -297,8 +310,12 @@ let g:tweetvim_open_buffer_cmd = 'vsplit!'
 nnoremap <silent> t :Unite tweetvim<CR>
 
 "--------------------------------------------------vim-airline
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+"--------------------------------------------------taboo
+let g:taboo_tabline = 0
 
 "--------------------------------------------------nerdtree-git-plugin
 let g:NERDTreeIndicatorMapCustom = {
@@ -319,4 +336,9 @@ let g:gitgutter_enabled = 0
 
 " key mapping
 map <leader>gg :GitGutterToggle<CR>
+map <leader>gh :GitGutterLineHighlightsToggle<CR>
 map <leader>gr :GitGutterToggle<CR>:GitGutterToggle<CR>
+
+"--------------------------------------------------vim-indent-guide
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['nerdtree']
