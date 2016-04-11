@@ -1,28 +1,70 @@
-" Plugins
+" ==================================================
+" Plugins.
 " ==================================================
 call plug#begin('~/.vim/plugged')
-" Basic amenities
+
+" Basic
+" --------------------------------------------------
 Plug 'tpope/vim-sensible'
 
 " Appearance
+" --------------------------------------------------
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'bling/vim-airline'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'gcmt/taboo.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'gregsexton/MatchTag'
 Plug 'bronson/vim-trailing-whitespace'
 
-" Git
+" Syntax
+" --------------------------------------------------
+Plug 'othree/html5.vim', { 'for': ['html', 'php'] }
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'vim-scripts/smarty-syntax', { 'for': 'smarty' }
+
+" Writing
+" --------------------------------------------------
+Plug 'mattn/emmet-vim', { 'for': ['html', 'php'] }
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tyru/caw.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --tern-completer' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
+
+" Git Integration
+" --------------------------------------------------
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
-" Utils
+" Util
+" --------------------------------------------------
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
-" Core
+
 " ==================================================
-silent! colorscheme hybrid_material
+" Custom Configrations.
+" ==================================================
+function! s:LoadCustomConfig()
+  if !exists('g:loaded_custom_config')
+    let &rtp.=','.fnamemodify(resolve(expand('<sfile>:p')),':h').'/.vim'
+    runtime! rc.d/core/*.vim
+    runtime! rc.d/plugin/*.vim
+    let g:loaded_custom_config = 1
+  endif
+endfunction
+
+call s:LoadCustomConfig()
