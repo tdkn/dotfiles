@@ -58,9 +58,10 @@ call plug#end()
 " ==================================================
 " Custom Configrations.
 " ==================================================
+let s:selfpath = fnamemodify(resolve(expand('<sfile>:p')),':h')
 function! s:LoadCustomConfig()
   if !exists('g:loaded_custom_config')
-    let &rtp.=','.fnamemodify(resolve(expand('<sfile>:p')),':h').'/.vim'
+    let &rtp.=','.s:selfpath.'/.vim'
     runtime! rc.d/core/*.vim
     runtime! rc.d/plugin/*.vim
     let g:loaded_custom_config = 1
