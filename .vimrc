@@ -61,7 +61,7 @@ call plug#end()
 
 
 " ==================================================
-" Custom Configrations.
+" Load Custom Configurations.
 " ==================================================
 let s:selfpath = fnamemodify(resolve(expand('<sfile>:p')),':h')
 function! s:LoadCustomConfig()
