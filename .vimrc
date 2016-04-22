@@ -36,11 +36,11 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'php'] }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
-Plug 'tyru/caw.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --tern-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdcommenter'
 
 " Git Integration
 " --------------------------------------------------
