@@ -51,8 +51,11 @@ Plug 'tpope/vim-fugitive'
 " Util
 " --------------------------------------------------
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'moll/vim-bbye'
 Plug 'bling/vim-bufferline'
+Plug 'Shougo/unite.vim'
+Plug 'djoshea/vim-autoread'
 
 call plug#end()
 
