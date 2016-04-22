@@ -41,6 +41,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
+Plug 'editorconfig/editorconfig-vim'
 
 " Git Integration
 " --------------------------------------------------
