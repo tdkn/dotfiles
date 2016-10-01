@@ -1,6 +1,7 @@
 "---------------
 " visual
 "---------------
+set background=dark
 silent! colorscheme hybrid_material
 set cursorline
 "set nocursorline
