@@ -1,3 +1,0 @@
-[submodule "lib/zsh-git-prompt"]
-	path = lib/zsh-git-prompt
-	url = git@github.com:olivierverdier/zsh-git-prompt.git

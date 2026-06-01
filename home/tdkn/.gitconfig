@@ -1,0 +1,30 @@
+[user]
+	name = Shun Tedokon
+	email = shun@tedokon.com
+[core]
+	autocrlf = input
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+[push]
+	autoSetupRemote = true
+[mailmap]
+	file = /Users/tdkn/.config/git/mailmap
+[gitbutler]
+	aiOpenAIKeyOption = bringYourOwn
+	aiAnthropicKeyOption = bringYourOwn
+	aiOpenAIModelName = gpt-5.4
+	aiAnthropicModelName = claude-sonnet-4-6
+	aiModelProvider = anthropic
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
