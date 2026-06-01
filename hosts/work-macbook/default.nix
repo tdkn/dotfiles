@@ -9,6 +9,8 @@
   imports = [
     # Shared Homebrew package declarations for macOS tools and applications.
     ../../modules/darwin/homebrew.nix
+    # Shared macOS defaults for Finder and other system applications.
+    ../../modules/darwin/defaults.nix
     # Home Manager is loaded as a nix-darwin module so user configuration is
     # applied during the same `darwin-rebuild` activation.
     inputs.home-manager.darwinModules.home-manager

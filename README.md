@@ -17,6 +17,7 @@ tools.
 │       └── default.nix
 └── modules
     ├── darwin
+    │   ├── defaults.nix
     │   └── homebrew.nix
     └── home
         └── packages.nix
@@ -28,6 +29,7 @@ tools.
   identity, the system user, and Home Manager integration.
 - `home/tdkn/default.nix` defines the user environment: shell behavior, session variables, mise integration, and
   generated dotfiles.
+- `modules/darwin/defaults.nix` collects macOS user defaults for Finder and other system applications.
 - `modules/darwin/homebrew.nix` declares Homebrew formulae, casks, fonts, and activation behavior for macOS-native
   software.
 - `modules/home/packages.nix` is reserved for user-scoped Nix packages that should live outside dedicated Home Manager
