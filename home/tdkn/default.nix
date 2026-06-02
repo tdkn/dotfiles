@@ -36,32 +36,13 @@
       darwin-build = "sudo darwin-rebuild build --flake ~/ghq/github.com/tdkn/dotfiles#work-macbook";
       darwin-switch = "sudo darwin-rebuild switch --flake ~/ghq/github.com/tdkn/dotfiles#work-macbook";
       darwin-update = "nix flake update --flake ~/ghq/github.com/tdkn/dotfiles";
+      ghqc = "ghq-clone";
       ll = "ls -la";
     };
 
-    # Import Homebrew's shell environment for login shells so formulae and casks
-    # that expose commands under /opt/homebrew are available on PATH.
-    profileExtra = ''
-      if [ -x /opt/homebrew/bin/brew ]; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-      fi
-    '';
+    profileExtra = builtins.readFile ./zsh/profile.zsh;
 
-    # Initialize optional command-line integrations only when the corresponding
-    # tools are installed, keeping shell startup resilient across fresh machines.
-    initContent = ''
-      if command -v mise >/dev/null 2>&1; then
-        eval "$(mise activate zsh)"
-      fi
-
-      if command -v starship >/dev/null 2>&1; then
-        eval "$(starship init zsh)"
-      fi
-
-      if command -v fzf >/dev/null 2>&1; then
-        source <(fzf --zsh)
-      fi
-    '';
+    initContent = (builtins.readFile ./zsh/init.zsh) + "\n" + (builtins.readFile ./zsh/ghq-clone.zsh);
   };
 
   # Link the raw Git configuration file into the home directory.
