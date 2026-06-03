@@ -20,6 +20,12 @@
       VISUAL = "nvim";
       PAGER = "less";
     };
+
+    # Link the raw Git configuration files into the home directory.
+    file = {
+      ".gitconfig".source = ./.gitconfig;
+      ".config/git/ignore".source = ./git/ignore;
+    };
   };
 
   # Let Home Manager manage its own generation metadata for this profile.
@@ -44,7 +50,4 @@
 
     initContent = (builtins.readFile ./zsh/init.zsh) + "\n" + (builtins.readFile ./zsh/ghq-clone.zsh);
   };
-
-  # Link the raw Git configuration file into the home directory.
-  home.file.".gitconfig".source = ./.gitconfig;
 }
