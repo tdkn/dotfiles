@@ -23,14 +23,6 @@ in
       VISUAL = "nvim";
       PAGER = "less";
     };
-
-    # Link the raw Git configuration files into the home directory.
-    file = {
-      ".gitconfig".source =
-        config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/home/tdkn/.gitconfig";
-      ".config/git/ignore".source =
-        config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/home/tdkn/git/ignore";
-    };
   };
 
   # Let Home Manager manage its own generation metadata for this profile.
@@ -51,13 +43,19 @@ in
       ll = "ls -la";
     };
 
-    profileExtra = builtins.readFile ./zsh/profile.zsh;
+    profileExtra = builtins.readFile ../../../zsh/profile.zsh;
 
-    initContent = (builtins.readFile ./zsh/init.zsh) + "\n" + (builtins.readFile ./zsh/ghq-clone.zsh);
+    initContent =
+      (builtins.readFile ../../../zsh/init.zsh)
+      + "\n"
+      + (builtins.readFile ../../../zsh/ghq-clone.zsh);
   };
 
-  # Ghostty's config editor writes through this symlink, so keep the target
-  # outside the read-only Nix store.
-  xdg.configFile."ghostty/config.ghostty".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/home/tdkn/ghostty/config.ghostty";
+  # App configs stay writable through symlinks instead of being copied into the Nix store.
+  xdg.configFile = {
+    "git/config".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/config";
+    "git/ignore".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/ignore";
+    "ghostty/config.ghostty".source =
+      config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/ghostty/config.ghostty";
+  };
 }
