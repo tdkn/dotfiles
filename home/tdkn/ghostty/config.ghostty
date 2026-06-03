@@ -1,0 +1,28 @@
+#
+# Appearance
+#
+cursor-style = block
+theme = Dracula+
+macos-titlebar-style = tabs
+shell-integration-features = no-cursor
+font-family = "Monaspace Xenon"
+background-opacity = 0.95
+
+#
+# Keygindings
+#
+keybind = shift+enter=text:\n
+keybind = alt+backspace=text:\x1b\x7f
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+keybind = unconsumed:super+,=text:\x1bqghostty +edit-config\x0d
+
+#
+# Quick Terminal
+#
+quick-terminal-position = bottom
+quick-terminal-size = 30%,80%
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0
+quick-terminal-autohide = true
+quick-terminal-space-behavior = move
+quick-terminal-keyboard-interactivity = on-demand
