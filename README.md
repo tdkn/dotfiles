@@ -9,31 +9,44 @@ tools.
 ```text
 .
 ├── flake.nix
-├── hosts
-│   └── work-macbook
-│       └── default.nix
-├── home
-│   └── tdkn
-│       └── default.nix
-└── modules
-    ├── darwin
-    │   ├── defaults.nix
-    │   └── homebrew.nix
-    └── home
-        └── packages.nix
+├── flake.lock
+├── ghostty
+│   └── config.ghostty
+├── git
+│   ├── config
+│   └── ignore
+├── nix
+│   ├── home
+│   │   └── tdkn
+│   │       └── default.nix
+│   ├── hosts
+│   │   └── work-macbook
+│   │       └── default.nix
+│   └── modules
+│       ├── darwin
+│       │   ├── defaults.nix
+│       │   └── homebrew.nix
+│       └── home
+│           └── packages.nix
+└── zsh
+    ├── ghq-clone.zsh
+    ├── init.zsh
+    └── profile.zsh
 ```
 
 - `flake.nix` is the entry point for the full configuration. It pins inputs, exposes the `work-macbook` nix-darwin
   configuration, and defines the project formatter.
-- `hosts/work-macbook/default.nix` contains the host-level macOS configuration, including Nix settings, networking
+- `nix/hosts/work-macbook/default.nix` contains the host-level macOS configuration, including Nix settings, networking
   identity, the system user, and Home Manager integration.
-- `home/tdkn/default.nix` defines the user environment: shell behavior, session variables, mise integration, and
-  generated dotfiles.
-- `modules/darwin/defaults.nix` collects macOS user defaults for Finder and other system applications.
-- `modules/darwin/homebrew.nix` declares Homebrew formulae, casks, fonts, and activation behavior for macOS-native
+- `nix/home/tdkn/default.nix` defines the user environment: shell behavior, session variables, mise integration, and
+  app config links.
+- `nix/modules/darwin/defaults.nix` collects macOS user defaults for Finder and other system applications.
+- `nix/modules/darwin/homebrew.nix` declares Homebrew formulae, casks, fonts, and activation behavior for macOS-native
   software.
-- `modules/home/packages.nix` is reserved for user-scoped Nix packages that should live outside dedicated Home Manager
+- `nix/modules/home/packages.nix` is reserved for user-scoped Nix packages that should live outside dedicated Home Manager
   program modules.
+- `ghostty/`, `git/`, and `zsh/` hold app-specific configuration files linked or read by Home Manager. Git config is
+  linked to `$XDG_CONFIG_HOME/git/config`.
 
 ## Installation
 
