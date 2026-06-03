@@ -18,6 +18,10 @@
     ".GlobalPreferences" = {
       "com.apple.mouse.scaling" = 2.0;
     };
+    NSGlobalDomain = {
+      InitialKeyRepeat = 15;
+      KeyRepeat = 1;
+    };
     trackpad = {
       Clicking = true;
       TrackpadRightClick = true;
