@@ -14,6 +14,8 @@
       autohide = true;
       mru-spaces = false;
       showhidden = true;
+      showMissionControlGestureEnabled = true;
+      showAppExposeGestureEnabled = true;
     };
     ".GlobalPreferences" = {
       "com.apple.mouse.scaling" = 2.0;
