@@ -50,4 +50,7 @@
 
     initContent = (builtins.readFile ./zsh/init.zsh) + "\n" + (builtins.readFile ./zsh/ghq-clone.zsh);
   };
+
+  # Link the raw Ghostty configuration files into the home directory.
+  xdg.configFile."ghostty/config.ghostty".source = ./ghostty/config.ghostty;
 }
