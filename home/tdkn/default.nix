@@ -1,4 +1,7 @@
-{ ... }:
+{ config, ... }:
+let
+  dotfilesRoot = "${config.home.homeDirectory}/ghq/github.com/tdkn/dotfiles";
+in
 {
   # Home Manager profile for the tdkn macOS user. This file collects shell,
   # session, and dotfile settings that should follow the user account.
@@ -23,8 +26,10 @@
 
     # Link the raw Git configuration files into the home directory.
     file = {
-      ".gitconfig".source = ./.gitconfig;
-      ".config/git/ignore".source = ./git/ignore;
+      ".gitconfig".source =
+        config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/home/tdkn/.gitconfig";
+      ".config/git/ignore".source =
+        config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/home/tdkn/git/ignore";
     };
   };
 
@@ -51,6 +56,8 @@
     initContent = (builtins.readFile ./zsh/init.zsh) + "\n" + (builtins.readFile ./zsh/ghq-clone.zsh);
   };
 
-  # Link the raw Ghostty configuration files into the home directory.
-  xdg.configFile."ghostty/config.ghostty".source = ./ghostty/config.ghostty;
+  # Ghostty's config editor writes through this symlink, so keep the target
+  # outside the read-only Nix store.
+  xdg.configFile."ghostty/config.ghostty".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/home/tdkn/ghostty/config.ghostty";
 }
