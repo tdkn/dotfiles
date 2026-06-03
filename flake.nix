@@ -35,12 +35,12 @@
     in
     {
       # Build target used by `darwin-rebuild --flake .#work-macbook`.
-      # Host-specific configuration lives under hosts/work-macbook.
+      # Host-specific configuration lives under nix/hosts/work-macbook.
       darwinConfigurations."work-macbook" = nix-darwin.lib.darwinSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/work-macbook
+          ./nix/hosts/work-macbook
         ];
       };
 
