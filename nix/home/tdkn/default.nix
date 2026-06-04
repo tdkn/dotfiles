@@ -57,5 +57,9 @@ in
     "git/ignore".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/ignore";
     "ghostty/config.ghostty".source =
       config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/ghostty/config.ghostty";
+    "karabiner/karabiner.json" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/karabiner/karabiner.json";
+      force = true;
+    };
   };
 }
