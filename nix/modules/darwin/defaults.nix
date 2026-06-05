@@ -23,6 +23,7 @@
     NSGlobalDomain = {
       InitialKeyRepeat = 15;
       KeyRepeat = 1;
+      "com.apple.sound.beep.feedback" = 1;
     };
     trackpad = {
       Clicking = true;
