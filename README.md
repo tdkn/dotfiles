@@ -51,3 +51,23 @@ sudo darwin-rebuild --rollback
 ```
 
 Update the flake inputs before rebuilding when you want to move pinned dependencies forward.
+
+## Git Signing
+
+Git commit and tag signing use 1Password's SSH signing program. Create an
+Ed25519 SSH key in 1Password, enable the 1Password SSH Agent, and add the
+public key to GitHub as a signing key.
+
+Keep the public signing key out of this repository in a local include file:
+
+```ini
+[user]
+	signingkey = ssh-ed25519 ...
+```
+
+Save it at `~/.config/git/1password-signing.config`, then run
+`darwin-rebuild switch --flake .#work-macbook`. The GitHub verified email must
+match the configured Git commit email.
+
+Git's primary config is `~/.gitconfig`; `~/.config/git` is only for the global
+ignore file and local signing-key include.

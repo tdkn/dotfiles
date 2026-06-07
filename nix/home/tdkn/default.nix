@@ -23,6 +23,12 @@ in
       VISUAL = "nvim";
       PAGER = "less";
     };
+    # Keep Git's primary global config in ~/.gitconfig so `git config --global`
+    # reads the same managed file that normal Git operations use.
+    file.".gitconfig" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/config";
+      force = true;
+    };
   };
 
   # Let Home Manager manage its own generation metadata for this profile.
@@ -46,14 +52,11 @@ in
     profileExtra = builtins.readFile ../../../zsh/profile.zsh;
 
     initContent =
-      (builtins.readFile ../../../zsh/init.zsh)
-      + "\n"
-      + (builtins.readFile ../../../zsh/ghq-clone.zsh);
+      (builtins.readFile ../../../zsh/init.zsh) + "\n" + (builtins.readFile ../../../zsh/ghq-clone.zsh);
   };
 
   # App configs stay writable through symlinks instead of being copied into the Nix store.
   xdg.configFile = {
-    "git/config".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/config";
     "git/ignore".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/ignore";
     "ghostty/config.ghostty".source =
       config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/ghostty/config.ghostty";

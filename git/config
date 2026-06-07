@@ -1,6 +1,8 @@
 [user]
 	name = Shun Tedokon
 	email = shun@tedokon.com
+[include]
+	path = ~/.config/git/1password-signing.config
 [core]
 	autocrlf = input
 [filter "lfs"]
@@ -14,6 +16,14 @@
 	ff = only
 [push]
 	autoSetupRemote = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
 [mailmap]
 	file = /Users/tdkn/.config/git/mailmap
 [gitbutler]
