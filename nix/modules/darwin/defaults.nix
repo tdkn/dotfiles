@@ -11,6 +11,7 @@
       _FXSortFoldersFirst = true;
     };
     dock = {
+      appswitcher-all-displays = true;
       autohide = true;
       mru-spaces = false;
       showhidden = true;
