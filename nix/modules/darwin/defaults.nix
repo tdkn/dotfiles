@@ -22,6 +22,7 @@
       "com.apple.mouse.scaling" = 2.0;
     };
     NSGlobalDomain = {
+      AppleKeyboardUIMode = 2;
       InitialKeyRepeat = 15;
       KeyRepeat = 1;
       "com.apple.sound.beep.feedback" = 1;
