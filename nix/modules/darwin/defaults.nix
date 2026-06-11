@@ -13,6 +13,7 @@
     dock = {
       appswitcher-all-displays = true;
       autohide = true;
+      expose-group-apps = true;
       mru-spaces = false;
       showhidden = true;
       showMissionControlGestureEnabled = true;
