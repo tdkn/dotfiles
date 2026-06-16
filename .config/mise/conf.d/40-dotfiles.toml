@@ -1,0 +1,12 @@
+[dotfiles]
+"~/.dotfiles" = "~/ghq/github.com/tdkn/dotfiles"
+"~/.codex/AGENTS.md" = "~/.dotfiles/codex/AGENTS.md"
+"~/.config/ghostty/config.ghostty" = "~/.dotfiles/ghostty/config.ghostty"
+"~/.config/git/ignore" = "~/.dotfiles/git/ignore"
+"~/.config/homebrew/Brewfile" = "~/.dotfiles/homebrew/Brewfile"
+"~/.config/karabiner/karabiner.json" = "~/.dotfiles/karabiner/karabiner.json"
+"~/.config/mise/config.toml" = "~/.dotfiles/.config/mise/config.toml"
+"~/.config/mise/conf.d" = "~/.dotfiles/.config/mise/conf.d"
+"~/.gitconfig" = "~/.dotfiles/git/config"
+"~/.zprofile" = "~/.dotfiles/zsh/profile.zsh"
+"~/.zshrc" = "~/.dotfiles/zsh/zshrc"

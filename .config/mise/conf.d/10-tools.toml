@@ -1,0 +1,11 @@
+[tools]
+bun = "latest"
+deno = "latest"
+node = "25"
+pnpm = "latest"
+"npm:@ast-grep/cli" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:@yaakapp/cli" = "latest"
+"npm:sfw" = "latest"
+"npm:skills" = "latest"
+uv = "latest"

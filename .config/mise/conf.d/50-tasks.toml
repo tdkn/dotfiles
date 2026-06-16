@@ -1,0 +1,5 @@
+[tasks.bootstrap]
+run = """
+HOMEBREW_NO_AUTO_UPDATE=1 brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile ||
+  HOMEBREW_NO_AUTO_UPDATE=1 brew bundle install --no-upgrade --file ~/.config/homebrew/Brewfile
+"""

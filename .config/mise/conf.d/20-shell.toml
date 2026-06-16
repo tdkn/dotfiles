@@ -1,0 +1,8 @@
+[env]
+EDITOR = "nvim"
+VISUAL = "nvim"
+PAGER = "less"
+
+[shell_alias]
+ghqc = "ghq-clone"
+ll = "ls -la"
