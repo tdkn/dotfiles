@@ -25,9 +25,15 @@ in
     };
     # Keep Git's primary global config in ~/.gitconfig so `git config --global`
     # reads the same managed file that normal Git operations use.
-    file.".gitconfig" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/config";
-      force = true;
+    file = {
+      ".codex/AGENTS.md" = {
+        source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/codex/AGENTS.md";
+        force = true;
+      };
+      ".gitconfig" = {
+        source = config.lib.file.mkOutOfStoreSymlink "${dotfilesRoot}/git/config";
+        force = true;
+      };
     };
   };
 
