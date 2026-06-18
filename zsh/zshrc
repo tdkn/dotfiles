@@ -1,9 +1,5 @@
 dotfiles_root="${HOME}/.dotfiles"
 
-if [ -r "${dotfiles_root}/zsh/init.zsh" ]; then
-  source "${dotfiles_root}/zsh/init.zsh"
-fi
-
-if [ -r "${dotfiles_root}/zsh/ghq-clone.zsh" ]; then
-  source "${dotfiles_root}/zsh/ghq-clone.zsh"
-fi
+for zshrc_file in "${dotfiles_root}"/zsh/rc.d/*.zsh(N); do
+  source "$zshrc_file"
+done
