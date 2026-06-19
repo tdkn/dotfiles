@@ -2,6 +2,7 @@
 "~/.dotfiles" = "~/ghq/github.com/tdkn/dotfiles"
 "~/.claude/CLAUDE.md" = "~/.dotfiles/claude/CLAUDE.md"
 "~/.codex/AGENTS.md" = "~/.dotfiles/codex/AGENTS.md"
+"~/.codex/rules" = "~/.dotfiles/codex/rules"
 "~/.config/ghostty/config.ghostty" = "~/.dotfiles/ghostty/config.ghostty"
 "~/.config/git/ignore" = "~/.dotfiles/git/ignore"
 "~/.config/homebrew/Brewfile" = "~/.dotfiles/homebrew/Brewfile"

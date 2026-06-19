@@ -1,0 +1,144 @@
+# GitButler command rules for Codex outside-sandbox execution.
+# This Starlark file is loaded at startup; restart Codex after changing it.
+# Keep allow rules narrow; use prompt for mutations, history operations, UI, and configuration.
+
+# These are useful because but often needs outside-sandbox access to .git/gitbutler state.
+prefix_rule(
+    pattern = ["but", "status"],
+    decision = "allow",
+    justification = "Inspect GitButler workspace, branch, and stack state",
+    match = [
+        "but status",
+        "but status -f",
+        "but status --json",
+    ],
+)
+
+prefix_rule(
+    pattern = ["but", "diff"],
+    decision = "allow",
+    justification = "Inspect uncommitted GitButler changes",
+    match = [
+        "but diff",
+        "but diff file:README.md",
+        "but diff --json",
+    ],
+)
+
+prefix_rule(
+    pattern = ["but", "show"],
+    decision = "allow",
+    justification = "Inspect GitButler branch or commit details",
+    match = [
+        "but show c1",
+        "but show my-feature-branch --verbose",
+    ],
+)
+
+prefix_rule(
+    pattern = ["but", "branch", ["list", "show"]],
+    decision = "allow",
+    justification = "Inspect GitButler branches",
+    match = [
+        "but branch list",
+        "but branch list --all",
+        "but branch show my-feature-branch",
+    ],
+    not_match = [
+        "but branch new my-feature-branch",
+        "but branch delete my-feature-branch",
+    ],
+)
+
+prefix_rule(
+    pattern = ["but", "pull", ["--check", "-c"]],
+    decision = "allow",
+    justification = "Check whether pulling would be safe without mutating",
+    match = [
+        "but pull --check",
+        "but pull -c",
+    ],
+    not_match = [
+        "but pull",
+    ],
+)
+
+prefix_rule(
+    pattern = ["but", "oplog", "list"],
+    decision = "allow",
+    justification = "Inspect GitButler operation history",
+    match = [
+        "but oplog list",
+        "but oplog list --json",
+    ],
+    not_match = [
+        "but oplog restore abc123",
+        "but oplog snapshot --message checkpoint",
+    ],
+)
+
+# GitButler mutations: keep prompt, not allow.
+prefix_rule(
+    pattern = ["but", "branch", ["new", "delete", "-d"]],
+    decision = "prompt",
+    justification = "GitButler branch mutation; review before running",
+    match = [
+        "but branch new my-feature-branch",
+        "but branch delete my-feature-branch",
+        "but branch -d my-feature-branch",
+    ],
+)
+
+prefix_rule(
+    pattern = ["but", "oplog", ["snapshot", "restore"]],
+    decision = "prompt",
+    justification = "GitButler operation history mutation; review before running",
+    match = [
+        "but oplog snapshot --message checkpoint",
+        "but oplog restore abc123",
+    ],
+)
+
+prefix_rule(
+    pattern = ["but", [
+        "commit",
+        "amend",
+        "push",
+        "move",
+        "squash",
+        "reword",
+        "resolve",
+        "pick",
+        "undo",
+        "stage",
+        "merge",
+        "discard",
+        "unapply",
+        "apply",
+        "clean",
+        "rub",
+        "absorb",
+        "uncommit",
+        "redo",
+        "pr",
+        "setup",
+        "teardown",
+        "gui",
+        "tui",
+        "update",
+        "alias",
+        "config",
+        "skill",
+        "mark",
+        "unmark",
+    ]],
+    decision = "prompt",
+    justification = "GitButler mutation, history operation, UI launch, or configuration change; review before running",
+    match = [
+        "but commit",
+        "but push",
+        "but stage README.md",
+        "but discard README.md",
+        "but pr create",
+    ],
+)
