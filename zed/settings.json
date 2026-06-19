@@ -1,0 +1,141 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "existing_window",
+  "minimap": {
+    "show": "auto",
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "diff_view_style": "split",
+  "git_panel": {
+    "dock": "left",
+    "tree_view": true,
+  },
+  "title_bar": {
+    "show_project_items": true,
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "model": "gpt-5.5",
+      },
+      "type": "registry",
+    },
+    "cursor": {
+      "default_config_options": {
+        "mode": "agent",
+        "model": "composer-2.5[fast=true]",
+      },
+      "type": "registry",
+    },
+  },
+  "terminal": {
+    "blinking": "on",
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+    "dock": "bottom",
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "base_keymap": "VSCode",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
+  },
+  "agent": {
+    "sidebar_side": "left",
+    "dock": "right",
+    "tool_permissions": {
+      "tools": {
+        "search_web": {
+          "default": "allow",
+        },
+        "move_path": {
+          "default": "allow",
+        },
+      },
+    },
+    "inline_assistant_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-latest",
+    },
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+    },
+  },
+  "vim_mode": false,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 12.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Dracula Light (Alucard)",
+    "dark": "Ayu Mirage",
+  },
+  "bottom_dock_layout": "full",
+  "use_system_window_tabs": false,
+  "file_scan_exclusions": [
+    // Defaults
+    // see: https://zed.dev/docs/reference/all-settings#file-scan-exclusions
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // Customizations
+    "**/.next",
+    "**/.turbo",
+    "**/node_modules",
+    "**/*.{xcodeproj,xcworkspace}",
+  ],
+  "languages": {
+    "CSS": {
+      "language_servers": ["tailwindcss-language-server"],
+    },
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true,
+      },
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": ["cva", "cx", "cn", "classNames"],
+        "experimental": {
+          "classRegex": ["[cls|className]\\s\\:\\=\\s\"([^\"]*)"],
+        },
+      },
+    },
+  },
+  "file_types": {
+    "Starlark": ["**/rules/*.rules"],
+  },
+}
