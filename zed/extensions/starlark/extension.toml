@@ -1,0 +1,11 @@
+id = "starlark-syntax"
+name = "Starlark Syntax"
+version = "0.0.1"
+schema_version = 1
+authors = ["tdkn"]
+description = "Syntax highlighting for Starlark files."
+repository = "https://github.com/tdkn/dotfiles/tree/main/zed/extensions/starlark"
+
+[grammars.starlark]
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-starlark"
+rev = "a453dbf3ba433db0e5ec621a38a7e59d72e4dc69"
