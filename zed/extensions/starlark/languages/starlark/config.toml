@@ -1,0 +1,19 @@
+name = "Starlark"
+grammar = "starlark"
+path_suffixes = [
+  "bzl",
+  "bxl",
+  "star",
+  "sky",
+  "BUILD",
+  "BUILD.bazel",
+  "BUCK",
+  "MODULE.bazel",
+  "REPO.bazel",
+  "TARGETS",
+  "WORKSPACE",
+  "WORKSPACE.bazel",
+]
+line_comments = ["# "]
+tab_size = 4
+hard_tabs = false
