@@ -9,6 +9,7 @@
 "~/.config/karabiner/karabiner.json" = "~/.dotfiles/karabiner/karabiner.json"
 "~/.config/mise/config.toml" = "~/.dotfiles/.config/mise/config.toml"
 "~/.config/mise/conf.d" = "~/.dotfiles/.config/mise/conf.d"
+"~/.config/mise/tasks" = "~/.dotfiles/.config/mise/tasks"
 "~/.config/zed/settings.json" = "~/.dotfiles/zed/settings.json"
 "~/.gitconfig" = "~/.dotfiles/git/config"
 "~/.zprofile" = "~/.dotfiles/zsh/profile.zsh"
