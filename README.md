@@ -38,9 +38,13 @@ mise bootstrap --yes --force-dotfiles
 mise dotfiles status --missing
 mise bootstrap macos-defaults status --missing
 mise bootstrap user status --missing
+mise brew-sync
 brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile
 mise doctor
 ```
+
+Run `mise brew-sync` after changing Homebrew formulae, casks, or Mac App Store
+apps, then review the Brewfile diff before committing.
 
 ## Git Signing
 

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+HOMEBREW_NO_AUTO_UPDATE=1 brew bundle dump \
+  --file ~/.config/homebrew/Brewfile \
+  --force \
+  --no-describe \
+  --formula \
+  --cask \
+  --mas \
+  --no-tap
