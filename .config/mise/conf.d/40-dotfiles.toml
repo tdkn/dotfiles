@@ -19,6 +19,7 @@
 "~/.config/mise/conf.d" = "~/.dotfiles/.config/mise/conf.d"
 "~/.config/mise/miserc.toml" = "~/.dotfiles/.config/mise/miserc.toml"
 "~/.config/mise/tasks" = "~/.dotfiles/.config/mise/tasks"
+"~/.config/nvim" = "~/.dotfiles/nvim"
 "~/.config/zed/settings.json" = "~/.dotfiles/zed/settings.json"
 "~/.gitconfig/dotfiles" = { block = "[include]\n\tpath = ~/.dotfiles/git/config\n" }
 "~/.zprofile" = "~/.dotfiles/zsh/profile.zsh"
