@@ -1,0 +1,6 @@
+interface:
+  display_name: "Fast Mode"
+  short_description: "Answer first with focused reasons for fast decisions"
+  default_prompt: "Use $fast-mode to give me the answer first, briefly."
+policy:
+  allow_implicit_invocation: false

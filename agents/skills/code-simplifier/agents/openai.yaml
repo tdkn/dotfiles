@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Simplifier"
+  short_description: "Clarify code and PR diffs safely"
+  default_prompt: "Use $code-simplifier to simplify or review this code for behavior-preserving cleanup."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delegate Code Review"
+  short_description: "Collect Claude Code review feedback"
+  default_prompt: "Use $delegate-code-review to ask Claude Code to review my current changes, then summarize the actionable feedback."

@@ -1,0 +1,16 @@
+name: tdkn-agents
+version: 0.1.0
+description: Third-party agent skills installed at user scope.
+
+# Pinned so install never auto-detects and writes outside these two roots.
+# agent-skills -> ~/.agents/skills (read by Codex CLI); claude -> ~/.claude/skills.
+targets:
+  - agent-skills
+  - claude
+
+dependencies:
+  apm:
+    - anthropics/skills/skills/frontend-design
+    - ast-grep/agent-skill/ast-grep/skills/ast-grep
+    - github/awesome-copilot/skills/create-agentsmd
+    - shadcn/improve/skills/improve

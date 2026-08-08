@@ -1,0 +1,327 @@
+lockfile_version: '1'
+generated_at: '2026-08-08T00:35:27.807576+00:00'
+apm_version: 0.28.0
+dependencies:
+- repo_url: anthropics/skills
+  name: frontend-design
+  host: github.com
+  resolved_commit: f17010c9bb483898c1d9c9f42dde2b3a98889434
+  version: unknown
+  virtual_path: skills/frontend-design
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/frontend-design
+  - .agents/skills/frontend-design/LICENSE.txt
+  - .agents/skills/frontend-design/SKILL.md
+  - .claude/skills/frontend-design
+  - .claude/skills/frontend-design/LICENSE.txt
+  - .claude/skills/frontend-design/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/frontend-design/LICENSE.txt: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+    .agents/skills/frontend-design/SKILL.md: sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd
+    .claude/skills/frontend-design/LICENSE.txt: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+    .claude/skills/frontend-design/SKILL.md: sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd
+  content_hash: sha256:4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336
+- repo_url: ast-grep/agent-skill
+  name: ast-grep
+  host: github.com
+  resolved_commit: c2a9bc154f4ffe08b25d28d5e852dfac8c0d0d8a
+  version: unknown
+  virtual_path: ast-grep/skills/ast-grep
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/ast-grep
+  - .agents/skills/ast-grep/SKILL.md
+  - .agents/skills/ast-grep/references/rule_reference.md
+  - .claude/skills/ast-grep
+  - .claude/skills/ast-grep/SKILL.md
+  - .claude/skills/ast-grep/references/rule_reference.md
+  deployed_file_hashes:
+    .agents/skills/ast-grep/SKILL.md: sha256:1d356580b6d3af4feb5722e820b1c34041f6e90162c063f1c63fce3f21c72543
+    .agents/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
+    .claude/skills/ast-grep/SKILL.md: sha256:1d356580b6d3af4feb5722e820b1c34041f6e90162c063f1c63fce3f21c72543
+    .claude/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
+  content_hash: sha256:e812630c21ec2215bd0abfe33835ae382059112e990411b588b84bb24c4f0a4f
+- repo_url: github/awesome-copilot
+  name: create-agentsmd
+  host: github.com
+  resolved_commit: ab7544d03d4c49fdd07f5958e1888ad39c4118e2
+  version: unknown
+  virtual_path: skills/create-agentsmd
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/create-agentsmd
+  - .agents/skills/create-agentsmd/SKILL.md
+  - .claude/skills/create-agentsmd
+  - .claude/skills/create-agentsmd/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/create-agentsmd/SKILL.md: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
+    .claude/skills/create-agentsmd/SKILL.md: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
+  content_hash: sha256:bfbdbb76b17cca970d1d624e36ce72b6847860d740581c8865da796c1fef8552
+- repo_url: shadcn/improve
+  name: improve
+  host: github.com
+  resolved_commit: 03369ee6d7cafbfcecc4346539b05b3dc0a603bb
+  version: unknown
+  virtual_path: skills/improve
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/improve
+  - .agents/skills/improve/SKILL.md
+  - .agents/skills/improve/references/audit-playbook.md
+  - .agents/skills/improve/references/closing-the-loop.md
+  - .agents/skills/improve/references/plan-template.md
+  - .claude/skills/improve
+  - .claude/skills/improve/SKILL.md
+  - .claude/skills/improve/references/audit-playbook.md
+  - .claude/skills/improve/references/closing-the-loop.md
+  - .claude/skills/improve/references/plan-template.md
+  deployed_file_hashes:
+    .agents/skills/improve/SKILL.md: sha256:1599aa29e9b16424cb767779efac53fa56e3f38be92dff4ac587393a1ad5070a
+    .agents/skills/improve/references/audit-playbook.md: sha256:587c1b927070f3c28139ad95ac34cc21a7da32618cfeb966cb774e58a865d4c8
+    .agents/skills/improve/references/closing-the-loop.md: sha256:5d526bb378e1783bbeb68d7af527776cbe98cde27a1aeccbd13e818e5b73b454
+    .agents/skills/improve/references/plan-template.md: sha256:7be76dd3c29442288fa7cee4432fc6e95c2fdbf748c9b356344bf647c5f8722e
+    .claude/skills/improve/SKILL.md: sha256:1599aa29e9b16424cb767779efac53fa56e3f38be92dff4ac587393a1ad5070a
+    .claude/skills/improve/references/audit-playbook.md: sha256:587c1b927070f3c28139ad95ac34cc21a7da32618cfeb966cb774e58a865d4c8
+    .claude/skills/improve/references/closing-the-loop.md: sha256:5d526bb378e1783bbeb68d7af527776cbe98cde27a1aeccbd13e818e5b73b454
+    .claude/skills/improve/references/plan-template.md: sha256:7be76dd3c29442288fa7cee4432fc6e95c2fdbf748c9b356344bf647c5f8722e
+  content_hash: sha256:b4768ee5c11cd620dee9b8c5c29bae56ae625e44f061807863088d70a3afa621
+deployments:
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/ast-grep
+  runtime: null
+  scope: project
+  owners:
+  - ast-grep/agent-skill/ast-grep/skills/ast-grep
+  active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/ast-grep/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ast-grep/agent-skill/ast-grep/skills/ast-grep
+  active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
+  content_hash: sha256:1d356580b6d3af4feb5722e820b1c34041f6e90162c063f1c63fce3f21c72543
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/ast-grep/references/rule_reference.md
+  runtime: null
+  scope: project
+  owners:
+  - ast-grep/agent-skill/ast-grep/skills/ast-grep
+  active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
+  content_hash: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/create-agentsmd
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/skills/create-agentsmd
+  active_owner: github/awesome-copilot/skills/create-agentsmd
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/create-agentsmd/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/skills/create-agentsmd
+  active_owner: github/awesome-copilot/skills/create-agentsmd
+  content_hash: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/frontend-design
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/frontend-design/LICENSE.txt
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/frontend-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/improve
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/improve/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:1599aa29e9b16424cb767779efac53fa56e3f38be92dff4ac587393a1ad5070a
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/improve/references/audit-playbook.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:587c1b927070f3c28139ad95ac34cc21a7da32618cfeb966cb774e58a865d4c8
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/improve/references/closing-the-loop.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:5d526bb378e1783bbeb68d7af527776cbe98cde27a1aeccbd13e818e5b73b454
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/improve/references/plan-template.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:7be76dd3c29442288fa7cee4432fc6e95c2fdbf748c9b356344bf647c5f8722e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ast-grep
+  runtime: null
+  scope: project
+  owners:
+  - ast-grep/agent-skill/ast-grep/skills/ast-grep
+  active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ast-grep/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ast-grep/agent-skill/ast-grep/skills/ast-grep
+  active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
+  content_hash: sha256:1d356580b6d3af4feb5722e820b1c34041f6e90162c063f1c63fce3f21c72543
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ast-grep/references/rule_reference.md
+  runtime: null
+  scope: project
+  owners:
+  - ast-grep/agent-skill/ast-grep/skills/ast-grep
+  active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
+  content_hash: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/create-agentsmd
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/skills/create-agentsmd
+  active_owner: github/awesome-copilot/skills/create-agentsmd
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/create-agentsmd/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/skills/create-agentsmd
+  active_owner: github/awesome-copilot/skills/create-agentsmd
+  content_hash: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
+- kind: project-relative
+  target: claude
+  value: .claude/skills/frontend-design
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/frontend-design/LICENSE.txt
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+- kind: project-relative
+  target: claude
+  value: .claude/skills/frontend-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/skills/skills/frontend-design
+  active_owner: anthropics/skills/skills/frontend-design
+  content_hash: sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd
+- kind: project-relative
+  target: claude
+  value: .claude/skills/improve
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/improve/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:1599aa29e9b16424cb767779efac53fa56e3f38be92dff4ac587393a1ad5070a
+- kind: project-relative
+  target: claude
+  value: .claude/skills/improve/references/audit-playbook.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:587c1b927070f3c28139ad95ac34cc21a7da32618cfeb966cb774e58a865d4c8
+- kind: project-relative
+  target: claude
+  value: .claude/skills/improve/references/closing-the-loop.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:5d526bb378e1783bbeb68d7af527776cbe98cde27a1aeccbd13e818e5b73b454
+- kind: project-relative
+  target: claude
+  value: .claude/skills/improve/references/plan-template.md
+  runtime: null
+  scope: project
+  owners:
+  - shadcn/improve/skills/improve
+  active_owner: shadcn/improve/skills/improve
+  content_hash: sha256:7be76dd3c29442288fa7cee4432fc6e95c2fdbf748c9b356344bf647c5f8722e
