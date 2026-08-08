@@ -1,6 +1,22 @@
 [dotfiles]
 "~/.dotfiles" = "~/ghq/github.com/tdkn/dotfiles"
+# Locally authored skills. One line per agent that should see the skill, so a
+# skill can be scoped to a single agent by linking it only there. Third-party
+# skills are not listed here -- apm deploys them into the same directories.
+"~/.agents/skills/code-simplifier" = "~/.dotfiles/agents/skills/code-simplifier"
+"~/.agents/skills/delegate-code-review" = "~/.dotfiles/agents/skills/delegate-code-review"
+"~/.agents/skills/fast-mode" = "~/.dotfiles/agents/skills/fast-mode"
+"~/.agents/skills/other-repo" = "~/.dotfiles/agents/skills/other-repo"
+"~/.agents/skills/pr-drafter" = "~/.dotfiles/agents/skills/pr-drafter"
+"~/.agents/skills/raycast-ai-command" = "~/.dotfiles/agents/skills/raycast-ai-command"
+"~/.apm" = "~/.dotfiles/apm"
 "~/.claude/CLAUDE.md" = "~/.dotfiles/claude/CLAUDE.md"
+"~/.claude/skills/code-simplifier" = "~/.dotfiles/agents/skills/code-simplifier"
+"~/.claude/skills/delegate-code-review" = "~/.dotfiles/agents/skills/delegate-code-review"
+"~/.claude/skills/fast-mode" = "~/.dotfiles/agents/skills/fast-mode"
+"~/.claude/skills/other-repo" = "~/.dotfiles/agents/skills/other-repo"
+"~/.claude/skills/pr-drafter" = "~/.dotfiles/agents/skills/pr-drafter"
+"~/.claude/skills/raycast-ai-command" = "~/.dotfiles/agents/skills/raycast-ai-command"
 "~/.codex/AGENTS.md" = "~/.dotfiles/codex/AGENTS.md"
 "~/.codex/rules" = "~/.dotfiles/codex/rules"
 "~/.config/ghostty/config.ghostty" = "~/.dotfiles/ghostty/config.ghostty"

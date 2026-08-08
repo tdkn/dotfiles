@@ -1,0 +1,4 @@
+interface:
+  display_name: "Raycast AI Command"
+  short_description: "Draft paste-ready Raycast AI Command prompts"
+  default_prompt: "Use $raycast-ai-command to create a paste-ready Raycast AI Command prompt for summarizing selected text."

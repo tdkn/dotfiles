@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+apm install -g
+
+# GitButler ships its skill alongside the CLI binary, so the two drift apart
+# whenever `but` is upgraded. Reinstall with `but skill install --global`.
+but skill check

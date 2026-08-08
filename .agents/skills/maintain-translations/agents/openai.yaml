@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain Translations"
+  short_description: "Keep English and Japanese docs aligned"
+  default_prompt: "Use $maintain-translations to keep translation files aligned with source documentation changes."
