@@ -13,4 +13,5 @@ dependencies:
     - anthropics/skills/skills/frontend-design
     - ast-grep/agent-skill/ast-grep/skills/ast-grep
     - github/awesome-copilot/skills/create-agentsmd
+    - openai/codex/.codex/skills/babysit-pr
     - shadcn/improve/skills/improve
