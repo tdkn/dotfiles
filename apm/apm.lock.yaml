@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-08T00:35:27.807576+00:00'
+generated_at: '2026-08-13T01:41:40.436580+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: anthropics/skills
@@ -61,6 +61,43 @@ dependencies:
     .agents/skills/create-agentsmd/SKILL.md: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
     .claude/skills/create-agentsmd/SKILL.md: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
   content_hash: sha256:bfbdbb76b17cca970d1d624e36ce72b6847860d740581c8865da796c1fef8552
+- repo_url: openai/codex
+  name: babysit-pr
+  host: github.com
+  resolved_commit: 5104cb649e653d8ea828db547fd04cbd004d32fb
+  version: unknown
+  virtual_path: .codex/skills/babysit-pr
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/babysit-pr
+  - .agents/skills/babysit-pr/SKILL.md
+  - .agents/skills/babysit-pr/agents/openai.yaml
+  - .agents/skills/babysit-pr/references/github-api-notes.md
+  - .agents/skills/babysit-pr/references/heuristics.md
+  - .agents/skills/babysit-pr/scripts/gh_pr_watch.py
+  - .agents/skills/babysit-pr/scripts/test_gh_pr_watch.py
+  - .claude/skills/babysit-pr
+  - .claude/skills/babysit-pr/SKILL.md
+  - .claude/skills/babysit-pr/agents/openai.yaml
+  - .claude/skills/babysit-pr/references/github-api-notes.md
+  - .claude/skills/babysit-pr/references/heuristics.md
+  - .claude/skills/babysit-pr/scripts/gh_pr_watch.py
+  - .claude/skills/babysit-pr/scripts/test_gh_pr_watch.py
+  deployed_file_hashes:
+    .agents/skills/babysit-pr/SKILL.md: sha256:8e4b149a345eca77207cb061209eed500924695c9d5547c99f0a42215597de2e
+    .agents/skills/babysit-pr/agents/openai.yaml: sha256:28565a936da54b49abaf71a1087491a0593b336e8219b80fd83764429d05d422
+    .agents/skills/babysit-pr/references/github-api-notes.md: sha256:33e0202472fa2e01e41d11ddc6cdc625d67ebff2c3282a0ca14f23a0950d23d2
+    .agents/skills/babysit-pr/references/heuristics.md: sha256:6da7e334fa16a3cd4d022e996e819c0285e5ffde37ff83a5c3b7a907c6848c07
+    .agents/skills/babysit-pr/scripts/gh_pr_watch.py: sha256:9f9e992ec1f3e5a99546c79334ae2e0f810279edbd8b50fa894f2b275d644417
+    .agents/skills/babysit-pr/scripts/test_gh_pr_watch.py: sha256:a6c719d03bda4dd1d2aead3ec49b83f443320776e721d72dfd57256c95d60ea4
+    .claude/skills/babysit-pr/SKILL.md: sha256:8e4b149a345eca77207cb061209eed500924695c9d5547c99f0a42215597de2e
+    .claude/skills/babysit-pr/agents/openai.yaml: sha256:28565a936da54b49abaf71a1087491a0593b336e8219b80fd83764429d05d422
+    .claude/skills/babysit-pr/references/github-api-notes.md: sha256:33e0202472fa2e01e41d11ddc6cdc625d67ebff2c3282a0ca14f23a0950d23d2
+    .claude/skills/babysit-pr/references/heuristics.md: sha256:6da7e334fa16a3cd4d022e996e819c0285e5ffde37ff83a5c3b7a907c6848c07
+    .claude/skills/babysit-pr/scripts/gh_pr_watch.py: sha256:9f9e992ec1f3e5a99546c79334ae2e0f810279edbd8b50fa894f2b275d644417
+    .claude/skills/babysit-pr/scripts/test_gh_pr_watch.py: sha256:a6c719d03bda4dd1d2aead3ec49b83f443320776e721d72dfd57256c95d60ea4
+  content_hash: sha256:ff1e68a955d2d4e07dfd307d827f2124d2681822e4abc6b8a2adaaebc584861a
 - repo_url: shadcn/improve
   name: improve
   host: github.com
@@ -118,6 +155,69 @@ deployments:
   - ast-grep/agent-skill/ast-grep/skills/ast-grep
   active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
   content_hash: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/babysit-pr
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/babysit-pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:8e4b149a345eca77207cb061209eed500924695c9d5547c99f0a42215597de2e
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/babysit-pr/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:28565a936da54b49abaf71a1087491a0593b336e8219b80fd83764429d05d422
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/babysit-pr/references/github-api-notes.md
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:33e0202472fa2e01e41d11ddc6cdc625d67ebff2c3282a0ca14f23a0950d23d2
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/babysit-pr/references/heuristics.md
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:6da7e334fa16a3cd4d022e996e819c0285e5ffde37ff83a5c3b7a907c6848c07
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/babysit-pr/scripts/gh_pr_watch.py
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:9f9e992ec1f3e5a99546c79334ae2e0f810279edbd8b50fa894f2b275d644417
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/babysit-pr/scripts/test_gh_pr_watch.py
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:a6c719d03bda4dd1d2aead3ec49b83f443320776e721d72dfd57256c95d60ea4
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/create-agentsmd
@@ -235,6 +335,69 @@ deployments:
   - ast-grep/agent-skill/ast-grep/skills/ast-grep
   active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
   content_hash: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/babysit-pr
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/babysit-pr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:8e4b149a345eca77207cb061209eed500924695c9d5547c99f0a42215597de2e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/babysit-pr/agents/openai.yaml
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:28565a936da54b49abaf71a1087491a0593b336e8219b80fd83764429d05d422
+- kind: project-relative
+  target: claude
+  value: .claude/skills/babysit-pr/references/github-api-notes.md
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:33e0202472fa2e01e41d11ddc6cdc625d67ebff2c3282a0ca14f23a0950d23d2
+- kind: project-relative
+  target: claude
+  value: .claude/skills/babysit-pr/references/heuristics.md
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:6da7e334fa16a3cd4d022e996e819c0285e5ffde37ff83a5c3b7a907c6848c07
+- kind: project-relative
+  target: claude
+  value: .claude/skills/babysit-pr/scripts/gh_pr_watch.py
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:9f9e992ec1f3e5a99546c79334ae2e0f810279edbd8b50fa894f2b275d644417
+- kind: project-relative
+  target: claude
+  value: .claude/skills/babysit-pr/scripts/test_gh_pr_watch.py
+  runtime: null
+  scope: project
+  owners:
+  - openai/codex/.codex/skills/babysit-pr
+  active_owner: openai/codex/.codex/skills/babysit-pr
+  content_hash: sha256:a6c719d03bda4dd1d2aead3ec49b83f443320776e721d72dfd57256c95d60ea4
 - kind: project-relative
   target: claude
   value: .claude/skills/create-agentsmd
