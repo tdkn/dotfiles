@@ -1,0 +1,17 @@
+# Claude Code CLI command rule for Codex outside-sandbox execution.
+# This Starlark file is loaded at startup; restart Codex after changing it.
+# Claude Code can use network, local authentication, workspace files, and tools.
+
+prefix_rule(
+    pattern = ["claude"],
+    decision = "prompt",
+    justification = "Claude Code requires network and local authentication access; review each invocation",
+    match = [
+        "claude -p Explain this function",
+        "claude auth status",
+        "claude --help",
+    ],
+    not_match = [
+        "npx claude -p Explain this function",
+    ],
+)
