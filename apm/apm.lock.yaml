@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-13T01:41:40.436580+00:00'
+generated_at: '2026-08-25T05:11:48.831097+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: anthropics/skills
@@ -44,6 +44,40 @@ dependencies:
     .claude/skills/ast-grep/SKILL.md: sha256:1d356580b6d3af4feb5722e820b1c34041f6e90162c063f1c63fce3f21c72543
     .claude/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
   content_hash: sha256:e812630c21ec2215bd0abfe33835ae382059112e990411b588b84bb24c4f0a4f
+- repo_url: cursor/plugins
+  name: thermos
+  host: github.com
+  resolved_commit: bdf7aa355337897f167153e05069aca505dae17c
+  version: 1.0.0
+  virtual_path: thermos
+  is_virtual: true
+  package_type: marketplace_plugin
+  deployed_files:
+  - .agents/skills/thermo-nuclear-code-quality-review
+  - .agents/skills/thermo-nuclear-code-quality-review/SKILL.md
+  - .agents/skills/thermo-nuclear-review
+  - .agents/skills/thermo-nuclear-review/SKILL.md
+  - .agents/skills/thermos
+  - .agents/skills/thermos/SKILL.md
+  - .claude/agents/thermo-nuclear-code-quality-review-subagent.md
+  - .claude/agents/thermo-nuclear-review-subagent.md
+  - .claude/skills/thermo-nuclear-code-quality-review
+  - .claude/skills/thermo-nuclear-code-quality-review/SKILL.md
+  - .claude/skills/thermo-nuclear-review
+  - .claude/skills/thermo-nuclear-review/SKILL.md
+  - .claude/skills/thermos
+  - .claude/skills/thermos/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/thermo-nuclear-code-quality-review/SKILL.md: sha256:7faca08b51b643b2ddd0836f92af15574444024685dcc1e677dbbb39ae8c9e8f
+    .agents/skills/thermo-nuclear-review/SKILL.md: sha256:5091011c4490932d40658ae958fb55b9aaca8e2bba5196860295ab945180e434
+    .agents/skills/thermos/SKILL.md: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472
+    .claude/agents/thermo-nuclear-code-quality-review-subagent.md: sha256:636800f1e5acf501f339779a8867b95d633396930b3356a2b0c9a0018343f02d
+    .claude/agents/thermo-nuclear-review-subagent.md: sha256:9dfa8ed88d1ea5d775edb5557b8a8ecfa9f2977b904c55c902b0ceb648b563d0
+    .claude/skills/thermo-nuclear-code-quality-review/SKILL.md: sha256:7faca08b51b643b2ddd0836f92af15574444024685dcc1e677dbbb39ae8c9e8f
+    .claude/skills/thermo-nuclear-review/SKILL.md: sha256:5091011c4490932d40658ae958fb55b9aaca8e2bba5196860295ab945180e434
+    .claude/skills/thermos/SKILL.md: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472
+  content_hash: sha256:71547a01d95289a4613d13e8c5cd7eed66ac83f3b2dcbc0b92894b69fa5fabf7
+  declared_license: MIT
 - repo_url: github/awesome-copilot
   name: create-agentsmd
   host: github.com
@@ -309,6 +343,78 @@ deployments:
   active_owner: shadcn/improve/skills/improve
   content_hash: sha256:7be76dd3c29442288fa7cee4432fc6e95c2fdbf748c9b356344bf647c5f8722e
 - kind: project-relative
+  target: agent-skills
+  value: .agents/skills/thermo-nuclear-code-quality-review
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/thermo-nuclear-code-quality-review/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:7faca08b51b643b2ddd0836f92af15574444024685dcc1e677dbbb39ae8c9e8f
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/thermo-nuclear-review
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/thermo-nuclear-review/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:5091011c4490932d40658ae958fb55b9aaca8e2bba5196860295ab945180e434
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/thermos
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/thermos/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472
+- kind: project-relative
+  target: claude
+  value: .claude/agents/thermo-nuclear-code-quality-review-subagent.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:636800f1e5acf501f339779a8867b95d633396930b3356a2b0c9a0018343f02d
+- kind: project-relative
+  target: claude
+  value: .claude/agents/thermo-nuclear-review-subagent.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:9dfa8ed88d1ea5d775edb5557b8a8ecfa9f2977b904c55c902b0ceb648b563d0
+- kind: project-relative
   target: claude
   value: .claude/skills/ast-grep
   runtime: null
@@ -488,3 +594,57 @@ deployments:
   - shadcn/improve/skills/improve
   active_owner: shadcn/improve/skills/improve
   content_hash: sha256:7be76dd3c29442288fa7cee4432fc6e95c2fdbf748c9b356344bf647c5f8722e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/thermo-nuclear-code-quality-review
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/thermo-nuclear-code-quality-review/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:7faca08b51b643b2ddd0836f92af15574444024685dcc1e677dbbb39ae8c9e8f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/thermo-nuclear-review
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/thermo-nuclear-review/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:5091011c4490932d40658ae958fb55b9aaca8e2bba5196860295ab945180e434
+- kind: project-relative
+  target: claude
+  value: .claude/skills/thermos
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/thermos/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/thermos
+  active_owner: cursor/plugins/thermos
+  content_hash: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472

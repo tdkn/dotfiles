@@ -15,3 +15,4 @@ dependencies:
     - github/awesome-copilot/skills/create-agentsmd
     - openai/codex/.codex/skills/babysit-pr
     - shadcn/improve/skills/improve
+    - cursor/plugins/thermos
