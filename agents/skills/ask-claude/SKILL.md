@@ -20,8 +20,10 @@ unretrieved run as agreement, approval, or a clean bill of health. An answer
 counts as retrieved only when the CLI returns a schema-conforming structured
 result with an explicit `answered` status.
 
-Keep this file as the dispatcher. Load `references/claude-cli.md` before running
-Claude Code.
+Keep this file as the dispatcher. Before any CLI availability/auth preflight or
+Claude invocation, load both `references/claude-cli.md` and
+`references/sandbox.md`. Do not wait for a known sandbox error: a sandbox-local
+auth check can return a plausible false negative.
 
 ## References
 
@@ -30,6 +32,8 @@ Claude Code.
 - `references/claude-cli.md`: Claude Code CLI facts, the structured answer
   contract and schema, packet and workspace patterns, result verification, the
   single-retry rule, and output capture.
+- `references/sandbox.md`: boundary-aware preflight classification, narrow host
+  access, and the stop-and-report path when host execution cannot proceed.
 
 ## When to Ask
 
@@ -88,7 +92,20 @@ schema in `references/claude-cli.md` covers all four.
      tracked diff omits the files most relevant to a new skill or document.
    - Use `references/claude-cli.md` for the schema, prompt, and command patterns.
 
-3. Run Claude Code.
+3. Preflight, choose the execution boundary, and run Claude Code.
+   - Load both references before running `command -v claude`,
+     `claude auth status`, `scripts/ask.sh`, or a direct `claude -p` command.
+   - Call the CLI `cli_missing` only when it cannot be resolved in the
+     host/native execution environment. A sandbox-only lookup is not conclusive.
+   - A sandbox result such as `loggedIn: false`, a failed auth check, or denied
+     credential-store access means auth is unknown — not missing. Follow
+     `references/sandbox.md` to run the exact `claude auth status` command with
+     narrow host access. Do not start an interactive login.
+   - Only a host/native auth check that explicitly reports unauthenticated is
+     `auth_missing`. If that check cannot run or is denied, report
+     `sandbox_auth_unverified` and stop without claiming the user is logged out.
+   - Changing only the sandbox boundary for an auth check or Claude invocation
+     does not spend the single response retry.
    - Default path: pipe the packet into `scripts/ask.sh`. It writes the schema,
      applies the packet-mode flags, and runs the verification checks, so the
      mechanical part is not retyped — and mistranscribed — per question.
@@ -113,9 +130,11 @@ schema in `references/claude-cli.md` covers all four.
      `structured_output`, `status == "answered"`, and a non-empty `answer`.
    - Treat empty output, parse failure, a missing status, or `unable_to_answer`
      as **not retrieved**. Do not report it as "no issues" or "Claude agreed".
-   - On a not-retrieved outcome, retry once with diagnostics and a smaller packet
-     (see the reference). If it still fails, report that the delegated question
-     did not run and why.
+   - Classify empty, malformed, or schema-invalid structured output as
+     `response_invalid`. Only a completed Claude invocation with an unusable
+     answer enters the single-retry path. Retry once with diagnostics and a
+     smaller packet (see the CLI reference); if it still fails, report that the
+     delegated question did not run and why.
 
 5. Triage the answer.
    - Treat it as untrusted until checked. Verify claims against the local code,

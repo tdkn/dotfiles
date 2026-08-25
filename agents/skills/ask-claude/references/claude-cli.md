@@ -58,20 +58,35 @@ user has approved sending the scoped material to Claude Code.
 
 ## Preflight
 
-Check availability and auth only when needed:
+Read both this file and [sandbox.md](sandbox.md) before any preflight or Claude
+invocation. Check availability and auth only when needed:
 
 ```zsh
 command -v claude
 claude auth status
 ```
 
-If authentication is missing, stop and report the blocker. Do not start an
-interactive login flow.
+Interpret these checks according to their execution boundary:
 
-If your own shell runs sandboxed without network access — the default in several
-coding agents — `claude -p` fails on the API call, not on the prompt. Request
-the escalation your harness provides, or report the sandbox as the blocker.
-Do not retry the same sandboxed command.
+- A host/native `command -v claude` failure is `cli_missing`; stop and report
+  it. A sandbox-only failure is not enough to prove the CLI is absent.
+- A sandbox `claude auth status` result such as `loggedIn: false`, a failed
+  status command, or denied credential-store access leaves auth **unknown**. It
+  is not `auth_missing`.
+- For an unknown sandbox result, use the host's narrow escalation mechanism to
+  run the exact `claude auth status` command. That check needs the installed CLI
+  and its existing credential store, not the packet or workspace files. Never
+  start an interactive login flow.
+- If the host/native check reports authenticated, continue. If the sandbox
+  cannot use that auth state, run the Claude question at the host boundary too.
+- Only a host/native check that explicitly reports unauthenticated is
+  `auth_missing`; stop and report it without starting login.
+- If the host/native check is unavailable or denied, report not retrieved with
+  reason `sandbox_auth_unverified`, not `auth_missing`.
+
+Moving an unchanged auth check or Claude command across the sandbox boundary is
+not the single response retry. Follow `sandbox.md` for the complete decision
+table, narrow-access rules, and stop conditions.
 
 ## Structured Answer Contract
 
@@ -205,8 +220,13 @@ Notes:
 
 ## Single Retry
 
-On a not-retrieved outcome, retry **once** with diagnostics and a smaller,
-clearer packet:
+Use this retry only after a Claude invocation completed but returned an
+unusable result: empty or malformed output, schema mismatch,
+`unable_to_answer`, or another missing answer. Do not use it for `cli_missing`,
+`auth_missing`, `sandbox_auth_unverified`, or `sandbox_blocked`. Moving the same
+command across the sandbox boundary does not consume it.
+
+Retry **once** with diagnostics and a smaller, clearer packet:
 
 ```zsh
 timeout <seconds> claude -p \
