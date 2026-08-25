@@ -1,0 +1,63 @@
+[
+  {
+    "query": "Codex just rewrote the token refresh path in our auth middleware and I'm not confident it's right. Before I merge, get a second opinion on it from Claude Code.",
+    "should_trigger": true,
+    "note": "explicit, review mode"
+  },
+  {
+    "query": "this migration drops and recreates the index on orders — i've stared at it for an hour and still can't decide if the downtime is acceptable. can you have another model sanity check my reasoning?",
+    "should_trigger": true,
+    "note": "decide mode, casual, never names Claude"
+  },
+  {
+    "query": "さっきの修正、別のエージェントにもレビューしてもらいたい",
+    "should_trigger": true,
+    "note": "Japanese, terse, second-opinion intent"
+  },
+  {
+    "query": "tests/test_scheduler.py::test_retry_backoff only fails in CI, never locally. I've already ruled out timezone and clock skew. Ask Claude what else could be causing it.",
+    "should_trigger": true,
+    "audience": "non-claude",
+    "note": "debug mode, explicit. Only meaningful from a non-Claude caller: run through `claude -p`, 'Ask Claude' reads as 'you, answer me', and not triggering is the correct behavior."
+  },
+  {
+    "query": "I don't understand what this constraint is doing and the author has left the company — `type Registry<T extends Record<string, (...args: never[]) => unknown>>`. Before I refactor around it, can we get a read on it from a model that hasn't been staring at this code with me?",
+    "should_trigger": true,
+    "note": "explain mode, self-contained. Keep the snippet inline: a path to a file the eval workspace lacks sends the run hunting for it instead of reaching for the skill."
+  },
+  {
+    "query": "before we commit to event sourcing for billing, i want a devil's advocate pass from a different model on the two designs we shortlisted",
+    "should_trigger": true,
+    "note": "adversarial decide mode, no product name"
+  },
+  {
+    "query": "review this diff and fix the off-by-one in the pagination helper while you're in there",
+    "should_trigger": false,
+    "note": "near-miss: review keyword, but wants the current agent to review and edit"
+  },
+  {
+    "query": "claude.md にコミット規約を追記しておいて",
+    "should_trigger": false,
+    "note": "near-miss: names Claude, but it is a config file edit"
+  },
+  {
+    "query": "we're getting rate limited by the Anthropic API in production — add exponential backoff to the client in src/llm/client.ts",
+    "should_trigger": false,
+    "note": "near-miss: Anthropic keyword, but it is implementation work"
+  },
+  {
+    "query": "ask the user whether they want the feature flag defaulted on before you continue",
+    "should_trigger": false,
+    "note": "near-miss: delegation shape, but the target is the user"
+  },
+  {
+    "query": "install the claude code CLI on this machine and set up auth so I can use it later",
+    "should_trigger": false,
+    "note": "near-miss: names the CLI, but it is environment setup, not a question"
+  },
+  {
+    "query": "run the test suite and tell me which tests are failing on this branch",
+    "should_trigger": false,
+    "note": "plain local work the agent can settle itself"
+  }
+]

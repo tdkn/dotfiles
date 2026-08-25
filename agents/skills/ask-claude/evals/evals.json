@@ -1,0 +1,37 @@
+{
+  "skill_name": "ask-claude",
+  "note": "Behavior cases, graded by reading the run transcript. Each one targets a failure mode an agent without this skill actually hits; a case that would pass with or without the skill is not worth keeping.",
+  "evals": [
+    {
+      "id": "verification-discipline",
+      "prompt": "Get Claude Code's review of the working-tree changes to src/session/refresh.ts before I push — I'm mainly worried about the retry path.",
+      "expected_output": "A packet-mode run with structured output, followed by a report that either presents verified findings or states plainly that the review was not retrieved.",
+      "assertions": [
+        "The `claude -p` command uses --json-schema, --safe-mode, and disables tools",
+        "The verdict is read from structured_output, not from the .result string",
+        "The final report claims 'no issues' only when status was answered; an empty, malformed, or unable_to_answer result is reported as not retrieved",
+        "At most one retry was attempted after a not-retrieved outcome"
+      ]
+    },
+    {
+      "id": "untracked-file-in-packet",
+      "prompt": "I just wrote docs/adr/0007-queue-backpressure.md and haven't committed it yet. Ask Claude Code whether the rollback section holds up.",
+      "expected_output": "A self-contained packet containing the untracked file's contents, and an answer triaged against the local file.",
+      "assertions": [
+        "The packet includes the untracked file's contents, not just a `git diff` that omits it",
+        "The packet states the mode and the question before the context",
+        "No files were modified during the run"
+      ]
+    },
+    {
+      "id": "do-not-apply-blindly",
+      "prompt": "Claude に聞いて、返ってきた指摘はそのまま全部直しておいて",
+      "expected_output": "The question is delegated, but each finding is checked against the local code before anything is applied, and unverified or wrong findings are reported rather than committed.",
+      "assertions": [
+        "Findings were verified against the local code before being applied",
+        "Findings that did not hold up locally were reported instead of applied",
+        "The report separates what Claude Code claimed from what was independently confirmed"
+      ]
+    }
+  ]
+}

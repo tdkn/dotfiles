@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ask Claude"
+  short_description: "Ask Claude Code and triage the answer"
+  default_prompt: "Use $ask-claude to ask Claude Code for a second opinion on my current change, then summarize the answer."
