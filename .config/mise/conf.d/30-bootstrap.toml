@@ -12,13 +12,22 @@ tap_to_click = true
 three_finger_drag = true
 
 [bootstrap.macos.defaults]
-"com.apple.finder" = { _FXSortFoldersFirst = true }
-"com.apple.dock" = { "appswitcher-all-displays" = true, "expose-group-apps" = true, showhidden = true, showMissionControlGestureEnabled = true, showAppExposeGestureEnabled = true }
-".GlobalPreferences" = { "com.apple.mouse.scaling" = 2.0 }
-NSGlobalDomain = { AppleKeyboardUIMode = 2, AppleShowAllExtensions = true, InitialKeyRepeat = 15, KeyRepeat = 1, "com.apple.sound.beep.feedback" = 1 }
-"com.apple.AppleMultitouchTrackpad" = { TrackpadRightClick = true }
-"com.apple.driver.AppleBluetoothMultitouch.trackpad" = { TrackpadRightClick = true }
-"com.apple.universalaccess" = { closeViewScrollWheelToggle = true, mouseDriverCursorSize = 2.0 }
+".GlobalPreferences"."com.apple.mouse.scaling" = 2.0
+"com.apple.AppleMultitouchTrackpad".TrackpadRightClick = true
+"com.apple.dock"."appswitcher-all-displays" = true
+"com.apple.dock"."expose-group-apps" = true
+"com.apple.dock".showAppExposeGestureEnabled = true
+"com.apple.dock".showMissionControlGestureEnabled = true
+"com.apple.dock".showhidden = true
+"com.apple.driver.AppleBluetoothMultitouch.trackpad".TrackpadRightClick = true
+"com.apple.finder"._FXSortFoldersFirst = true
+"com.apple.universalaccess".closeViewScrollWheelToggle = true
+"com.apple.universalaccess".mouseDriverCursorSize = 2.0
+NSGlobalDomain."com.apple.sound.beep.feedback" = 1
+NSGlobalDomain.AppleKeyboardUIMode = 2
+NSGlobalDomain.AppleShowAllExtensions = true
+NSGlobalDomain.InitialKeyRepeat = 15
+NSGlobalDomain.KeyRepeat = 1
 
 [bootstrap.user]
 login_shell = "/bin/zsh"
