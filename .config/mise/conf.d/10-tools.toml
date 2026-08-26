@@ -2,6 +2,7 @@
 apm = "latest"
 bun = "latest"
 deno = "latest"
+java = "temurin-21"
 node = "25"
 pnpm = "latest"
 "npm:@ast-grep/cli" = "latest"

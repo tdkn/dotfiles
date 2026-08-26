@@ -2,6 +2,13 @@
 EDITOR = "nvim"
 VISUAL = "nvim"
 PAGER = "less"
+ANDROID_HOME = "$HOME/Library/Android/sdk"
+
+_.path = [
+  "~/Library/Android/sdk/platform-tools",
+  "~/Library/Android/sdk/emulator",
+  "~/Library/Android/sdk/cmdline-tools/latest/bin",
+]
 
 [shell_alias]
 ghqc = "ghq-clone"
