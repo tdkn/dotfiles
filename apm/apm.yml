@@ -16,6 +16,7 @@ dependencies:
     - openai/codex/.codex/skills/babysit-pr
     - shadcn/improve/skills/improve
     - cursor/plugins/thermos
+    - cursor/plugins/pstack/skills/unslop
     - android/skills/devtools/android-cli
     - android/skills/jetpack-compose/adaptive
     - android/skills/jetpack-compose/migration/migrate-xml-views-to-jetpack-compose

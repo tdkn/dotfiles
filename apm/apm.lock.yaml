@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-26T07:16:05.907344+00:00'
+generated_at: '2026-09-01T07:09:52.695341+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: android/skills
@@ -616,6 +616,23 @@ dependencies:
     .claude/skills/ast-grep/SKILL.md: sha256:1d356580b6d3af4feb5722e820b1c34041f6e90162c063f1c63fce3f21c72543
     .claude/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
   content_hash: sha256:e812630c21ec2215bd0abfe33835ae382059112e990411b588b84bb24c4f0a4f
+- repo_url: cursor/plugins
+  name: unslop
+  host: github.com
+  resolved_commit: b9ddc83c32972210b8a94d389130713e8eed346e
+  version: unknown
+  virtual_path: pstack/skills/unslop
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/unslop
+  - .agents/skills/unslop/SKILL.md
+  - .claude/skills/unslop
+  - .claude/skills/unslop/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/unslop/SKILL.md: sha256:181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441
+    .claude/skills/unslop/SKILL.md: sha256:181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441
+  content_hash: sha256:3dfc2afeda677e12c6065497a40df7d895859de1c7d1cffb899b1559d129fe4f
 - repo_url: cursor/plugins
   name: thermos
   host: github.com
@@ -2022,6 +2039,24 @@ deployments:
   active_owner: cursor/plugins/thermos
   content_hash: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472
 - kind: project-relative
+  target: agent-skills
+  value: .agents/skills/unslop
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/pstack/skills/unslop
+  active_owner: cursor/plugins/pstack/skills/unslop
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/unslop/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/pstack/skills/unslop
+  active_owner: cursor/plugins/pstack/skills/unslop
+  content_hash: sha256:181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441
+- kind: project-relative
   target: claude
   value: .claude/agents/thermo-nuclear-code-quality-review-subagent.md
   runtime: null
@@ -3326,3 +3361,21 @@ deployments:
   - cursor/plugins/thermos
   active_owner: cursor/plugins/thermos
   content_hash: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472
+- kind: project-relative
+  target: claude
+  value: .claude/skills/unslop
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/pstack/skills/unslop
+  active_owner: cursor/plugins/pstack/skills/unslop
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/unslop/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - cursor/plugins/pstack/skills/unslop
+  active_owner: cursor/plugins/pstack/skills/unslop
+  content_hash: sha256:181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441
