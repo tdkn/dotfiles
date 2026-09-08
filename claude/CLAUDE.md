@@ -42,6 +42,18 @@
 - Use Conventional Commits. A commit body is required.
 - Include a `Co-authored-by: Claude <noreply@anthropic.com>` trailer in commit messages.
 
+## GitHub attachments
+
+- Use `--attach` to upload local images or videos with `gh issue` or `gh pr`
+  `create`, `edit`, and `comment`. Repository push access is required.
+- Example: `gh pr comment 123 --body-file body.md --attach screenshot.png`.
+  Repeat `--attach` for multiple files.
+- To place an image inline, include `![Screenshot](screenshot.png)` in the body
+  and attach the same path. GitHub CLI replaces it with the uploaded URL;
+  attachments without a matching reference are appended to the body.
+- Check the command's `--help` for `--attach`. If missing, report that the
+  installed CLI needs updating rather than assuming CLI uploads are unsupported.
+
 ## GitHub attribution
 
 - When starting implementation work on a GitHub issue, assign it to `tdkn`.
