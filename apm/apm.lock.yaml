@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-09-01T07:09:52.695341+00:00'
+generated_at: '2026-09-04T03:40:03.614033+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: android/skills
@@ -684,6 +684,23 @@ dependencies:
     .agents/skills/create-agentsmd/SKILL.md: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
     .claude/skills/create-agentsmd/SKILL.md: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
   content_hash: sha256:bfbdbb76b17cca970d1d624e36ce72b6847860d740581c8865da796c1fef8552
+- repo_url: humanlayer/skills
+  name: show-me
+  host: github.com
+  resolved_commit: 3c2629142c5d437428269b1b722b08c0b87f574d
+  version: unknown
+  virtual_path: plugins/show-me/skills/show-me
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/show-me
+  - .agents/skills/show-me/SKILL.md
+  - .claude/skills/show-me
+  - .claude/skills/show-me/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/show-me/SKILL.md: sha256:bea6da70a58096730b9aeb0bae293ddf4726103a98efc9ce13c481619942a810
+    .claude/skills/show-me/SKILL.md: sha256:bea6da70a58096730b9aeb0bae293ddf4726103a98efc9ce13c481619942a810
+  content_hash: sha256:de32a72f802801f08a84641b467f2c6306d35a58ce5e59ea607ac3a993a18c91
 - repo_url: openai/codex
   name: babysit-pr
   host: github.com
@@ -1939,6 +1956,24 @@ deployments:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
   content_hash: sha256:384da2bdff16d8f553acb3aeb9aac93962c4b8d160b40faf4939f4de53a06e92
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/show-me
+  runtime: null
+  scope: project
+  owners:
+  - humanlayer/skills/plugins/show-me/skills/show-me
+  active_owner: humanlayer/skills/plugins/show-me/skills/show-me
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/show-me/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - humanlayer/skills/plugins/show-me/skills/show-me
+  active_owner: humanlayer/skills/plugins/show-me/skills/show-me
+  content_hash: sha256:bea6da70a58096730b9aeb0bae293ddf4726103a98efc9ce13c481619942a810
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/testing-setup
@@ -3262,6 +3297,24 @@ deployments:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
   content_hash: sha256:384da2bdff16d8f553acb3aeb9aac93962c4b8d160b40faf4939f4de53a06e92
+- kind: project-relative
+  target: claude
+  value: .claude/skills/show-me
+  runtime: null
+  scope: project
+  owners:
+  - humanlayer/skills/plugins/show-me/skills/show-me
+  active_owner: humanlayer/skills/plugins/show-me/skills/show-me
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/show-me/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - humanlayer/skills/plugins/show-me/skills/show-me
+  active_owner: humanlayer/skills/plugins/show-me/skills/show-me
+  content_hash: sha256:bea6da70a58096730b9aeb0bae293ddf4726103a98efc9ce13c481619942a810
 - kind: project-relative
   target: claude
   value: .claude/skills/testing-setup
