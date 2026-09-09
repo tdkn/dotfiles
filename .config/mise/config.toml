@@ -1,6 +1,7 @@
 min_version = { hard = "2026.7.5" }
 
 [settings]
+locked_scopes = ["project"]
 dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink"
 npm.package_manager = "pnpm"
