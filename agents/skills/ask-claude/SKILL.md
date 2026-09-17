@@ -111,7 +111,7 @@ schema in `references/claude-cli.md` covers all four.
      mechanical part is not retyped — and mistranscribed — per question.
 
      ```zsh
-     "<skill-dir>/scripts/ask.sh" --timeout 300 < packet.txt
+     "<skill-dir>/scripts/ask.sh" --timeout 600 < packet.txt
      ```
 
    - It prints the structured answer and exits 0 when the answer is retrieved,

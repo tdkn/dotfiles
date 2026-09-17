@@ -18,7 +18,7 @@ set -u
 # opinion silently becomes an echo. Override per call for routine questions.
 model="claude-opus-5"
 effort="max"
-timeout_secs=300
+timeout_secs=600
 
 while [ $# -gt 0 ]; do
   case "$1" in
