@@ -27,8 +27,8 @@ auth check can return a plausible false negative.
 
 ## References
 
-- `scripts/ask.sh`: one packet-mode question, run and verified. Use it instead
-  of retyping the flags and the checks.
+- `scripts/ask.sh`: one packet-mode question with progress monitoring and answer
+  verification. Requires Node.js and the Claude CLI, with no npm packages.
 - `references/claude-cli.md`: Claude Code CLI facts, the structured answer
   contract and schema, packet and workspace patterns, result verification, the
   single-retry rule, and output capture.
@@ -106,16 +106,28 @@ schema in `references/claude-cli.md` covers all four.
      `sandbox_auth_unverified` and stop without claiming the user is logged out.
    - Changing only the sandbox boundary for an auth check or Claude invocation
      does not spend the single response retry.
-   - Default path: pipe the packet into `scripts/ask.sh`. It writes the schema,
-     applies the packet-mode flags, and runs the verification checks, so the
-     mechanical part is not retyped — and mistranscribed — per question.
+   - Default path: pipe the packet into `scripts/ask.sh`. It applies the schema
+     and packet-mode flags, monitors progress, and verifies the final answer.
 
      ```zsh
-     "<skill-dir>/scripts/ask.sh" --timeout 600 < packet.txt
+     ask_dir=$(mktemp -d "${TMPDIR:-/tmp}/claude-ask.XXXXXX")
+     "<skill-dir>/scripts/ask.sh" --status-file "$ask_dir/status.json" < packet.txt
      ```
 
-   - It prints the structured answer and exits 0 when the answer is retrieved,
-     or prints a diagnosis on stderr and exits 1 when it is not.
+   - Keep the execution session open and poll it every 30–60 seconds. Read the
+     optional status file for elapsed time, the last observed phase, progress
+     age, API retry information, and the final outcome. A phase is a past
+     observation, not proof that Claude is still making progress.
+   - The helper reports status changes and a heartbeat every 30 seconds on
+     stderr. At 10 minutes elapsed or without content progress it warns and
+     continues. Silence alone never ends the run. The hard limit is 30 minutes;
+     `--timeout <seconds>` changes it. Do not add an outer 10-minute timeout. If
+     the execution tool requires a hard deadline, allow the configured limit
+     plus at least 15 seconds for process cleanup.
+   - It prints only the verified structured answer on stdout and exits 0 when
+     retrieved. Otherwise it reports the reason on stderr and exits non-zero.
+     Thinking text and partial answers are neither printed nor saved. Read the
+     final status before removing the caller-owned temporary directory.
    - It pins Opus 5 at `max` effort, which is the expensive end. Pass `--model`
      and `--effort` to step down for a routine question.
    - Build the command by hand from `references/claude-cli.md` when you need
@@ -127,14 +139,16 @@ schema in `references/claude-cli.md` covers all four.
    - `scripts/ask.sh` already exits non-zero on every not-retrieved outcome.
      When you ran the CLI by hand, check the same things: shell exit 0,
      `is_error == false`, `subtype == "success"`, a schema-valid
-     `structured_output`, `status == "answered"`, and a non-empty `answer`.
+     `structured_output` from the final `result` event, `status == "answered"`,
+     and an `answer` containing non-whitespace text.
    - Treat empty output, parse failure, a missing status, or `unable_to_answer`
      as **not retrieved**. Do not report it as "no issues" or "Claude agreed".
    - Classify empty, malformed, or schema-invalid structured output as
      `response_invalid`. Only a completed Claude invocation with an unusable
      answer enters the single-retry path. Retry once with diagnostics and a
-     smaller packet (see the CLI reference); if it still fails, report that the
-     delegated question did not run and why.
+     smaller packet (see the CLI reference). Time limits, cancellations, and
+     process failures do not enter this response retry. If no answer is
+     retrieved, report the outcome and reason.
 
 5. Triage the answer.
    - Treat it as untrusted until checked. Verify claims against the local code,

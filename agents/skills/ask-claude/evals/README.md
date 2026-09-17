@@ -1,7 +1,20 @@
 # Evals
 
-Two deliberately small sets. They exist to catch regressions in the skill, not
-to run an optimization loop.
+The offline runner tests exercise process behavior. Trigger and behavior evals
+check how an agent uses the skill.
+
+## Offline runner tests
+
+Run with Node.js; no network access, Claude credentials, or npm packages are
+needed:
+
+```bash
+node --test agents/skills/ask-claude/evals/runner.test.mjs
+```
+
+The tests use a fake Claude CLI and shortened timers. They cover progress and
+idle warnings, API retry waits, strict final-answer verification, atomic status
+files, stream chunk boundaries, and process cleanup after failure or cancellation.
 
 ## Trigger eval
 
@@ -51,11 +64,12 @@ tool calls: no tool call at all means the description lost, while a `Bash` or
 
 ## Behavior eval
 
-`evals.json` holds three cases, graded by reading the run transcript against
+`evals.json` holds four cases, graded by reading the run transcript against
 each assertion. They target the failure modes that motivate the skill:
 reporting an unretrieved run as "no issues", building a packet that omits
-untracked files, and applying delegated findings without checking them. Grade a
-case as passing only with concrete evidence from the transcript.
+untracked files, applying delegated findings without checking them, and ending
+a live run after a warning. Grade a case as passing only with concrete evidence
+from the transcript.
 
 Run each case twice — once with the skill, once without — when judging whether a
 change to `SKILL.md` earned its tokens. Assertions that pass in both

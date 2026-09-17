@@ -19,9 +19,16 @@ Claude structured-answer schema.
 | `sandbox_auth_unverified` | Sandbox auth is negative/failed and the host check is unavailable or denied. | Report not retrieved without claiming the user is logged out. |
 | `sandbox_blocked` | Permission, DNS, credential-store, or temp-file access prevents preflight or invocation. | Move the unchanged command to a narrowly approved host boundary. |
 | `response_invalid` | Claude ran, but output is empty, malformed, or does not match the structured-answer schema. | Use the one normal response retry from `claude-cli.md`. |
+| `max_duration_exceeded` | The configured hard time limit was reached. | Report the time limit and last observed progress; do not use the response retry. |
+| `cancelled` | The caller interrupted the run. | Let the supervisor clean up the process group and report cancellation; do not retry. |
+| `process_failed` | Claude failed to start or exited unsuccessfully. | Report the failure. Check for the boundary errors above before classifying it; do not use the response retry. |
 
 `unable_to_answer` is a schema-valid but not-retrieved response. It uses the
 same normal response-retry path, but it is not `response_invalid`.
+
+An elapsed-time or idle warning is not a not-retrieved outcome. Keep the
+execution session alive and follow `claude-cli.md` until the supervisor records
+a terminal outcome. A sandbox block does not justify adding a shorter timeout.
 
 ## Verify Authentication Across the Boundary
 

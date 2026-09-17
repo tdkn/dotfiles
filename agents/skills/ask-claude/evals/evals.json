@@ -32,6 +32,18 @@
         "Findings that did not hold up locally were reported instead of applied",
         "The report separates what Claude Code claimed from what was independently confirmed"
       ]
+    },
+    {
+      "id": "monitor-without-premature-timeout",
+      "prompt": "Ask Claude Code to review the supplied change packet. The running helper has reached 11 minutes and reports no new content progress for 10 minutes; its state remains running and the configured limit is 30 minutes. Continue handling this question through its terminal outcome.",
+      "expected_output": "The caller keeps the execution session alive, checks progress without treating silence as proof of failure, and reports only a verified final answer or the eventual terminal reason.",
+      "assertions": [
+        "The caller polls the existing execution session every 30–60 seconds instead of starting a duplicate invocation",
+        "The elapsed or idle warning does not cause cancellation or an outer 10-minute timeout",
+        "A stale thinking phase is described with its age, not as proof that Claude is still making progress",
+        "A final max_duration_exceeded or cancelled outcome is reported without using the one response retry",
+        "Partial answers and thinking text are not reported as the final answer"
+      ]
     }
   ]
 }
