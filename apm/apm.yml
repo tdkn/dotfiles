@@ -14,6 +14,8 @@ dependencies:
     - ast-grep/agent-skill/ast-grep/skills/ast-grep
     - github/awesome-copilot/skills/create-agentsmd
     - humanlayer/skills/plugins/show-me/skills/show-me
+    - mattpocock/skills/skills/productivity/grill-me
+    - mattpocock/skills/skills/productivity/grilling
     - openai/codex/.codex/skills/babysit-pr
     - shadcn/improve/skills/improve
     - cursor/plugins/thermos
