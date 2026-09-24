@@ -2,6 +2,7 @@
 EDITOR = "nvim"
 VISUAL = "nvim"
 PAGER = "less"
+DISABLE_AUTOUPDATER = "1"
 ANDROID_HOME = "$HOME/Library/Android/sdk"
 
 _.path = [
