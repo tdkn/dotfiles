@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-09-09T07:17:15.598431+00:00'
+generated_at: '2026-09-28T08:54:33.889434+00:00'
 apm_version: 0.28.0
 dependencies:
 - repo_url: android/skills
@@ -743,6 +743,23 @@ dependencies:
     .claude/skills/grilling/SKILL.md: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
     .claude/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
   content_hash: sha256:e98f109bca3d8889f673d9f32bf84086f85a70ff9e241f8a34a4560a07ab5a39
+- repo_url: mountain-loop/yaak
+  name: use-yaak
+  host: github.com
+  resolved_commit: 7f302536168585be4603aea09491a78b75c57070
+  version: unknown
+  virtual_path: crates-cli/yaak-cli/skills/use-yaak
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/use-yaak
+  - .agents/skills/use-yaak/SKILL.md
+  - .claude/skills/use-yaak
+  - .claude/skills/use-yaak/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/use-yaak/SKILL.md: sha256:6fccede55db0eff1a104d1e2c1a00177a6cdcf527246be5b4ab2672db01a85fd
+    .claude/skills/use-yaak/SKILL.md: sha256:6fccede55db0eff1a104d1e2c1a00177a6cdcf527246be5b4ab2672db01a85fd
+  content_hash: sha256:1bc16ac192cf72c1f8cf8762d2e5cc74137ed9efa0c8c5eb213b2e04d71c4f9e
 - repo_url: openai/codex
   name: babysit-pr
   host: github.com
@@ -2188,6 +2205,24 @@ deployments:
   active_owner: cursor/plugins/pstack/skills/unslop
   content_hash: sha256:181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441
 - kind: project-relative
+  target: agent-skills
+  value: .agents/skills/use-yaak
+  runtime: null
+  scope: project
+  owners:
+  - mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  active_owner: mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/use-yaak/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  active_owner: mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  content_hash: sha256:6fccede55db0eff1a104d1e2c1a00177a6cdcf527246be5b4ab2672db01a85fd
+- kind: project-relative
   target: claude
   value: .claude/agents/thermo-nuclear-code-quality-review-subagent.md
   runtime: null
@@ -3582,3 +3617,21 @@ deployments:
   - cursor/plugins/pstack/skills/unslop
   active_owner: cursor/plugins/pstack/skills/unslop
   content_hash: sha256:181883e539caec8258ec9129e3ba5f133409144a2cbf2aa361158ab94cfc3441
+- kind: project-relative
+  target: claude
+  value: .claude/skills/use-yaak
+  runtime: null
+  scope: project
+  owners:
+  - mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  active_owner: mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/use-yaak/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  active_owner: mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
+  content_hash: sha256:6fccede55db0eff1a104d1e2c1a00177a6cdcf527246be5b4ab2672db01a85fd
