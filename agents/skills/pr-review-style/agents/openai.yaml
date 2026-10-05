@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Review Style"
+  short_description: "Format GitHub PR reviews with labeled inline comments"
+  default_prompt: "Use $pr-review-style to format my review of this pull request."
