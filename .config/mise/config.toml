@@ -1,4 +1,4 @@
-min_version = { hard = "2026.7.5" }
+min_version = { hard = "2026.9.3" }
 
 [settings]
 locked_scopes = ["project"]

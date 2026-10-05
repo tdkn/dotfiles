@@ -25,7 +25,7 @@
 [tag]
 	gpgSign = true
 [mailmap]
-	file = /Users/tdkn/.config/git/mailmap
+	file = ~/.config/git/mailmap
 [gitbutler]
 	aiOpenAIKeyOption = bringYourOwn
 	aiAnthropicKeyOption = bringYourOwn
