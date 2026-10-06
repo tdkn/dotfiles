@@ -84,6 +84,15 @@ It shows apm's update plan and asks for confirmation. Commit the resulting
 mise run skills-update
 ```
 
+Skills removed from their upstream repository are not kept at an old commit.
+An update that reports `Subdirectory '...' not found in repository` points to
+one. Uninstall it and save both files back before updating again:
+
+```sh
+apm uninstall -g <package>
+mise dot add ~/.apm/apm.yml ~/.apm/apm.lock.yaml
+```
+
 If `~/.apm` is still a symlink to `apm/`, replace it with a regular directory
 and remove the files apm left in the repository:
 

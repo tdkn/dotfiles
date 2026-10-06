@@ -17,7 +17,6 @@ dependencies:
     - mattpocock/skills/skills/productivity/grill-me
     - mattpocock/skills/skills/productivity/grilling
     - mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak
-    - openai/codex/.codex/skills/babysit-pr
     - shadcn/improve/skills/improve
     - cursor/plugins/thermos
     - cursor/plugins/pstack/skills/unslop
