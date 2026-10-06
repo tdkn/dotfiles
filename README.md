@@ -24,6 +24,7 @@ mise 2026.9.3 or later is required to prepend the managed Git include.
 
 If an existing installation has a symlinked `~/.gitconfig`, migrate it to a
 regular file before applying the bootstrap. See [Git configuration](#git-configuration).
+If `~/.apm` is a symlink, remove it first. See [Agent Skills](#agent-skills).
 
 Trust, review, and apply the bootstrap.
 
@@ -57,9 +58,9 @@ effect immediately and shows up as an unstaged change here. Third-party skills
 are declared in `apm/apm.yml` and installed by
 [apm](https://microsoft.github.io/apm) into the same directories.
 
-```sh
-mise run agents-sync
-```
+apm refuses a symlinked `~/.apm`, so mise copies `apm/apm.yml` and
+`apm/apm.lock.yaml` into a regular `~/.apm` directory. The bootstrap task runs
+`apm install -g` and saves any lockfile change back to `apm/apm.lock.yaml`.
 
 Add a local skill by creating `agents/skills/<name>/SKILL.md`, then rerun the
 bootstrap or apply the dotfiles:
@@ -72,12 +73,29 @@ Two glob mappings in `.config/mise/conf.d/40-dotfiles.toml` link every local
 skill directory into both `~/.agents/skills/` and `~/.claude/skills/`. New skills
 need no individual mapping. apm installs third-party skills alongside these links.
 
-Add a third-party skill by editing `apm/apm.yml`, running `mise run
-agents-sync`, then committing the `apm/apm.lock.yaml` diff.
+Add a third-party skill by editing `apm/apm.yml`, rerunning the bootstrap, then
+committing the `apm/apm.lock.yaml` diff.
+
+Update third-party skills to their latest upstream commits with the task below.
+It shows apm's update plan and asks for confirmation. Commit the resulting
+`apm/apm.lock.yaml` diff.
+
+```sh
+mise run skills-update
+```
+
+If `~/.apm` is still a symlink to `apm/`, replace it with a regular directory
+and remove the files apm left in the repository:
+
+```sh
+rm ~/.apm
+mise bootstrap --yes --force-dotfiles
+rm -rf ~/.dotfiles/apm/apm_modules ~/.dotfiles/apm/config.json
+```
 
 The GitButler skill ships with the `but` binary rather than through apm, so it
-is installed separately. `mise run agents-sync` reports version drift after a
-`brew upgrade`; resolve it with `but skill install --global`.
+is installed separately with `but skill install --global`. The bootstrap task
+updates it when a `brew upgrade` leaves it behind the `but` version.
 
 apm covers the user-scope skills described here. The
 [skills](https://skills.sh/) CLI stays installed for project-scoped skills in

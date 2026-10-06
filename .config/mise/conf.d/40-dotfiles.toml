@@ -2,7 +2,9 @@
 "~/.dotfiles" = "~/ghq/github.com/tdkn/dotfiles"
 # Each local skill directory is linked as a whole; apm installs remain separate.
 "~/.agents/skills/*" = "~/.dotfiles/agents/skills/*"
-"~/.apm" = "~/.dotfiles/apm"
+# apm refuses a symlinked ~/.apm, so it gets copies; `mise dot add` saves lockfile updates back.
+"~/.apm/apm.lock.yaml" = { source = "~/.dotfiles/apm/apm.lock.yaml", mode = "copy" }
+"~/.apm/apm.yml" = { source = "~/.dotfiles/apm/apm.yml", mode = "copy" }
 "~/.claude/CLAUDE.md" = "~/.dotfiles/claude/CLAUDE.md"
 "~/.claude/skills/*" = "~/.dotfiles/agents/skills/*"
 "~/.codex/AGENTS.md" = "~/.dotfiles/codex/AGENTS.md"

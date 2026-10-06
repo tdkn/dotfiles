@@ -1,5 +1,17 @@
 [tasks.bootstrap]
-run = """
+run = [
+  """
 HOMEBREW_NO_AUTO_UPDATE=1 brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile ||
   HOMEBREW_NO_AUTO_UPDATE=1 brew bundle install --no-upgrade --file ~/.config/homebrew/Brewfile
-"""
+""",
+  "apm install -g",
+  "mise dot add ~/.apm/apm.lock.yaml",
+  # GitButler ships its skill with the `but` binary, so it drifts after `brew upgrade`.
+  "but skill check --global --update",
+]
+
+[tasks.skills-update]
+description = "Update apm-managed skills and save the lockfile to dotfiles"
+# apm asks for confirmation before applying the update plan.
+interactive = true
+run = ["apm update -g", "mise dot add ~/.apm/apm.lock.yaml"]
