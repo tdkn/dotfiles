@@ -1,6 +1,6 @@
 lockfile_version: '1'
-generated_at: '2026-09-28T08:54:33.889434+00:00'
-apm_version: 0.28.0
+generated_at: '2026-10-06T01:20:27.028751+00:00'
+apm_version: 0.32.0
 dependencies:
 - repo_url: android/skills
   name: android-cli
@@ -665,7 +665,7 @@ dependencies:
     .claude/skills/thermo-nuclear-code-quality-review/SKILL.md: sha256:7faca08b51b643b2ddd0836f92af15574444024685dcc1e677dbbb39ae8c9e8f
     .claude/skills/thermo-nuclear-review/SKILL.md: sha256:5091011c4490932d40658ae958fb55b9aaca8e2bba5196860295ab945180e434
     .claude/skills/thermos/SKILL.md: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472
-  content_hash: sha256:71547a01d95289a4613d13e8c5cd7eed66ac83f3b2dcbc0b92894b69fa5fabf7
+  content_hash: sha256:ee420ae5377749a6b453526774afd0b325a28911d99e073e86d10175d86e43d2
   declared_license: MIT
 - repo_url: github/awesome-copilot
   name: create-agentsmd
