@@ -13,14 +13,25 @@ cd ~/ghq/github.com/tdkn/dotfiles
 ln -sfn ~/ghq/github.com/tdkn/dotfiles ~/.dotfiles
 ```
 
-Install the latest mise with Homebrew.
+Install the latest mise with the official installer. It installs the binary
+to `~/.local/bin/mise`, and `zsh/profile.d/40-local-bin.zsh` adds that
+directory to `PATH` once the bootstrap links the zsh profile.
 
 ```sh
-brew install mise
-brew upgrade mise
+curl -fsSL https://mise.run | sh
+export PATH="$HOME/.local/bin:$PATH"
+mise --version
 ```
 
-mise 2026.9.3 or later is required to prepend the managed Git include.
+Update mise with `mise self-update`. mise 2026.9.3 or later is required to
+prepend the managed Git include.
+
+If mise was installed with Homebrew, remove that copy after installing the
+official binary so only one `mise` stays on `PATH`:
+
+```sh
+brew uninstall mise
+```
 
 If an existing installation has a symlinked `~/.gitconfig`, migrate it to a
 regular file before applying the bootstrap. See [Git configuration](#git-configuration).
