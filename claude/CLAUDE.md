@@ -40,7 +40,10 @@
   this instruction and `git-create-pull-request-as-draft = false` unless the
   user explicitly requested a Draft PR.
 - Use Conventional Commits. A commit body is required.
-- Include a `Co-authored-by: Claude <noreply@anthropic.com>` trailer in commit messages.
+- Include exactly one Claude co-author trailer in commit messages, with the model
+  name: `Co-Authored-By: Claude <model name> <noreply@anthropic.com>`. If Claude
+  Code already supplies this attribution line, use it as-is and do not add
+  another. Otherwise, fill in the current model name.
 
 ## GitHub attachments
 
