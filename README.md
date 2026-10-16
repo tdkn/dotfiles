@@ -123,17 +123,20 @@ individual repositories.
 
 ## Git configuration
 
-mise keeps `~/.gitconfig` as a regular local file. With `position = "prepend"`,
-it adds this line before the existing contents when the line is missing:
+mise manages this multiline include in a marker block in the regular local
+`~/.gitconfig`:
 
 ```ini
-[include] path = ~/.dotfiles/git/config
+[include]
+	path = ~/.dotfiles/git/config
 ```
 
-mise leaves an existing matching line in place. Keep the include before local
-settings so those settings override shared defaults. `git config --global`
-writes local settings to `~/.gitconfig`; edit `git/config` to change shared
-settings.
+Keep the entire block, including its markers, at the top so local settings
+override shared defaults. On first apply to an existing file, mise appends the
+missing block; move it to the top once. Subsequent applies replace it in place.
+`git config --global` writes local settings; edit `git/config` for shared
+settings. Replace any existing shared include with the block to avoid loading
+shared settings twice.
 
 To migrate an existing symlink, save its contents, replace the link with a
 regular file without changing `git/config`, and retain only intended local

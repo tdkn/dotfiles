@@ -17,7 +17,6 @@
 "~/.config/mise/conf.d" = "~/.dotfiles/.config/mise/conf.d"
 "~/.config/mise/tasks" = "~/.dotfiles/.config/mise/tasks"
 "~/.config/zed/settings.json" = "~/.dotfiles/zed/settings.json"
-# Shared defaults come before machine-local settings in the writable Git config.
-"~/.gitconfig/dotfiles" = { line = "[include] path = ~/.dotfiles/git/config", position = "prepend" }
+"~/.gitconfig/dotfiles" = { block = "[include]\n\tpath = ~/.dotfiles/git/config\n" }
 "~/.zprofile" = "~/.dotfiles/zsh/profile.zsh"
 "~/.zshrc" = "~/.dotfiles/zsh/zshrc"
