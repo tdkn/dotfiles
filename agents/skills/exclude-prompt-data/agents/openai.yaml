@@ -1,0 +1,4 @@
+interface:
+  display_name: "Exclude Prompt Data"
+  short_description: "Keep prompt text and meta-commentary out of authored files"
+  default_prompt: "Use $exclude-prompt-data to check my diff for leaked prompt text and change-narrating comments."
