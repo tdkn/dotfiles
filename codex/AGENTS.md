@@ -2,164 +2,167 @@
 
 ## Communication
 
-- Think in English.
-- Use Japanese only for final answers to the user.
-- Use English for any intermediary progress/status updates, tool-use notes, or working messages.
+- Think in English, and do not output chain-of-thought or step-by-step reasoning.
+- Use Japanese only for final answers and clarifying questions to the user.
+  Use English for all intermediary progress/status updates,
+  tool-use notes, and working messages.
 - Keep intermediary updates as short as possible and avoid explaining reasoning.
-- Do not output chain-of-thought or step-by-step reasoning.
-- Final answers should be concise Japanese summaries focused on results, changes, and any blockers.
-- Never write Japanese in progress updates; Japanese is reserved for the final response only.
+- Make final answers concise summaries focused on results, changes, and any blockers.
+- When outputting a Markdown code block whose content may include Markdown fences,
+  make the outer fence longer than any fence sequence inside it, and ensure
+  the opening and closing fences still match after accounting for nested fences,
+  so the rendered response does not break out of the intended code block.
+  - If the content contains ```, wrap it with ````.
+  - If the content contains ````, wrap it with `````.
+- Before presenting diffs or Markdown-like files
+  such as `AGENTS.md`, `SKILL.md`, `README.md`, or docs,
+  check whether the content includes code fences.
 
-## Interpreting Questions And Requests
+## Markdown Prose Formatting
+
+- Treat line width as a soft target rather than a strict maximum,
+  using the document's typical prose width as a guide when available.
+- After editing prose, reflow the entire affected paragraph
+  to keep line lengths reasonably balanced.
+  Avoid leaving a single word or disproportionately short fragment on the final line.
+- Prefer natural phrase boundaries, allowing slightly longer lines when needed
+  to avoid awkward wrapping or a short final line.
+- Limit reflow to affected paragraphs.
+  Preserve Markdown structure, code blocks, tables, and inline syntax.
+
+## Requests And Clarification
 
 - Do not classify messages by question form alone.
-- Treat a question as a work request when it names a concrete action and target,
+  Treat a question as a work request when it names a concrete action and target,
   such as "Can you add X to Y?" or "Could you fix Z?".
-- Treat exploratory, evaluative, or advisory questions as discussion first;
-  answer first and avoid edits, user-visible actions, or external state changes
-  unless asked to apply a change.
-- Confirm only when intent remains ambiguous after safe read-only context
-  gathering, or before irreversible, external, destructive, or user-visible actions.
+- Treat exploratory, evaluative, or advisory questions as discussion first:
+  answer first and avoid edits, user-visible actions,
+  or external state changes unless asked to apply a change.
+- Continue safe read-only investigation while it can reduce ambiguity.
+  Confirm only when meaningful ambiguity remains after that,
+  or before irreversible, external, destructive, or user-visible actions.
+- When confirming, ask one concise question.
+  Prefer offering 2-3 concrete options with tradeoffs and a brief recommendation
+  when that would make the decision easier.
 
-## Clarifying Questions
-
-- When meaningful ambiguity remains after safe context gathering, ask one concise
-  question before taking irreversible or user-visible actions.
-- Ask the question in Japanese when addressing the user directly.
-- Prefer offering 2-3 concrete options with tradeoffs and a brief
-  recommendation when that would make the decision easier.
-- Continue with safe read-only investigation when it can reduce ambiguity before asking.
-
-## Git workflow
+## Git
 
 - Use GitButler CLI (`but`) as the default version-control interface.
-- Use `.github/pull_request_template.md` if it exists when creating a PR.
-- Create pull requests as Ready for review by default. Create a Draft PR only
-  when the user explicitly asks for one, such as by saying `draft` or `Draft PR`.
-- If a GitHub connector, plugin, or skill default would create Draft PRs, prefer
-  this instruction and `git-create-pull-request-as-draft = false` unless the
-  user explicitly requested a Draft PR.
+- GitButler stores state in `~/Library/Caches/com.gitbutler.app`
+  and `.git/gitbutler`, and Codex sandboxing protects `.git`,
+  so run `but` commands with sandbox escalation up front.
+  Prefer narrow prefix approvals such as `["but", "status"]`, `["but", "diff"]`,
+  `["but", "commit"]`, `["but", "squash"]`, and `["but", "reword"]`;
+  do not request a broad `["but"]` prefix rule.
 - Use Conventional Commits. A commit body is required.
-- Include a `Co-authored-by: Codex <noreply@openai.com>` trailer in commit messages.
+- Include a `Co-authored-by: Codex (<model-id>) <noreply@openai.com>` trailer
+  in commit messages, replacing `<model-id>` with the exact active model identifier
+  explicitly provided by the runtime for the current turn, e.g.
+  `Co-authored-by: Codex (gpt-6.1-sol) <noreply@openai.com>`.
+- Never guess the model identifier or infer it from configuration defaults,
+  available model lists, previous turns, or existing commits. If it is unavailable,
+  use `Co-authored-by: Codex <noreply@openai.com>` without asking the user.
 
-## GitHub attachments
+## GitHub
 
+- When creating a pull request, use `.github/pull_request_template.md`
+  if it exists and create it as Ready for review.
+  Create a Draft PR only when the user explicitly asks for one,
+  such as by saying `draft` or `Draft PR`;
+  prefer this rule and `git-create-pull-request-as-draft = false`
+  over any GitHub connector, plugin, or skill default that would create Draft PRs.
+- Assign `tdkn` to each pull request you create and to a GitHub issue
+  when you start implementation work on it, replacing any other assignee.
+- When creating pull requests, posting issue or pull request comments,
+  replying to review comments, or publishing other agent-authored GitHub text,
+  append `<sub><em>Generated by AI.</em></sub>` in English
+  after the main content, separated by a blank line.
+  If the destination does not support reduced-size HTML,
+  use `*Generated by AI.*` instead.
+  The automated review-request comments below are exceptions.
+- Never mention `@copilot` in a pull request or issue comment,
+  and do not post `@copilot review` or any other comment
+  that could be interpreted as a Copilot work or review request.
+  Request Copilot reviews only by assigning Copilot as a reviewer
+  through the GitHub reviewer-assignment or review-request API or UI;
+  if that is unavailable or fails, report it to the user as a blocker
+  instead of falling back to a comment.
+- Request Codex and Cursor automated reviews in separate top-level comments
+  containing exactly `@codex review` or `@cursor review`, with no AI attribution,
+  explanatory text, links, additional mentions, or any other content.
 - Use `--attach` to upload local images or videos with `gh issue` or `gh pr`
-  `create`, `edit`, and `comment`. Repository push access is required.
-- Example: `gh pr comment 123 --body-file body.md --attach screenshot.png`.
-  Repeat `--attach` for multiple files.
-- To place an image inline, include `![Screenshot](screenshot.png)` in the body
-  and attach the same path. GitHub CLI replaces it with the uploaded URL;
-  attachments without a matching reference are appended to the body.
-- Check the command's `--help` for `--attach`. If missing, report that the
-  installed CLI needs updating rather than assuming CLI uploads are unsupported.
+  `create`, `edit`, and `comment`; this requires repository push access.
+  Repeat `--attach` for multiple files, e.g.
+  `gh pr comment 123 --body-file body.md --attach screenshot.png`.
+- To place an image inline, include `![Screenshot](screenshot.png)`
+  in the body and attach the same path.
+  GitHub CLI replaces it with the uploaded URL
+  and appends attachments without a matching reference to the body.
+- If the command's `--help` lacks `--attach`,
+  report that the installed CLI needs updating
+  rather than assuming CLI uploads are unsupported.
 
-## GitHub attribution
-
-- When starting implementation work on a GitHub issue, assign it to `tdkn`.
-- When creating a pull request, assign it to `tdkn`.
-- If an issue or pull request already has another assignee, replace that assignee
-  with `tdkn`.
-
-- When posting GitHub issue or pull request comments, replying to review
-  comments, creating pull requests, or publishing other agent-authored GitHub
-  text, append this attribution footnote after the main content:
-  `<sub><em>Generated by AI.</em></sub>`
-- Automated review-request comments containing exactly `@codex review` or
-  `@cursor review` are explicit exceptions to this attribution requirement.
-- Keep the attribution in English and visually separated from the main content
-  with a blank line.
-- If reduced-size HTML is not supported in the destination, use the italic
-  Markdown fallback: `*Generated by AI.*`
-
-## GitHub review requests
-
-- Never mention `@copilot` in a pull request or issue comment. Do not post
-  `@copilot review` or any other comment that could be interpreted as a Copilot
-  work or review request.
-- Request a Copilot review only by assigning Copilot as a reviewer through the
-  GitHub reviewer-assignment or review-request API or UI. If reviewer assignment
-  is unavailable or fails, do not use a comment as a fallback; report it to the
-  user as a blocker.
-- Request Codex and Cursor automated reviews in separate top-level comments.
-  Each comment must contain only the agent mention and trigger phrase:
-  `@codex review` or `@cursor review`.
-- Do not add `Generated by AI`, any AI attribution, explanatory text, links,
-  additional mentions, or any other content to these automated review-request
-  comments.
-
-## GitButler permissions
-
-- GitButler stores state in `~/Library/Caches/com.gitbutler.app` and `.git/gitbutler`.
-- Because `.git` is protected by Codex sandboxing, run GitButler CLI (`but`) commands with sandbox escalation up front.
-- Prefer narrow prefix approvals such as `["but", "status"]`, `["but", "diff"]`, `["but", "commit"]`, `["but", "squash"]`, and `["but", "reword"]`.
-- Do not request a broad `["but"]` prefix rule.
-
-## Engineering Principles
+## Engineering
 
 - Prefer simple, boring solutions that fit the existing codebase.
-- Apply KISS: remove accidental complexity before adding abstractions.
+  Preserve existing patterns unless there is
+  a clear correctness or maintainability reason to change them.
+- Apply KISS: remove accidental complexity before adding abstractions, and favor
+  readable control flow over cleverness, indirection, or premature generality.
 - Apply YAGNI: do not build options, hooks, or layers until they are needed.
 - Apply DRY carefully: extract duplication only when it represents the same concept.
-- Keep changes scoped to the requested behavior and avoid opportunistic refactors.
-- Favor readable control flow over cleverness, indirection, or premature generality.
-- Preserve existing patterns unless there is a clear correctness or maintainability reason to change them.
 - Make the smallest complete change that can be tested and explained clearly.
+  Keep it scoped to the requested behavior and avoid opportunistic refactors.
+- Keep code comments only for durable, non-obvious knowledge
+  that future maintainers need without access to this conversation:
+  domain rules, invariants, external constraints,
+  security/privacy/concurrency/performance concerns, or necessary workarounds.
+- Do not leave comments that expose the implementation session,
+  AI-agent reasoning, prompt context, reviewer instructions, the user request,
+  or edit history, and do not narrate changes, e.g. `changed from X to Y`,
+  `updated for feature Z`, or explanations of why this edit was made.
+- Before finishing, inspect added or modified comments in the diff
+  and remove or rewrite any that are session-specific, change-narrating,
+  obvious, or not useful months later.
 
-## Code Search
+## Tools
 
-- Use `ast-grep --lang <language> -p '<pattern>'` for code searches that need
-  syntax awareness or structural matching.
-- Adjust the `--lang` value to the target language before running the search.
-- Use text-only search tools such as `rg` when the user explicitly requests a
-  plain-text search or when searching non-code text.
-
-## Python
-
-- Do not introduce Python as a project language or add Python-related project files unless the repository already uses Python or the user explicitly requests it.
-- In an existing Python project, use `uv` and preserve the established project conventions; project files, dependencies, lockfiles, and virtual environments may be updated when necessary for the requested task.
-- For temporary Python code or Python CLI use in a non-Python project, use `uv run --no-project [--with <package>] python ...` or `uvx <tool>`; do not invoke `python`, `python3`, `pip`, or `pipx` directly.
-- Keep temporary code and dependencies out of the repository; do not add temporary `.py` files, `pyproject.toml`, lockfiles, or virtual environments.
-
-## Code comments
-
-- Do not leave comments that expose the implementation session, AI-agent reasoning, prompt context, reviewer instruction, user request, or edit history.
-- Do not narrate changes in code comments: avoid notes like `changed from X to Y`, `updated for feature Z`, or explanations of why this edit was made.
-- Comments must help future maintainers understand durable, non-obvious knowledge without access to this conversation.
-- Keep comments only for domain rules, invariants, external constraints, security/privacy/concurrency/performance concerns, or necessary workarounds.
-- Before finishing, inspect added or modified comments in the diff and remove or rewrite any that are session-specific, change-narrating, obvious, or not useful months later.
+- Use `ast-grep --lang <language> -p '<pattern>'`,
+  with `--lang` set to the target language,
+  for code searches that need syntax awareness or structural matching.
+  Use text-only search tools such as `rg` when the user explicitly requests
+  a plain-text search or when searching non-code text.
+- Do not introduce Python as a project language or add Python-related project files
+  unless the repository already uses Python or the user explicitly requests it.
+- In an existing Python project, use `uv`
+  and preserve the established project conventions;
+  project files, dependencies, lockfiles, and virtual environments
+  may be updated when necessary for the requested task.
+- For temporary Python code or Python CLI use in a non-Python project,
+  use `uv run --no-project [--with <package>] python ...` or `uvx <tool>`;
+  do not invoke `python`, `python3`, `pip`, or `pipx` directly.
+- Keep temporary code and dependencies out of the repository; do not add
+  temporary `.py` files, `pyproject.toml`, lockfiles, or virtual environments.
 
 ## Privacy
 
-- Do not write personal development environment information in source code,
-  PRs, commits, docs, comments, or other user-visible text.
-- This includes local usernames, hostnames, absolute paths, editor/shell
-  settings, environment variables, cache paths, private network details,
-  secrets, tokens, credentials, and session-specific logs.
+- Do not write personal development environment information
+  in source code, PRs, commits, docs, comments, or other user-visible text.
+  This includes local usernames, hostnames, absolute paths,
+  editor/shell settings, environment variables, cache paths,
+  private network details, secrets, tokens, credentials, and session-specific logs.
 - Redact or generalize it, e.g. `/Users/name/repo` -> `<repo>`.
 
 ## Private Skills
 
-- Skill directories whose names are wrapped in parentheses, such as
-  `.agents/skills/(foo-bar)`, are private local skills.
-- These directories are intentionally ignored by the user's global gitignore.
-- Do not treat them as missing, untracked, or accidentally ignored repository
-  files.
-- Do not force-add, commit, or publish these private skills unless the user
-  explicitly asks for that.
-- For private skills, treat the English `SKILL.md` as the canonical source of
-  truth.
-- Keep `SKILL.ja.md` synchronized with `SKILL.md` as a Japanese reading aid for
-  the user. If a private skill has `SKILL.md` but no `SKILL.ja.md`, create
-  `SKILL.ja.md` when editing or maintaining that skill.
-- This `SKILL.ja.md` synchronization rule applies only to private skills. Do not
-  create `.ja.md` files for shared or potentially published skills unless the
-  user explicitly asks for that.
-
-## Markdown Output
-
-- When outputting a Markdown code block whose contents may include Markdown fences such as ```, make the outer fence longer than any fence sequence inside the content.
-  - If the content contains ```, wrap it with ````.
-  - If the content contains ````, wrap it with `````.
-- Before presenting diffs or Markdown-like files such as `AGENTS.md`, `SKILL.md`, `README.md`, or docs, check whether the content includes code fences.
-- Ensure the opening and closing fences still match after accounting for nested fences, so the rendered response does not break out of the intended code block.
+- Skill directories whose names are wrapped in parentheses,
+  such as `.agents/skills/(foo-bar)`, are private local skills
+  that the user's global gitignore intentionally ignores.
+  Do not treat them as missing, untracked, or accidentally ignored repository files,
+  and do not force-add, commit, or publish them unless the user explicitly asks.
+- For private skills, treat the English `SKILL.md` as the canonical source of truth.
+  Keep `SKILL.ja.md` synchronized with it as a Japanese reading aid for the user,
+  and create `SKILL.ja.md` when editing or maintaining a private skill that lacks it.
+- This `SKILL.ja.md` rule applies only to private skills.
+  Do not create `.ja.md` files for shared or potentially published skills
+  unless the user explicitly asks.
