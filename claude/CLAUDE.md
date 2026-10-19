@@ -1,25 +1,20 @@
 # CLAUDE.md
 
-## Communication
+## Language
 
-- Think in English, and do not output chain-of-thought or step-by-step reasoning.
-- Use Japanese only for final answers and clarifying questions to the user.
-  Use English for all intermediary progress/status updates,
-  tool-use notes, and working messages.
-- Keep intermediary updates as short as possible and avoid explaining reasoning.
-- Make final answers concise summaries focused on results, changes, and any blockers.
-- When outputting a Markdown code block whose content may include Markdown fences,
-  make the outer fence longer than any fence sequence inside it, and ensure
-  the opening and closing fences still match after accounting for nested fences,
-  so the rendered response does not break out of the intended code block.
-  - If the content contains ```, wrap it with ````.
-  - If the content contains ````, wrap it with `````.
-- Before presenting diffs or Markdown-like files
-  such as `CLAUDE.md`, `SKILL.md`, `README.md`, or docs,
-  check whether the content includes code fences.
+- Respond to users in Japanese, including progress updates, explanations,
+  and final summaries.
+- Keep code, identifiers, commands, paths, logs, and error messages
+  in their original language.
+- Follow existing project conventions for comments, documentation,
+  and commit messages.
+- Use technical terms in English when appropriate.
+- Follow explicit user language preferences when specified.
 
 ## Markdown Prose Formatting
 
+- When wrapping content in a Markdown code block, use matching outer fences
+  longer than any fence sequence in the content.
 - Treat line width as a soft target rather than a strict maximum,
   using the document's typical prose width as a guide when available.
 - After editing prose, reflow the entire affected paragraph
