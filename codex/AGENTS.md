@@ -13,17 +13,28 @@
 
 ## Markdown Prose Formatting
 
-- When wrapping content in a Markdown code block, use matching outer fences
+- When enclosing content in a Markdown code block, use matching outer fences
   longer than any fence sequence in the content.
+- Apply the rules below to prose paragraphs in Markdown files,
+  treating list item text and blockquote text as paragraphs too.
+- Follow the existing line-break style of the file or nearby Markdown files.
+  Do not hard-wrap paragraphs that the file leaves unwrapped,
+  and keep sentence- or phrase-based breaks where the file uses them.
 - Treat line width as a soft target rather than a strict maximum,
   using the document's typical prose width as a guide when available.
-- After editing prose, reflow the entire affected paragraph
-  to keep line lengths reasonably balanced.
-  Avoid leaving a single word or disproportionately short fragment on the final line.
-- Prefer natural phrase boundaries, allowing slightly longer lines when needed
-  to avoid awkward wrapping or a short final line.
+- After writing or editing a paragraph, review its line breaks as a whole
+  and reflow it as needed to keep line lengths reasonably balanced.
+  When reflowing with an edit tool that matches exact text,
+  replace the whole paragraph rather than only the changed lines.
+- Break lines at natural phrase boundaries, and avoid ending a paragraph
+  with a single word or a fragment much shorter than its other lines.
+  To fix a short final line, rebalance breaks across the whole paragraph
+  and allow slightly longer lines when that reads better.
 - Limit reflow to affected paragraphs.
-  Preserve Markdown structure, code blocks, tables, and inline syntax.
+  Preserve list markers, continuation indentation, blockquote markers,
+  intentional hard line breaks, code blocks, tables, and inline syntax.
+- Before finishing, reread each edited paragraph in the resulting file
+  and fix any unbalanced line lengths or short final line.
 
 ## Requests And Clarification
 
