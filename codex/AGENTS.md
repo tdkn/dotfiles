@@ -6,8 +6,7 @@
   and final summaries.
 - Keep code, identifiers, commands, paths, logs, and error messages
   in their original language.
-- Follow existing project conventions for comments, documentation,
-  and commit messages.
+- Follow existing project conventions for comments and documentation.
 - Use technical terms in English when appropriate.
 - Follow explicit user language preferences when specified.
 
@@ -60,14 +59,6 @@
   Prefer narrow prefix approvals such as `["but", "status"]`, `["but", "diff"]`,
   `["but", "commit"]`, `["but", "squash"]`, and `["but", "reword"]`;
   do not request a broad `["but"]` prefix rule.
-- Use Conventional Commits. A commit body is required.
-- Include a `Co-authored-by: Codex (<model-id>) <noreply@openai.com>` trailer
-  in commit messages, replacing `<model-id>` with the exact active model identifier
-  explicitly provided by the runtime for the current turn, e.g.
-  `Co-authored-by: Codex (gpt-6.1-sol) <noreply@openai.com>`.
-- Never guess the model identifier or infer it from configuration defaults,
-  available model lists, previous turns, or existing commits. If it is unavailable,
-  use `Co-authored-by: Codex <noreply@openai.com>` without asking the user.
 
 ## GitHub
 
