@@ -347,3 +347,10 @@ AGENTS.override.md
 
 # Yaak
 .yaak
+
+# Claude
+**/.claude/settings.local.json
+**/CLAUDE.local.md
+**/.claude/.cc-writes/
+**/.claude/worktrees/
+**/.claude/agent-memory-local/
