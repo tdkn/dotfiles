@@ -1,12 +1,10 @@
 ---
 name: sync-translations
 description: >-
-  Keep English/Japanese Markdown pairs in this dotfiles repository aligned
-  one to one in content and structure.
+  Keep English/Japanese Markdown pairs aligned one to one in content and
+  structure across projects.
   Use when editing either file in a .ja.md pair, updating translations, or
   maintaining a private skill's Japanese reading aid.
-metadata:
-  internal: true
 ---
 
 # Sync translations
@@ -19,9 +17,6 @@ metadata:
   skills in parenthesized directories such as `(example)`, create `SKILL.ja.md`
   if missing and synchronize it as a Japanese reading aid.
 - For other Markdown files, create Japanese counterparts only when requested.
-- `.agents/skills/` holds repository guidance; `agents/skills/` holds locally
-  authored skills linked into global skill directories. Skill edits alone do
-  not require README updates.
 
 ## Workflow
 
