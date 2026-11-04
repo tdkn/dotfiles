@@ -84,12 +84,14 @@ Two glob mappings in `.config/mise/conf.d/40-dotfiles.toml` link every local
 skill directory into both `~/.agents/skills/` and `~/.claude/skills/`. New skills
 need no individual mapping. apm installs third-party skills alongside these links.
 
-Add a third-party skill by editing `apm/apm.yml`, rerunning the bootstrap, then
-committing the `apm/apm.lock.yaml` diff.
+Add a third-party skill in `apm/apm.yml` with its upstream branch as a ref,
+such as `#main`. Rerun the bootstrap and commit the `apm/apm.lock.yaml` diff.
 
-Update third-party skills to their latest upstream commits with the task below.
-It shows apm's update plan and asks for confirmation. Commit the resulting
-`apm/apm.lock.yaml` diff.
+Dependabot checks these refs weekly and opens pull requests that update the
+lockfile. Rerun the bootstrap after merging an update to install the skills.
+
+To update skills to their latest upstream commits manually, use the task below.
+apm shows an update plan and asks for confirmation; commit the `apm/apm.lock.yaml` diff.
 
 ```sh
 mise run skills-update
