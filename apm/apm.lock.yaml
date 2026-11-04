@@ -1,11 +1,12 @@
 lockfile_version: '1'
-generated_at: '2026-10-16T04:55:52.861737+00:00'
-apm_version: 0.32.0
+generated_at: '2026-11-04T04:40:19.649441+00:00'
+apm_version: 0.33.0
 dependencies:
 - repo_url: android/skills
   name: android-cli
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: devtools/android-cli
   is_virtual: true
@@ -26,11 +27,12 @@ dependencies:
     .claude/skills/android-cli/SKILL.md: sha256:93bef1a066f4cc04ee6e02c7770f1b741aa43b2ca250b77e5626f0fb26cc75a0
     .claude/skills/android-cli/references/interact.md: sha256:86eaab56b5ba8de103632292ce446fb99170cab07d775e3f348a7e49e8b165dd
     .claude/skills/android-cli/references/journeys.md: sha256:cd570a549f4785fadf1f131edcc47d4e692d7eebc37d28a79019cb569f055c86
-  content_hash: sha256:d6e1a4a6a154f18e15143ea21143bd197d6017fc3a1a6c684be8e50578c8ec59
+  content_hash: sha256:bbe53f7481bc5de0a5fa1152ca113bff161b3e6aec6a228820c2485e4d861873
 - repo_url: android/skills
   name: adaptive
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: jetpack-compose/adaptive
   is_virtual: true
@@ -87,11 +89,12 @@ dependencies:
     .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/mediaquery/index.md: sha256:1e79df59c053569d5376a618c414b793670fdf35e337d7c8aecce81bf09f90d7
     .claude/skills/adaptive/references/android/develop/ui/compose/tooling/debug.md: sha256:ba62982a079cd1535f904bc784d4a64b1c77bd9ccede9f1e675c48fa44a95397
     .claude/skills/adaptive/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md: sha256:e4781cf0fc691f92c202400a07ebc80424666681f9547e757f660388252cdb29
-  content_hash: sha256:a74e6c9996f451bf3a3b397286f3cb453dd13530b16613761db81f34551d2d77
+  content_hash: sha256:172c058f860c017a5d9645c54732bbb7cd2f383a513ffe8b5f9369e825ae457f
 - repo_url: android/skills
   name: migrate-xml-views-to-jetpack-compose
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: jetpack-compose/migration/migrate-xml-views-to-jetpack-compose
   is_virtual: true
@@ -144,7 +147,8 @@ dependencies:
 - repo_url: android/skills
   name: navigation-3
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: navigation/navigation-3
   is_virtual: true
@@ -265,11 +269,12 @@ dependencies:
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/scenes-listdetail.md: sha256:2a19b4d03973c179eb4e4be8f95f9b728af34b55015619dde73dcd72af916e8c
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/scenes-twopane.md: sha256:d0cb99ae3054cf463a598fd348d3d9a07aa4b6805ab22121bdc11561a60b1f64
     .claude/skills/navigation-3/references/android/guide/navigation/type-safe-destinations.md: sha256:ad5f13e3d5ee1bc849d2da5941d4f99a3e2a5748d52fcdfde96d1bc21bf47acb
-  content_hash: sha256:3c7ea607a76fc7cbc5f3b8c60ac7914e83d092a4c4dde5a04cbae32958ac0555
+  content_hash: sha256:8475a7e54a5f986edd492a96ae1e4a71a825d1b0d41d5126301c3ffa8aa2f938
 - repo_url: android/skills
   name: r8-analyzer
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: performance/r8-analyzer
   is_virtual: true
@@ -314,11 +319,12 @@ dependencies:
     .claude/skills/r8-analyzer/references/REPORT_FORMAT.md: sha256:6db6de4b91db7e0e21f22967c24a7f535bfdcfa728f06bf91802983ded4fdee2
     .claude/skills/r8-analyzer/references/android/topic/performance/app-optimization/enable-app-optimization.md: sha256:560048d6c973301d60c4ee058147f16043c50e5490f6e464c45754a38a7a92bb
     .claude/skills/r8-analyzer/references/android/training/testing/other-components/ui-automator.md: sha256:60c0c0675cae082561d7ca94a02520251bc3e77131e207c609d4faa23ab89c98
-  content_hash: sha256:44458dc70bcbd83596610a8b7bafa2bb298fff5f5fd9f828f0c192729479c35b
+  content_hash: sha256:7bee16200224e69abcdcc421b1705c90d8b20b2c683a9985b96785e179239d54
 - repo_url: android/skills
   name: play-policy-insights
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: play/play-policy-insights
   is_virtual: true
@@ -387,7 +393,8 @@ dependencies:
 - repo_url: android/skills
   name: android-profiler
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: profilers/android-profiler
   is_virtual: true
@@ -510,11 +517,12 @@ dependencies:
     .claude/skills/android-profiler/references/env_setup.md: sha256:28d10c202ccf759cc7c07649968f3a390d5d984d31b9639d6dac0cd8920a6ee9
     .claude/skills/android-profiler/references/perfetto/setup.md: sha256:a0bd2461f7d24f36a15fb078273e6850c49e820844a1e777427cc7377332b5c0
     .claude/skills/android-profiler/references/perfetto/sql.md: sha256:ab667eaeba9243884df539fadb43989ad75f5285553fef7af9364740ce00b1a6
-  content_hash: sha256:245cfb5543c5fe49a1a0206e90c292b12f91df4f3609a66602e66c962e453e69
+  content_hash: sha256:288032fa7ce8279ae2292ac66b25a4581a1c48d24af2e930a63e24ffa8d26165
 - repo_url: android/skills
   name: android-intent-security
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: security/android-intent-security
   is_virtual: true
@@ -527,11 +535,12 @@ dependencies:
   deployed_file_hashes:
     .agents/skills/android-intent-security/SKILL.md: sha256:116afe4bfd3c0153ed25eb472faabdbedc81f09dfcae19466501915ca23c5156
     .claude/skills/android-intent-security/SKILL.md: sha256:116afe4bfd3c0153ed25eb472faabdbedc81f09dfcae19466501915ca23c5156
-  content_hash: sha256:9f0e9b26ba6624d174f49225370ed3abcfdc2f8bff49b9b7cc997f81d5e08f6d
+  content_hash: sha256:f3eb7d785071d1a161685563b834c5d702c582e9767ced3fe87e921b3e16bc6f
 - repo_url: android/skills
   name: edge-to-edge
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: system/edge-to-edge
   is_virtual: true
@@ -548,7 +557,8 @@ dependencies:
 - repo_url: android/skills
   name: testing-setup
   host: github.com
-  resolved_commit: 42dc2270e96032bd860bb94511e440aa00a43125
+  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_ref: main
   version: unknown
   virtual_path: testing/testing-setup
   is_virtual: true
@@ -577,11 +587,12 @@ dependencies:
     .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md: sha256:4b4ada7a50201bcf9ab90b0d9f00cc2ceb16513d1de7f63c12d634318a2ec20d
     .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing.md: sha256:4a18a18c1cec8685fdb736c69622e7315f39e1a612570fb4838072a60154bdc6
     .claude/skills/testing-setup/references/android/training/dependency-injection/hilt-testing.md: sha256:5e774a6ab09c0f469b4712ea8c468402b38dd4a19dce9570bacc49ad9af9c814
-  content_hash: sha256:433a4294d51ee02753a87516d511b128a1fa58aa3e454879103035fe4a1f00f2
+  content_hash: sha256:2d1090689966e496966fa71047db0190f2ecbd310e3a6d00b0b372cb44673954
 - repo_url: anthropics/skills
   name: frontend-design
   host: github.com
-  resolved_commit: 683bc88e56f3e09ba94f7055977f3d3aa499f202
+  resolved_commit: ca45fc496a3436251f191354091d557da31c15b5
+  resolved_ref: main
   version: unknown
   virtual_path: skills/frontend-design
   is_virtual: true
@@ -602,7 +613,8 @@ dependencies:
 - repo_url: ast-grep/agent-skill
   name: ast-grep
   host: github.com
-  resolved_commit: f2175aff21f20cfb8e2db30c28febeb3a2d42b61
+  resolved_commit: 0613dc7f82bbfb3b557380b54726b92f73358460
+  resolved_ref: main
   version: unknown
   virtual_path: ast-grep/skills/ast-grep
   is_virtual: true
@@ -619,11 +631,12 @@ dependencies:
     .agents/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
     .claude/skills/ast-grep/SKILL.md: sha256:a18b68ab555758b85915937cf252d70b0261f930a07ce52095e7cafbbd304782
     .claude/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
-  content_hash: sha256:cc2ab26ddaecb8c15db65514dd2db0f74aaea0c489a53c219411dcc0c9a1079a
+  content_hash: sha256:606a5ff4093729267da84101c96f21a3a94a3120cadb379595402dcbf0a81be9
 - repo_url: cursor/plugins
   name: unslop
   host: github.com
-  resolved_commit: df581122cde17e6e27686b5a448bde23e4ad4318
+  resolved_commit: 180939f9e59cc9512e9330649175763e81fad16f
+  resolved_ref: main
   version: unknown
   virtual_path: pstack/skills/unslop
   is_virtual: true
@@ -636,11 +649,12 @@ dependencies:
   deployed_file_hashes:
     .agents/skills/unslop/SKILL.md: sha256:195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1
     .claude/skills/unslop/SKILL.md: sha256:195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1
-  content_hash: sha256:6018ca8c329ba87c6b4298207f58d6b773fe23e44ff52a00a9a4d160c19bedc0
+  content_hash: sha256:eca0ad9fa3a3867c83f3aaf3a058e247a569c8976a68ca423a569b93eb86de5d
 - repo_url: cursor/plugins
   name: thermos
   host: github.com
-  resolved_commit: df581122cde17e6e27686b5a448bde23e4ad4318
+  resolved_commit: 180939f9e59cc9512e9330649175763e81fad16f
+  resolved_ref: main
   version: 1.0.0
   virtual_path: thermos
   is_virtual: true
@@ -674,7 +688,8 @@ dependencies:
 - repo_url: github/awesome-copilot
   name: create-agentsmd
   host: github.com
-  resolved_commit: 143a3d976b3c1603cc8932984d5e1f28501cb5fc
+  resolved_commit: 7e408815ddcb64889a3683799a85399331cfd4ef
+  resolved_ref: main
   version: unknown
   virtual_path: skills/create-agentsmd
   is_virtual: true
@@ -691,7 +706,8 @@ dependencies:
 - repo_url: humanlayer/skills
   name: show-me
   host: github.com
-  resolved_commit: ca7c8088db69e315a8b2deea43820270457f8f3c
+  resolved_commit: 4d69d20f6e9b57b4fcf0d501ccfb1be961f0f329
+  resolved_ref: main
   version: unknown
   virtual_path: plugins/show-me/skills/show-me
   is_virtual: true
@@ -713,6 +729,7 @@ dependencies:
   name: defuddle
   host: github.com
   resolved_commit: 3ccff5338ea700537839b21900aa5358a0402c98
+  resolved_ref: main
   version: unknown
   virtual_path: skills/defuddle
   is_virtual: true
@@ -730,6 +747,7 @@ dependencies:
   name: json-canvas
   host: github.com
   resolved_commit: 3ccff5338ea700537839b21900aa5358a0402c98
+  resolved_ref: main
   version: unknown
   virtual_path: skills/json-canvas
   is_virtual: true
@@ -751,6 +769,7 @@ dependencies:
   name: obsidian-bases
   host: github.com
   resolved_commit: 3ccff5338ea700537839b21900aa5358a0402c98
+  resolved_ref: main
   version: unknown
   virtual_path: skills/obsidian-bases
   is_virtual: true
@@ -772,6 +791,7 @@ dependencies:
   name: obsidian-cli
   host: github.com
   resolved_commit: 3ccff5338ea700537839b21900aa5358a0402c98
+  resolved_ref: main
   version: unknown
   virtual_path: skills/obsidian-cli
   is_virtual: true
@@ -789,6 +809,7 @@ dependencies:
   name: obsidian-markdown
   host: github.com
   resolved_commit: 3ccff5338ea700537839b21900aa5358a0402c98
+  resolved_ref: main
   version: unknown
   virtual_path: skills/obsidian-markdown
   is_virtual: true
@@ -817,7 +838,8 @@ dependencies:
 - repo_url: mattpocock/skills
   name: grill-me
   host: github.com
-  resolved_commit: 4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d
+  resolved_commit: 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
+  resolved_ref: main
   version: unknown
   virtual_path: skills/productivity/grill-me
   is_virtual: true
@@ -838,7 +860,8 @@ dependencies:
 - repo_url: mattpocock/skills
   name: grilling
   host: github.com
-  resolved_commit: 4588b32ecab9ecc9fc8cc6b6c5e7d675b6004b0d
+  resolved_commit: 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d
+  resolved_ref: main
   version: unknown
   virtual_path: skills/productivity/grilling
   is_virtual: true
@@ -855,11 +878,12 @@ dependencies:
     .agents/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
     .claude/skills/grilling/SKILL.md: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
     .claude/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
-  content_hash: sha256:e98f109bca3d8889f673d9f32bf84086f85a70ff9e241f8a34a4560a07ab5a39
+  content_hash: sha256:823f08ad33368a9626991e6782f7ae14b958e39ef8503f6bdb3b98a58d237a58
 - repo_url: mountain-loop/yaak
   name: use-yaak
   host: github.com
-  resolved_commit: 7f302536168585be4603aea09491a78b75c57070
+  resolved_commit: 87a30200f9f30ca6bb33a731b6c7b1ee43b8d10a
+  resolved_ref: main
   version: unknown
   virtual_path: crates-cli/yaak-cli/skills/use-yaak
   is_virtual: true
@@ -877,6 +901,7 @@ dependencies:
   name: improve
   host: github.com
   resolved_commit: cac56e1ebd3c279aa9153616cfeac7b174ab90f9
+  resolved_ref: main
   version: unknown
   virtual_path: skills/improve
   is_virtual: true

@@ -81,8 +81,9 @@ immediately and show up as unstaged changes in this repository.
   must be copy-paste accurate.
 - Third-party skills are declared in `apm/apm.yml` and installed by the
   bootstrap task, which saves lockfile changes back to `apm/apm.lock.yaml`.
-  Update them with `mise run skills-update`; do not hand-edit
-  `apm/apm.lock.yaml`.
+  Specify an upstream branch ref, such as `#main`, so Dependabot can monitor
+  the skill. Dependabot checks for updates weekly; use `mise run skills-update`
+  for manual updates. Do not hand-edit `apm/apm.lock.yaml`.
 - Do not pin a third-party skill that its upstream repository removed. Run
   `apm uninstall -g <package>`, then
   `mise dot add ~/.apm/apm.yml ~/.apm/apm.lock.yaml`.
