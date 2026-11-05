@@ -71,7 +71,8 @@ are declared in `apm/apm.yml` and installed by
 
 apm refuses a symlinked `~/.apm`, so mise copies `apm/apm.yml` and
 `apm/apm.lock.yaml` into a regular `~/.apm` directory. The bootstrap task runs
-`apm install -g` and saves any lockfile change back to `apm/apm.lock.yaml`.
+`apm install -g --frozen` using the committed lockfile. Frozen installation can
+deploy files before reporting an error; it does not change the lockfile.
 
 Add a local skill by creating `agents/skills/<name>/SKILL.md`, then rerun the
 bootstrap or apply the dotfiles:
@@ -85,13 +86,22 @@ skill directory into both `~/.agents/skills/` and `~/.claude/skills/`. New skill
 need no individual mapping. apm installs third-party skills alongside these links.
 
 Add a third-party skill in `apm/apm.yml` with its upstream branch as a ref,
-such as `#main`. Rerun the bootstrap and commit the `apm/apm.lock.yaml` diff.
+such as `#main`. Copy the manifest, install, and save the updated lockfile:
+
+```sh
+mise dotfiles apply --force --yes ~/.apm/apm.yml
+apm install -g
+mise dot add ~/.apm/apm.lock.yaml
+```
+
+Review and commit the `apm/apm.lock.yaml` diff.
 
 Dependabot checks these refs weekly and opens pull requests that update the
 lockfile. Rerun the bootstrap after merging an update to install the skills.
 
 To update skills to their latest upstream commits manually, use the task below.
-apm shows an update plan and asks for confirmation; commit the `apm/apm.lock.yaml` diff.
+apm shows an update plan and asks for confirmation. The task reinstalls the
+resolved skills before saving the lockfile; review and commit the diff.
 
 ```sh
 mise run skills-update

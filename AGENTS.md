@@ -80,7 +80,9 @@ immediately and show up as unstaged changes in this repository.
 - Write skill text in English. Skills are procedural, so commands and file paths
   must be copy-paste accurate.
 - Third-party skills are declared in `apm/apm.yml` and installed by the
-  bootstrap task, which saves lockfile changes back to `apm/apm.lock.yaml`.
+  bootstrap task with `apm install -g --frozen`. After changing the manifest,
+  copy it to `~/.apm`, run `apm install -g`, and save the updated lockfile with
+  `mise dot add ~/.apm/apm.lock.yaml`.
   Specify an upstream branch ref, such as `#main`, so Dependabot can monitor
   the skill. Dependabot checks for updates weekly; use `mise run skills-update`
   for manual updates. Do not hand-edit `apm/apm.lock.yaml`.

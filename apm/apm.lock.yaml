@@ -1,11 +1,11 @@
 lockfile_version: '1'
-generated_at: '2026-11-04T04:40:19.649441+00:00'
-apm_version: 0.33.0
+generated_at: '2026-11-05T12:46:10.545712+00:00'
+apm_version: 0.35.0
 dependencies:
 - repo_url: android/skills
   name: android-cli
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: devtools/android-cli
@@ -14,24 +14,16 @@ dependencies:
   deployed_files:
   - .agents/skills/android-cli
   - .agents/skills/android-cli/SKILL.md
-  - .agents/skills/android-cli/references/interact.md
-  - .agents/skills/android-cli/references/journeys.md
   - .claude/skills/android-cli
   - .claude/skills/android-cli/SKILL.md
-  - .claude/skills/android-cli/references/interact.md
-  - .claude/skills/android-cli/references/journeys.md
   deployed_file_hashes:
-    .agents/skills/android-cli/SKILL.md: sha256:93bef1a066f4cc04ee6e02c7770f1b741aa43b2ca250b77e5626f0fb26cc75a0
-    .agents/skills/android-cli/references/interact.md: sha256:86eaab56b5ba8de103632292ce446fb99170cab07d775e3f348a7e49e8b165dd
-    .agents/skills/android-cli/references/journeys.md: sha256:cd570a549f4785fadf1f131edcc47d4e692d7eebc37d28a79019cb569f055c86
-    .claude/skills/android-cli/SKILL.md: sha256:93bef1a066f4cc04ee6e02c7770f1b741aa43b2ca250b77e5626f0fb26cc75a0
-    .claude/skills/android-cli/references/interact.md: sha256:86eaab56b5ba8de103632292ce446fb99170cab07d775e3f348a7e49e8b165dd
-    .claude/skills/android-cli/references/journeys.md: sha256:cd570a549f4785fadf1f131edcc47d4e692d7eebc37d28a79019cb569f055c86
+    .agents/skills/android-cli/SKILL.md: sha256:2d35bb178b30581a9d4a31c30cf4895861a095863a9d8434a134fd10c2fca0b3
+    .claude/skills/android-cli/SKILL.md: sha256:2d35bb178b30581a9d4a31c30cf4895861a095863a9d8434a134fd10c2fca0b3
   content_hash: sha256:bbe53f7481bc5de0a5fa1152ca113bff161b3e6aec6a228820c2485e4d861873
 - repo_url: android/skills
   name: adaptive
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: jetpack-compose/adaptive
@@ -49,8 +41,13 @@ dependencies:
   - .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md
   - .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/item-properties.md
   - .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/mediaquery/index.md
-  - .agents/skills/adaptive/references/android/develop/ui/compose/tooling/debug.md
   - .agents/skills/adaptive/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md
+  - .agents/skills/adaptive/references/android/guide/navigation/navigation-3/save-state.md
+  - .agents/skills/adaptive/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md
+  - .agents/skills/adaptive/references/custom_cursors.md
+  - .agents/skills/adaptive/references/foldable-tabletop.md
+  - .agents/skills/adaptive/references/keyboard_shortcuts.md
+  - .agents/skills/adaptive/references/tooltips.md
   - .claude/skills/adaptive
   - .claude/skills/adaptive/SKILL.md
   - .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/container-behavior.md
@@ -62,38 +59,53 @@ dependencies:
   - .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md
   - .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/item-properties.md
   - .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/mediaquery/index.md
-  - .claude/skills/adaptive/references/android/develop/ui/compose/tooling/debug.md
   - .claude/skills/adaptive/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md
+  - .claude/skills/adaptive/references/android/guide/navigation/navigation-3/save-state.md
+  - .claude/skills/adaptive/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md
+  - .claude/skills/adaptive/references/custom_cursors.md
+  - .claude/skills/adaptive/references/foldable-tabletop.md
+  - .claude/skills/adaptive/references/keyboard_shortcuts.md
+  - .claude/skills/adaptive/references/tooltips.md
   deployed_file_hashes:
-    .agents/skills/adaptive/SKILL.md: sha256:5067113bb22ff5eb4b6e971bd7aa52000fbf0bd625c7d0bf1765cb4024b1da68
+    .agents/skills/adaptive/SKILL.md: sha256:e7a778745599729973cd6a07f0c90be3355e9785f650680daece8905fe0f617d
     .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/container-behavior.md: sha256:7a33b15b827dbf21557a2ac808d3e0c2653cf33cc4c58277f2eb94ebfa41aa5f
-    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/get-started.md: sha256:a2c90a46ae65197955c988972d942425cc80ac6ec0bc4744827ef6206ac9750e
-    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/index.md: sha256:6323d0edb988ada38596508c520efc99ae8f9ab8f3954f5bfbfe8ee373e0afc7
+    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/get-started.md: sha256:2333ea80100012554a3891048f237b6aeacf9e5f9d8b54d8b10c4cf639897813
+    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/index.md: sha256:952ca4608d36dcb0db9a36aed865f9cdb5e85583480cd85e9e364327be460ecb
     .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/item-behavior.md: sha256:94e894a59857662ed784913774a4d0c5bcec7d16468c4c910962a7d806a0e562
     .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/container-properties.md: sha256:fb12005053f5f040c26c5b74a93c11825d5a27f1802ec7748859b24ee2c030c7
-    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/get-started.md: sha256:42bee8a81fbfda57cb99457078040da3858be789ab42e371567e2c4d08a14515
-    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md: sha256:97b1e85bc765b97c1930014a554977abddb12bfd0d638b13ab75932dc287a6d0
+    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/get-started.md: sha256:96a2eeb05283eb5c99b751b4bf68769b59462e2d0bb70170260325004240e673
+    .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md: sha256:f6fb9a8d962dc7053fa5a1a20234d96fd0eeb9d4252fc98c40826353816815ab
     .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/item-properties.md: sha256:ef0a67039918022d01ac26983b3cc06c798050736d42ffe692c98e3c4517b45a
     .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/mediaquery/index.md: sha256:1e79df59c053569d5376a618c414b793670fdf35e337d7c8aecce81bf09f90d7
-    .agents/skills/adaptive/references/android/develop/ui/compose/tooling/debug.md: sha256:ba62982a079cd1535f904bc784d4a64b1c77bd9ccede9f1e675c48fa44a95397
     .agents/skills/adaptive/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md: sha256:e4781cf0fc691f92c202400a07ebc80424666681f9547e757f660388252cdb29
-    .claude/skills/adaptive/SKILL.md: sha256:5067113bb22ff5eb4b6e971bd7aa52000fbf0bd625c7d0bf1765cb4024b1da68
+    .agents/skills/adaptive/references/android/guide/navigation/navigation-3/save-state.md: sha256:88f4e8e8831368f58fba9dc28f2cb40a0dcf0a627df5c09eb5b2a837486f9d6f
+    .agents/skills/adaptive/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md: sha256:4b4ada7a50201bcf9ab90b0d9f00cc2ceb16513d1de7f63c12d634318a2ec20d
+    .agents/skills/adaptive/references/custom_cursors.md: sha256:a6673e5540ea54e73c871a1e28e47c73b5f8e7cbc5a28bde18acd8ff3d6fd2fe
+    .agents/skills/adaptive/references/foldable-tabletop.md: sha256:5133e364ce466df05a3c012565f237b6fa27f853dbc92d2d65982045c20f2a79
+    .agents/skills/adaptive/references/keyboard_shortcuts.md: sha256:72c2876b4c805f00b00c948f00f0e41d9a3d2c9207a38262f45cd2ab03327513
+    .agents/skills/adaptive/references/tooltips.md: sha256:c87d96b2da4488cbbfd097a25a6b4557c48de055df96c7602bd7cb2966d2e4e9
+    .claude/skills/adaptive/SKILL.md: sha256:e7a778745599729973cd6a07f0c90be3355e9785f650680daece8905fe0f617d
     .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/container-behavior.md: sha256:7a33b15b827dbf21557a2ac808d3e0c2653cf33cc4c58277f2eb94ebfa41aa5f
-    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/get-started.md: sha256:a2c90a46ae65197955c988972d942425cc80ac6ec0bc4744827ef6206ac9750e
-    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/index.md: sha256:6323d0edb988ada38596508c520efc99ae8f9ab8f3954f5bfbfe8ee373e0afc7
+    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/get-started.md: sha256:2333ea80100012554a3891048f237b6aeacf9e5f9d8b54d8b10c4cf639897813
+    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/index.md: sha256:952ca4608d36dcb0db9a36aed865f9cdb5e85583480cd85e9e364327be460ecb
     .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/item-behavior.md: sha256:94e894a59857662ed784913774a4d0c5bcec7d16468c4c910962a7d806a0e562
     .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/container-properties.md: sha256:fb12005053f5f040c26c5b74a93c11825d5a27f1802ec7748859b24ee2c030c7
-    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/get-started.md: sha256:42bee8a81fbfda57cb99457078040da3858be789ab42e371567e2c4d08a14515
-    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md: sha256:97b1e85bc765b97c1930014a554977abddb12bfd0d638b13ab75932dc287a6d0
+    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/get-started.md: sha256:96a2eeb05283eb5c99b751b4bf68769b59462e2d0bb70170260325004240e673
+    .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md: sha256:f6fb9a8d962dc7053fa5a1a20234d96fd0eeb9d4252fc98c40826353816815ab
     .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/item-properties.md: sha256:ef0a67039918022d01ac26983b3cc06c798050736d42ffe692c98e3c4517b45a
     .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/mediaquery/index.md: sha256:1e79df59c053569d5376a618c414b793670fdf35e337d7c8aecce81bf09f90d7
-    .claude/skills/adaptive/references/android/develop/ui/compose/tooling/debug.md: sha256:ba62982a079cd1535f904bc784d4a64b1c77bd9ccede9f1e675c48fa44a95397
     .claude/skills/adaptive/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md: sha256:e4781cf0fc691f92c202400a07ebc80424666681f9547e757f660388252cdb29
+    .claude/skills/adaptive/references/android/guide/navigation/navigation-3/save-state.md: sha256:88f4e8e8831368f58fba9dc28f2cb40a0dcf0a627df5c09eb5b2a837486f9d6f
+    .claude/skills/adaptive/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md: sha256:4b4ada7a50201bcf9ab90b0d9f00cc2ceb16513d1de7f63c12d634318a2ec20d
+    .claude/skills/adaptive/references/custom_cursors.md: sha256:a6673e5540ea54e73c871a1e28e47c73b5f8e7cbc5a28bde18acd8ff3d6fd2fe
+    .claude/skills/adaptive/references/foldable-tabletop.md: sha256:5133e364ce466df05a3c012565f237b6fa27f853dbc92d2d65982045c20f2a79
+    .claude/skills/adaptive/references/keyboard_shortcuts.md: sha256:72c2876b4c805f00b00c948f00f0e41d9a3d2c9207a38262f45cd2ab03327513
+    .claude/skills/adaptive/references/tooltips.md: sha256:c87d96b2da4488cbbfd097a25a6b4557c48de055df96c7602bd7cb2966d2e4e9
   content_hash: sha256:172c058f860c017a5d9645c54732bbb7cd2f383a513ffe8b5f9369e825ae457f
 - repo_url: android/skills
   name: migrate-xml-views-to-jetpack-compose
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: jetpack-compose/migration/migrate-xml-views-to-jetpack-compose
@@ -147,7 +159,7 @@ dependencies:
 - repo_url: android/skills
   name: navigation-3
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: navigation/navigation-3
@@ -213,18 +225,18 @@ dependencies:
   - .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/scenes-twopane.md
   - .claude/skills/navigation-3/references/android/guide/navigation/type-safe-destinations.md
   deployed_file_hashes:
-    .agents/skills/navigation-3/SKILL.md: sha256:e5f448fc82a30e3a5efdb154dcc32fa77b806291d7fa571f201f3fb5530973fa
+    .agents/skills/navigation-3/SKILL.md: sha256:e2bc8ec434bc104f71ef753ca21665678b00db8f14ef3fd36847ab85b313b4af
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/index.md: sha256:a6170dc40e2769e1034d51a5021b0b6dbc5df9bc9d9bbcae3c576a0647d0b6cf
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/migration-guide.md: sha256:2ba7d44e4b0b5ab827925354810645da026e9fb721bd9589a4f94b6f5d7bc954
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/animations.md: sha256:50c54d09fe14cb28f27d02cd9aaad4204dfe975a14bc8292b0bd40f61ad5300d
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/basic.md: sha256:f96b02408f311d07c8df16c1867e25598c4bcc1794b52aaaa290a3b377727495
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/basicdsl.md: sha256:d077507172cbf9ed6916899ef2d17b5f9aebcc9d3b46d51725d30166949daa14
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/basicsaveable.md: sha256:93f01733db02f06a66c54bc5372a88688831bad14ded07ad181a16a12b848110
-    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/bottomsheet.md: sha256:24ac29f14deb7912df58cc1bb504b65e9f31b30dd7daa35a3446f2682a8e57a5
+    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/bottomsheet.md: sha256:63d7fe5d044bd0d9c4dbb913b47ecaf2d7677305ac94c51c9295ebabfc1ef76f
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/common-ui.md: sha256:835be092ff7114870543b4f7fb1f0893157c0ad07e00d70682a1256e95f5f3db
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/conditional-transitions.md: sha256:bb41f81b08f422aaa201d2716f0feaa22705ebc9154d914ade0c25b3d3052063
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/conditional.md: sha256:1197b80637b7f670d7f7a426e1c5e47958139954888ddbe5cad68a82dda0fe2f
-    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-custommatcher.md: sha256:9fbfccbf29e03d24de0caa667c826d8971984e5c6b5aba2e3ed9c057357c2fac
+    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-custommatcher.md: sha256:96c0a9a617fffc4e5e9113da2b55fd1bd8bbe40593c836425a9dc2984854d0b0
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-staticuri.md: sha256:f131fe946f25f108601b66dcdb62be6add8cf685437fc78621d8b92dd67bd201
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-syntheticbackstack.md: sha256:12bf69439480fab3111f4b513118be0128ad574dd9d0aecd199ea37d0f75c4b2
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-uriarguments.md: sha256:bb8afb2616dfc7202376175752bdb5c99b19a64642b7a1b1f6f651527dfdf129
@@ -232,27 +244,27 @@ dependencies:
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/lifecycle-owner.md: sha256:45e204c1494179deadb56e9b544c78c6f6f17be4d3d660d841a5db5e4245038f
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md: sha256:e4781cf0fc691f92c202400a07ebc80424666681f9547e757f660388252cdb29
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/material-supportingpane.md: sha256:f0dc47a8d0aaceeefc6a48bf73563b3f9449e608c2ef71140acd5dcd13377e6d
-    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-hilt.md: sha256:1c306c7f687148c9455d6df7be1f692dda9308b85f0ab40b400b9e0926a898a2
-    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-koin.md: sha256:6d8a7925dba9eb06d7e0fbcb9aa92f025cb58fdc09b42c0496f52cf77266f6cd
-    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/multiple-backstacks.md: sha256:571f6147f90e1b16aa883ef790b27b6bce58fc7250158077f1d5e5624470fca4
+    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-hilt.md: sha256:a11572b32f8a72ea6736db0ccea44eb94f575dd272c9246bdf24d1b76c31f539
+    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-koin.md: sha256:591bd833b2b725d9e2e8f5ca5658a825c7d2f589c6c5d3103066e320a82e4fb9
+    .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/multiple-backstacks.md: sha256:ee3300492f924914c649e157f3e72ce67af1b3b2fb356465a86b0b37e7b47d11
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/passingarguments.md: sha256:bc53a9bbabb799865bf8bc3130faeae6e6d2b2838c3e44f48574443b6467e0a5
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/results-event.md: sha256:e3f3371d6c5f06a3696c2f90f095bd5c530abd1a8dc59e666631b4e1d2926589
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/results-state.md: sha256:17fbf45258b3c928e300adfa07ec320ffbd591e3209236499c74bbb736a1acec
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/scenes-listdetail.md: sha256:2a19b4d03973c179eb4e4be8f95f9b728af34b55015619dde73dcd72af916e8c
     .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/scenes-twopane.md: sha256:d0cb99ae3054cf463a598fd348d3d9a07aa4b6805ab22121bdc11561a60b1f64
     .agents/skills/navigation-3/references/android/guide/navigation/type-safe-destinations.md: sha256:ad5f13e3d5ee1bc849d2da5941d4f99a3e2a5748d52fcdfde96d1bc21bf47acb
-    .claude/skills/navigation-3/SKILL.md: sha256:e5f448fc82a30e3a5efdb154dcc32fa77b806291d7fa571f201f3fb5530973fa
+    .claude/skills/navigation-3/SKILL.md: sha256:e2bc8ec434bc104f71ef753ca21665678b00db8f14ef3fd36847ab85b313b4af
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/index.md: sha256:a6170dc40e2769e1034d51a5021b0b6dbc5df9bc9d9bbcae3c576a0647d0b6cf
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/migration-guide.md: sha256:2ba7d44e4b0b5ab827925354810645da026e9fb721bd9589a4f94b6f5d7bc954
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/animations.md: sha256:50c54d09fe14cb28f27d02cd9aaad4204dfe975a14bc8292b0bd40f61ad5300d
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/basic.md: sha256:f96b02408f311d07c8df16c1867e25598c4bcc1794b52aaaa290a3b377727495
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/basicdsl.md: sha256:d077507172cbf9ed6916899ef2d17b5f9aebcc9d3b46d51725d30166949daa14
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/basicsaveable.md: sha256:93f01733db02f06a66c54bc5372a88688831bad14ded07ad181a16a12b848110
-    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/bottomsheet.md: sha256:24ac29f14deb7912df58cc1bb504b65e9f31b30dd7daa35a3446f2682a8e57a5
+    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/bottomsheet.md: sha256:63d7fe5d044bd0d9c4dbb913b47ecaf2d7677305ac94c51c9295ebabfc1ef76f
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/common-ui.md: sha256:835be092ff7114870543b4f7fb1f0893157c0ad07e00d70682a1256e95f5f3db
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/conditional-transitions.md: sha256:bb41f81b08f422aaa201d2716f0feaa22705ebc9154d914ade0c25b3d3052063
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/conditional.md: sha256:1197b80637b7f670d7f7a426e1c5e47958139954888ddbe5cad68a82dda0fe2f
-    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-custommatcher.md: sha256:9fbfccbf29e03d24de0caa667c826d8971984e5c6b5aba2e3ed9c057357c2fac
+    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-custommatcher.md: sha256:96c0a9a617fffc4e5e9113da2b55fd1bd8bbe40593c836425a9dc2984854d0b0
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-staticuri.md: sha256:f131fe946f25f108601b66dcdb62be6add8cf685437fc78621d8b92dd67bd201
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-syntheticbackstack.md: sha256:12bf69439480fab3111f4b513118be0128ad574dd9d0aecd199ea37d0f75c4b2
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-uriarguments.md: sha256:bb8afb2616dfc7202376175752bdb5c99b19a64642b7a1b1f6f651527dfdf129
@@ -260,9 +272,9 @@ dependencies:
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/lifecycle-owner.md: sha256:45e204c1494179deadb56e9b544c78c6f6f17be4d3d660d841a5db5e4245038f
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md: sha256:e4781cf0fc691f92c202400a07ebc80424666681f9547e757f660388252cdb29
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/material-supportingpane.md: sha256:f0dc47a8d0aaceeefc6a48bf73563b3f9449e608c2ef71140acd5dcd13377e6d
-    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-hilt.md: sha256:1c306c7f687148c9455d6df7be1f692dda9308b85f0ab40b400b9e0926a898a2
-    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-koin.md: sha256:6d8a7925dba9eb06d7e0fbcb9aa92f025cb58fdc09b42c0496f52cf77266f6cd
-    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/multiple-backstacks.md: sha256:571f6147f90e1b16aa883ef790b27b6bce58fc7250158077f1d5e5624470fca4
+    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-hilt.md: sha256:a11572b32f8a72ea6736db0ccea44eb94f575dd272c9246bdf24d1b76c31f539
+    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-koin.md: sha256:591bd833b2b725d9e2e8f5ca5658a825c7d2f589c6c5d3103066e320a82e4fb9
+    .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/multiple-backstacks.md: sha256:ee3300492f924914c649e157f3e72ce67af1b3b2fb356465a86b0b37e7b47d11
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/passingarguments.md: sha256:bc53a9bbabb799865bf8bc3130faeae6e6d2b2838c3e44f48574443b6467e0a5
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/results-event.md: sha256:e3f3371d6c5f06a3696c2f90f095bd5c530abd1a8dc59e666631b4e1d2926589
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/results-state.md: sha256:17fbf45258b3c928e300adfa07ec320ffbd591e3209236499c74bbb736a1acec
@@ -273,7 +285,7 @@ dependencies:
 - repo_url: android/skills
   name: r8-analyzer
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: performance/r8-analyzer
@@ -282,48 +294,48 @@ dependencies:
   deployed_files:
   - .agents/skills/r8-analyzer
   - .agents/skills/r8-analyzer/SKILL.md
-  - .agents/skills/r8-analyzer/references/CONFIGURATION-ANALYZER.md
   - .agents/skills/r8-analyzer/references/CONFIGURATION.md
-  - .agents/skills/r8-analyzer/references/KEEP-RULES-IMPACT-HIERARCHY.md
-  - .agents/skills/r8-analyzer/references/REDUNDANT-RULES.md
-  - .agents/skills/r8-analyzer/references/REFLECTION-GUIDE.md
+  - .agents/skills/r8-analyzer/references/FULL_BUILD_CONFIG_ANALYZER.md
+  - .agents/skills/r8-analyzer/references/INSPECT-RULES.md
   - .agents/skills/r8-analyzer/references/REPORT_FORMAT.md
   - .agents/skills/r8-analyzer/references/android/topic/performance/app-optimization/enable-app-optimization.md
-  - .agents/skills/r8-analyzer/references/android/training/testing/other-components/ui-automator.md
+  - .agents/skills/r8-analyzer/scripts/analyze.py
+  - .agents/skills/r8-analyzer/scripts/convert_pb_to_json.py
+  - .agents/skills/r8-analyzer/scripts/keep_radius_pb2.py
   - .claude/skills/r8-analyzer
   - .claude/skills/r8-analyzer/SKILL.md
-  - .claude/skills/r8-analyzer/references/CONFIGURATION-ANALYZER.md
   - .claude/skills/r8-analyzer/references/CONFIGURATION.md
-  - .claude/skills/r8-analyzer/references/KEEP-RULES-IMPACT-HIERARCHY.md
-  - .claude/skills/r8-analyzer/references/REDUNDANT-RULES.md
-  - .claude/skills/r8-analyzer/references/REFLECTION-GUIDE.md
+  - .claude/skills/r8-analyzer/references/FULL_BUILD_CONFIG_ANALYZER.md
+  - .claude/skills/r8-analyzer/references/INSPECT-RULES.md
   - .claude/skills/r8-analyzer/references/REPORT_FORMAT.md
   - .claude/skills/r8-analyzer/references/android/topic/performance/app-optimization/enable-app-optimization.md
-  - .claude/skills/r8-analyzer/references/android/training/testing/other-components/ui-automator.md
+  - .claude/skills/r8-analyzer/scripts/analyze.py
+  - .claude/skills/r8-analyzer/scripts/convert_pb_to_json.py
+  - .claude/skills/r8-analyzer/scripts/keep_radius_pb2.py
   deployed_file_hashes:
-    .agents/skills/r8-analyzer/SKILL.md: sha256:896f499155dcb4e8808c43e771d1f3f0b89c520c1bdb4aca36d91d743fc7ca74
-    .agents/skills/r8-analyzer/references/CONFIGURATION-ANALYZER.md: sha256:7c2cf0537fab3db2f1dde6aef31c3b416f188ab18cccbf12a2c0eebcbaac9b35
-    .agents/skills/r8-analyzer/references/CONFIGURATION.md: sha256:c7bbacde8b8c047be16896f0fc9a55aa805c1dd8abc51c42339deeb3b3a173f1
-    .agents/skills/r8-analyzer/references/KEEP-RULES-IMPACT-HIERARCHY.md: sha256:d383eb1673fb6e5ce9b50a633160b0b249529ec61922527302c7cc4bc2f6097e
-    .agents/skills/r8-analyzer/references/REDUNDANT-RULES.md: sha256:282ac09478adc085612d1333229a7a61adabe5c4977807cd2a20e69bb3927bb0
-    .agents/skills/r8-analyzer/references/REFLECTION-GUIDE.md: sha256:68ce8bdd6f29614b1c19093a9a3c7663ed96dec2740159dcaa718fac27647d69
-    .agents/skills/r8-analyzer/references/REPORT_FORMAT.md: sha256:6db6de4b91db7e0e21f22967c24a7f535bfdcfa728f06bf91802983ded4fdee2
+    .agents/skills/r8-analyzer/SKILL.md: sha256:b6001b06ff0ebcbe87b98534a239c8c22b818b97681972db50d5b26466d2bf06
+    .agents/skills/r8-analyzer/references/CONFIGURATION.md: sha256:61669860168d5c1f9628f4eb49d68b28e06d60f301a550107d96c030a1389ab2
+    .agents/skills/r8-analyzer/references/FULL_BUILD_CONFIG_ANALYZER.md: sha256:e35ee7cebcf2c2bff5f17b5691ad9ac3a58bc2755ae5d7c3f326a9911d3e6f06
+    .agents/skills/r8-analyzer/references/INSPECT-RULES.md: sha256:35c2c579ab8693365ed9caba4b08e70228484d3d98e74efe143047e8df9996c4
+    .agents/skills/r8-analyzer/references/REPORT_FORMAT.md: sha256:34f11005ccc09e7198fedcb2e56f270127c5e8ac6e95c5fce6e4d9b52a55c323
     .agents/skills/r8-analyzer/references/android/topic/performance/app-optimization/enable-app-optimization.md: sha256:560048d6c973301d60c4ee058147f16043c50e5490f6e464c45754a38a7a92bb
-    .agents/skills/r8-analyzer/references/android/training/testing/other-components/ui-automator.md: sha256:60c0c0675cae082561d7ca94a02520251bc3e77131e207c609d4faa23ab89c98
-    .claude/skills/r8-analyzer/SKILL.md: sha256:896f499155dcb4e8808c43e771d1f3f0b89c520c1bdb4aca36d91d743fc7ca74
-    .claude/skills/r8-analyzer/references/CONFIGURATION-ANALYZER.md: sha256:7c2cf0537fab3db2f1dde6aef31c3b416f188ab18cccbf12a2c0eebcbaac9b35
-    .claude/skills/r8-analyzer/references/CONFIGURATION.md: sha256:c7bbacde8b8c047be16896f0fc9a55aa805c1dd8abc51c42339deeb3b3a173f1
-    .claude/skills/r8-analyzer/references/KEEP-RULES-IMPACT-HIERARCHY.md: sha256:d383eb1673fb6e5ce9b50a633160b0b249529ec61922527302c7cc4bc2f6097e
-    .claude/skills/r8-analyzer/references/REDUNDANT-RULES.md: sha256:282ac09478adc085612d1333229a7a61adabe5c4977807cd2a20e69bb3927bb0
-    .claude/skills/r8-analyzer/references/REFLECTION-GUIDE.md: sha256:68ce8bdd6f29614b1c19093a9a3c7663ed96dec2740159dcaa718fac27647d69
-    .claude/skills/r8-analyzer/references/REPORT_FORMAT.md: sha256:6db6de4b91db7e0e21f22967c24a7f535bfdcfa728f06bf91802983ded4fdee2
+    .agents/skills/r8-analyzer/scripts/analyze.py: sha256:59b55ac94cc1509e244792edeef26111b048d130eb74b6eb4f14ad5f1f30473b
+    .agents/skills/r8-analyzer/scripts/convert_pb_to_json.py: sha256:06397052c96d80cc0ffd7077faf197555c2e9c9363a7fff59ae84f28169998e2
+    .agents/skills/r8-analyzer/scripts/keep_radius_pb2.py: sha256:37f0f038d7870c71b8d3cdd5b9b9361d79bde265e2754e3ffd511f53107a2e1a
+    .claude/skills/r8-analyzer/SKILL.md: sha256:b6001b06ff0ebcbe87b98534a239c8c22b818b97681972db50d5b26466d2bf06
+    .claude/skills/r8-analyzer/references/CONFIGURATION.md: sha256:61669860168d5c1f9628f4eb49d68b28e06d60f301a550107d96c030a1389ab2
+    .claude/skills/r8-analyzer/references/FULL_BUILD_CONFIG_ANALYZER.md: sha256:e35ee7cebcf2c2bff5f17b5691ad9ac3a58bc2755ae5d7c3f326a9911d3e6f06
+    .claude/skills/r8-analyzer/references/INSPECT-RULES.md: sha256:35c2c579ab8693365ed9caba4b08e70228484d3d98e74efe143047e8df9996c4
+    .claude/skills/r8-analyzer/references/REPORT_FORMAT.md: sha256:34f11005ccc09e7198fedcb2e56f270127c5e8ac6e95c5fce6e4d9b52a55c323
     .claude/skills/r8-analyzer/references/android/topic/performance/app-optimization/enable-app-optimization.md: sha256:560048d6c973301d60c4ee058147f16043c50e5490f6e464c45754a38a7a92bb
-    .claude/skills/r8-analyzer/references/android/training/testing/other-components/ui-automator.md: sha256:60c0c0675cae082561d7ca94a02520251bc3e77131e207c609d4faa23ab89c98
+    .claude/skills/r8-analyzer/scripts/analyze.py: sha256:59b55ac94cc1509e244792edeef26111b048d130eb74b6eb4f14ad5f1f30473b
+    .claude/skills/r8-analyzer/scripts/convert_pb_to_json.py: sha256:06397052c96d80cc0ffd7077faf197555c2e9c9363a7fff59ae84f28169998e2
+    .claude/skills/r8-analyzer/scripts/keep_radius_pb2.py: sha256:37f0f038d7870c71b8d3cdd5b9b9361d79bde265e2754e3ffd511f53107a2e1a
   content_hash: sha256:7bee16200224e69abcdcc421b1705c90d8b20b2c683a9985b96785e179239d54
 - repo_url: android/skills
   name: play-policy-insights
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: play/play-policy-insights
@@ -393,7 +405,7 @@ dependencies:
 - repo_url: android/skills
   name: android-profiler
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: profilers/android-profiler
@@ -405,14 +417,12 @@ dependencies:
   - .agents/skills/android-profiler/analysis/analysis_orchestrator.md
   - .agents/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md
   - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/guiding_principles.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/domain_hints_template.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_cpu.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_graphics.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_io.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_ipc.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_memory.md
-  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_power.md
+  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_cpu.md
+  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_graphics.md
+  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_io.md
+  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_ipc.md
+  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_memory.md
+  - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_power.md
   - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md
   - .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md
   - .agents/skills/android-profiler/recording/recording_orchestrator.md
@@ -433,14 +443,12 @@ dependencies:
   - .claude/skills/android-profiler/analysis/analysis_orchestrator.md
   - .claude/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md
   - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/guiding_principles.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/domain_hints_template.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_cpu.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_graphics.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_io.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_ipc.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_memory.md
-  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_power.md
+  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_cpu.md
+  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_graphics.md
+  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_io.md
+  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_ipc.md
+  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_memory.md
+  - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_power.md
   - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md
   - .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md
   - .claude/skills/android-profiler/recording/recording_orchestrator.md
@@ -457,24 +465,22 @@ dependencies:
   - .claude/skills/android-profiler/references/perfetto/setup.md
   - .claude/skills/android-profiler/references/perfetto/sql.md
   deployed_file_hashes:
-    .agents/skills/android-profiler/SKILL.md: sha256:6385aeb41e96271fa6295ead577fd03e3b21e0be380f8ca6a20fb13d46feff4c
-    .agents/skills/android-profiler/analysis/analysis_orchestrator.md: sha256:cd70825d9ed6f6dabf999561b5c69971695cd649001721191b5c829fec80035a
-    .agents/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md: sha256:e0eadf266207020eb91c4a682e22d48baaa2774fa36b1c260f9c04b222e6786d
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md: sha256:7a017bb1b6be37c96ec6a8eafd9425e1cd2a4001cc5dc1dcf0c9fe4953b6007a
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/guiding_principles.md: sha256:f7d735f3a34b87fe62cad35f12b564f8c76d6216efce3320a8739ae653bdde90
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/domain_hints_template.md: sha256:3fef8a7bed88a3e11f33ea538a3cb13643e9c9336a9ed1ee027a839737622aaf
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_cpu.md: sha256:32db6b750fa37595002e3abe42976615adf6d1cc6326e05977946cee6cea6e97
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_graphics.md: sha256:dc7136e9ee20c2c343a8a11a18817378f2e982762334136fe36ebfc0371d64e7
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_io.md: sha256:2f832c34053a9a4c816629efe4a46afb4af1923e0b55b4951bf06891ff81be51
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_ipc.md: sha256:ad593787b03e995043d8a6897ffd9021824b4646b1d417e18524ae1dba2be147
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_memory.md: sha256:127c42e239ffc0ddca9fb8e90185892d5f66e007d1feb14da0ab23c57f72d664
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_power.md: sha256:07fb29dc89f25a7784330b841394699bc16bc93a9431d9a42029fc7d6afa8328
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md: sha256:835fc1eb32badcf0022fe6f988d504cf36a11d91a15a2fa1f5799eb13862f467
-    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md: sha256:6db01df73f8c7601ff77cdb5b839d6d78187d2add34646d8007119d7923b8b44
-    .agents/skills/android-profiler/recording/recording_orchestrator.md: sha256:26a08ecd6f0ed8f80961d46b97db9420699565ea04f81970f74cdc44bf5fc010
-    .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/perfetto_trace_recording.md: sha256:1525b6f471e0930c9ea202e73b5ce69ddf9b88fa9a28e8934a0bf1cc7e82c718
+    .agents/skills/android-profiler/SKILL.md: sha256:d3083b151de83707950ac4edd68e84a11d153bd83d334e5315a44d45ce13b6be
+    .agents/skills/android-profiler/analysis/analysis_orchestrator.md: sha256:363ef7842f71b69ab46e86de6a1b262f6852b763d3958b7dd5fff58f9484898b
+    .agents/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md: sha256:ab547b6219e58c51eca8712b1baa7f8d0a3392d6fe40ac09b16a711b7a956dc6
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md: sha256:e2a1f1041e437ead24dfea2dcd745bf0a308639f763b2c76076ca39094263ed3
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_cpu.md: sha256:fd536d521436049f3ff04f6178128be2734f40f97e838f069bae6d8766257c4b
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_graphics.md: sha256:d2bd17c046cb8a6ecd8c81c736087c013fb908dce5d2b276d6d6ee354676d657
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_io.md: sha256:559da3bf6824a96122e6e755827b51669e4e42618f90ed2d81b12ee75f943c8e
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_ipc.md: sha256:ea5f15cb53251b86ef04eafe464a61455a1bd67583a90bf6df9f9b7bc04636e3
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_memory.md: sha256:c02cf981a091c7c69c0c42e91e7783efe37c6b133734831868de5947e623ee29
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_power.md: sha256:d1cf6f2681506b43ca3c3f57389bc86d9c232faa5fe3abb5e7adf3cd831070c7
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md: sha256:b6a00fb47db4233f94b3cb75fc22d696e96cb90aa7b7ae625557fa5235e00d6f
+    .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md: sha256:ce763b46ebaaf8c5f1a6d40979fb2291b6e64112f42d2d589ade4b4ea473389f
+    .agents/skills/android-profiler/recording/recording_orchestrator.md: sha256:ff9cbcf9b2876d6aaa4d749ce4ceaa5fa128d2a0807fd026f27b9b2270033d2c
+    .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/perfetto_trace_recording.md: sha256:20c49c7759ec7124ea065b8ddc388cc1b5344c5d16b36e7c3970d7f1a7207282
     .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/app_jank.pftxt: sha256:41bcc23a2300eb8913fc51b4e57578701bbb286cd60b549e3acec6b48da125ca
-    .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/cpu_profile.pftxt: sha256:f3185d9d2f73c3123d70f15ef928f130d5a8a221bf5bb8e438a86d1d54707db1
+    .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/cpu_profile.pftxt: sha256:62b0a152896bd4a99e4296770baff539c05bf79692818b33fa6d2043bc2a4092
     ? .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/java_heap_dump.pftxt
     : sha256:5b47447092cfdf81f780fd695fce7ca7aa70d5330325ae4f2cc67c504877159d
     ? .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/long_background.pftxt
@@ -483,28 +489,26 @@ dependencies:
     : sha256:e4298731b59c3a01cdfa5151446d3f3af845491ff8b98694357e09de58fc49df
     .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/native_heap.pftxt: sha256:e67c5ad23119c08ede35468e2b66ee63317ae55b54e4a06c9b0af2c043459be8
     .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/sched_cpu.pftxt: sha256:a37c989c0b3aa5d1d609f138d52c0625b728a2ec140ba8603991f562e614d9e0
-    .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/trace_config_reference.md: sha256:edaeba29593f49a0d789dc29300354372fea2674060c2b64283c9768a8ae2ff1
-    .agents/skills/android-profiler/references/env_setup.md: sha256:28d10c202ccf759cc7c07649968f3a390d5d984d31b9639d6dac0cd8920a6ee9
-    .agents/skills/android-profiler/references/perfetto/setup.md: sha256:a0bd2461f7d24f36a15fb078273e6850c49e820844a1e777427cc7377332b5c0
-    .agents/skills/android-profiler/references/perfetto/sql.md: sha256:ab667eaeba9243884df539fadb43989ad75f5285553fef7af9364740ce00b1a6
-    .claude/skills/android-profiler/SKILL.md: sha256:6385aeb41e96271fa6295ead577fd03e3b21e0be380f8ca6a20fb13d46feff4c
-    .claude/skills/android-profiler/analysis/analysis_orchestrator.md: sha256:cd70825d9ed6f6dabf999561b5c69971695cd649001721191b5c829fec80035a
-    .claude/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md: sha256:e0eadf266207020eb91c4a682e22d48baaa2774fa36b1c260f9c04b222e6786d
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md: sha256:7a017bb1b6be37c96ec6a8eafd9425e1cd2a4001cc5dc1dcf0c9fe4953b6007a
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/guiding_principles.md: sha256:f7d735f3a34b87fe62cad35f12b564f8c76d6216efce3320a8739ae653bdde90
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/domain_hints_template.md: sha256:3fef8a7bed88a3e11f33ea538a3cb13643e9c9336a9ed1ee027a839737622aaf
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_cpu.md: sha256:32db6b750fa37595002e3abe42976615adf6d1cc6326e05977946cee6cea6e97
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_graphics.md: sha256:dc7136e9ee20c2c343a8a11a18817378f2e982762334136fe36ebfc0371d64e7
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_io.md: sha256:2f832c34053a9a4c816629efe4a46afb4af1923e0b55b4951bf06891ff81be51
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_ipc.md: sha256:ad593787b03e995043d8a6897ffd9021824b4646b1d417e18524ae1dba2be147
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_memory.md: sha256:127c42e239ffc0ddca9fb8e90185892d5f66e007d1feb14da0ab23c57f72d664
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_power.md: sha256:07fb29dc89f25a7784330b841394699bc16bc93a9431d9a42029fc7d6afa8328
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md: sha256:835fc1eb32badcf0022fe6f988d504cf36a11d91a15a2fa1f5799eb13862f467
-    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md: sha256:6db01df73f8c7601ff77cdb5b839d6d78187d2add34646d8007119d7923b8b44
-    .claude/skills/android-profiler/recording/recording_orchestrator.md: sha256:26a08ecd6f0ed8f80961d46b97db9420699565ea04f81970f74cdc44bf5fc010
-    .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/perfetto_trace_recording.md: sha256:1525b6f471e0930c9ea202e73b5ce69ddf9b88fa9a28e8934a0bf1cc7e82c718
+    .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/trace_config_reference.md: sha256:9e0c9db5859dd619a96c3885f9c210af26fe321d46d02936825f593ee7b13d75
+    .agents/skills/android-profiler/references/env_setup.md: sha256:30ed3d16abbcbe381399339f13798b84f52e273cb2555fafa7b5be8da4a3b7a2
+    .agents/skills/android-profiler/references/perfetto/setup.md: sha256:8e5e1d7ec95bf848ac3d2f70acde12a3324865e212527c9b7dc0e7bbcc4ffc4b
+    .agents/skills/android-profiler/references/perfetto/sql.md: sha256:1a85db538f8c3e300cc8c9b6cf45ba52c8df8e9e32de41481e4021f8ce19db0e
+    .claude/skills/android-profiler/SKILL.md: sha256:d3083b151de83707950ac4edd68e84a11d153bd83d334e5315a44d45ce13b6be
+    .claude/skills/android-profiler/analysis/analysis_orchestrator.md: sha256:363ef7842f71b69ab46e86de6a1b262f6852b763d3958b7dd5fff58f9484898b
+    .claude/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md: sha256:ab547b6219e58c51eca8712b1baa7f8d0a3392d6fe40ac09b16a711b7a956dc6
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md: sha256:e2a1f1041e437ead24dfea2dcd745bf0a308639f763b2c76076ca39094263ed3
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_cpu.md: sha256:fd536d521436049f3ff04f6178128be2734f40f97e838f069bae6d8766257c4b
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_graphics.md: sha256:d2bd17c046cb8a6ecd8c81c736087c013fb908dce5d2b276d6d6ee354676d657
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_io.md: sha256:559da3bf6824a96122e6e755827b51669e4e42618f90ed2d81b12ee75f943c8e
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_ipc.md: sha256:ea5f15cb53251b86ef04eafe464a61455a1bd67583a90bf6df9f9b7bc04636e3
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_memory.md: sha256:c02cf981a091c7c69c0c42e91e7783efe37c6b133734831868de5947e623ee29
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_power.md: sha256:d1cf6f2681506b43ca3c3f57389bc86d9c232faa5fe3abb5e7adf3cd831070c7
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md: sha256:b6a00fb47db4233f94b3cb75fc22d696e96cb90aa7b7ae625557fa5235e00d6f
+    .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md: sha256:ce763b46ebaaf8c5f1a6d40979fb2291b6e64112f42d2d589ade4b4ea473389f
+    .claude/skills/android-profiler/recording/recording_orchestrator.md: sha256:ff9cbcf9b2876d6aaa4d749ce4ceaa5fa128d2a0807fd026f27b9b2270033d2c
+    .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/perfetto_trace_recording.md: sha256:20c49c7759ec7124ea065b8ddc388cc1b5344c5d16b36e7c3970d7f1a7207282
     .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/app_jank.pftxt: sha256:41bcc23a2300eb8913fc51b4e57578701bbb286cd60b549e3acec6b48da125ca
-    .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/cpu_profile.pftxt: sha256:f3185d9d2f73c3123d70f15ef928f130d5a8a221bf5bb8e438a86d1d54707db1
+    .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/cpu_profile.pftxt: sha256:62b0a152896bd4a99e4296770baff539c05bf79692818b33fa6d2043bc2a4092
     ? .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/java_heap_dump.pftxt
     : sha256:5b47447092cfdf81f780fd695fce7ca7aa70d5330325ae4f2cc67c504877159d
     ? .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/long_background.pftxt
@@ -513,15 +517,15 @@ dependencies:
     : sha256:e4298731b59c3a01cdfa5151446d3f3af845491ff8b98694357e09de58fc49df
     .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/native_heap.pftxt: sha256:e67c5ad23119c08ede35468e2b66ee63317ae55b54e4a06c9b0af2c043459be8
     .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/sched_cpu.pftxt: sha256:a37c989c0b3aa5d1d609f138d52c0625b728a2ec140ba8603991f562e614d9e0
-    .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/trace_config_reference.md: sha256:edaeba29593f49a0d789dc29300354372fea2674060c2b64283c9768a8ae2ff1
-    .claude/skills/android-profiler/references/env_setup.md: sha256:28d10c202ccf759cc7c07649968f3a390d5d984d31b9639d6dac0cd8920a6ee9
-    .claude/skills/android-profiler/references/perfetto/setup.md: sha256:a0bd2461f7d24f36a15fb078273e6850c49e820844a1e777427cc7377332b5c0
-    .claude/skills/android-profiler/references/perfetto/sql.md: sha256:ab667eaeba9243884df539fadb43989ad75f5285553fef7af9364740ce00b1a6
+    .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/trace_config_reference.md: sha256:9e0c9db5859dd619a96c3885f9c210af26fe321d46d02936825f593ee7b13d75
+    .claude/skills/android-profiler/references/env_setup.md: sha256:30ed3d16abbcbe381399339f13798b84f52e273cb2555fafa7b5be8da4a3b7a2
+    .claude/skills/android-profiler/references/perfetto/setup.md: sha256:8e5e1d7ec95bf848ac3d2f70acde12a3324865e212527c9b7dc0e7bbcc4ffc4b
+    .claude/skills/android-profiler/references/perfetto/sql.md: sha256:1a85db538f8c3e300cc8c9b6cf45ba52c8df8e9e32de41481e4021f8ce19db0e
   content_hash: sha256:288032fa7ce8279ae2292ac66b25a4581a1c48d24af2e930a63e24ffa8d26165
 - repo_url: android/skills
   name: android-intent-security
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: security/android-intent-security
@@ -533,13 +537,13 @@ dependencies:
   - .claude/skills/android-intent-security
   - .claude/skills/android-intent-security/SKILL.md
   deployed_file_hashes:
-    .agents/skills/android-intent-security/SKILL.md: sha256:116afe4bfd3c0153ed25eb472faabdbedc81f09dfcae19466501915ca23c5156
-    .claude/skills/android-intent-security/SKILL.md: sha256:116afe4bfd3c0153ed25eb472faabdbedc81f09dfcae19466501915ca23c5156
-  content_hash: sha256:f3eb7d785071d1a161685563b834c5d702c582e9767ced3fe87e921b3e16bc6f
+    .agents/skills/android-intent-security/SKILL.md: sha256:5f1c8dfed64b3da008e04ffb4c013e469f49f2758e0ce76bb031b7666b9140d4
+    .claude/skills/android-intent-security/SKILL.md: sha256:5f1c8dfed64b3da008e04ffb4c013e469f49f2758e0ce76bb031b7666b9140d4
+  content_hash: sha256:474a25eccad0ac044b4a65bd5ddf488d0d568b96c9e130e89d3d965959cf3278
 - repo_url: android/skills
   name: edge-to-edge
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: system/edge-to-edge
@@ -557,7 +561,7 @@ dependencies:
 - repo_url: android/skills
   name: testing-setup
   host: github.com
-  resolved_commit: 6daa53ef27fa2aa87827d183a85c06cedceca833
+  resolved_commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
   resolved_ref: main
   version: unknown
   virtual_path: testing/testing-setup
@@ -577,15 +581,15 @@ dependencies:
   - .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing.md
   - .claude/skills/testing-setup/references/android/training/dependency-injection/hilt-testing.md
   deployed_file_hashes:
-    .agents/skills/testing-setup/SKILL.md: sha256:7a249ae3a4d8d74caaebe31a9bc936afc557ba153b9c0080e3df3b23fd0c0dd2
-    .agents/skills/testing-setup/references/android/develop/ui/compose/testing/common-patterns.md: sha256:6e382fbf008b8a0b218d6f798b96dc16d31701eae5ef5753e26e7f25ca110471
+    .agents/skills/testing-setup/SKILL.md: sha256:613970834fedb22c5f85bbc900e600e9a17cd953157af5a7e953e5938d7c2457
+    .agents/skills/testing-setup/references/android/develop/ui/compose/testing/common-patterns.md: sha256:57fc697835d875cae7179d1b164db371e1b8c37881719fb32be51c09fa5c8c35
     .agents/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md: sha256:4b4ada7a50201bcf9ab90b0d9f00cc2ceb16513d1de7f63c12d634318a2ec20d
-    .agents/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing.md: sha256:4a18a18c1cec8685fdb736c69622e7315f39e1a612570fb4838072a60154bdc6
+    .agents/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing.md: sha256:d9b9c86efe82e0aa841f43435e4a29466794e75dd452e84a29fdc4f332a4d699
     .agents/skills/testing-setup/references/android/training/dependency-injection/hilt-testing.md: sha256:5e774a6ab09c0f469b4712ea8c468402b38dd4a19dce9570bacc49ad9af9c814
-    .claude/skills/testing-setup/SKILL.md: sha256:7a249ae3a4d8d74caaebe31a9bc936afc557ba153b9c0080e3df3b23fd0c0dd2
-    .claude/skills/testing-setup/references/android/develop/ui/compose/testing/common-patterns.md: sha256:6e382fbf008b8a0b218d6f798b96dc16d31701eae5ef5753e26e7f25ca110471
+    .claude/skills/testing-setup/SKILL.md: sha256:613970834fedb22c5f85bbc900e600e9a17cd953157af5a7e953e5938d7c2457
+    .claude/skills/testing-setup/references/android/develop/ui/compose/testing/common-patterns.md: sha256:57fc697835d875cae7179d1b164db371e1b8c37881719fb32be51c09fa5c8c35
     .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md: sha256:4b4ada7a50201bcf9ab90b0d9f00cc2ceb16513d1de7f63c12d634318a2ec20d
-    .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing.md: sha256:4a18a18c1cec8685fdb736c69622e7315f39e1a612570fb4838072a60154bdc6
+    .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing.md: sha256:d9b9c86efe82e0aa841f43435e4a29466794e75dd452e84a29fdc4f332a4d699
     .claude/skills/testing-setup/references/android/training/dependency-injection/hilt-testing.md: sha256:5e774a6ab09c0f469b4712ea8c468402b38dd4a19dce9570bacc49ad9af9c814
   content_hash: sha256:2d1090689966e496966fa71047db0190f2ecbd310e3a6d00b0b372cb44673954
 - repo_url: anthropics/skills
@@ -627,15 +631,15 @@ dependencies:
   - .claude/skills/ast-grep/SKILL.md
   - .claude/skills/ast-grep/references/rule_reference.md
   deployed_file_hashes:
-    .agents/skills/ast-grep/SKILL.md: sha256:a18b68ab555758b85915937cf252d70b0261f930a07ce52095e7cafbbd304782
+    .agents/skills/ast-grep/SKILL.md: sha256:a84b673582781080bc8b0424c7dff8fba53a26e53d64f78471e1e2a962452e70
     .agents/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
-    .claude/skills/ast-grep/SKILL.md: sha256:a18b68ab555758b85915937cf252d70b0261f930a07ce52095e7cafbbd304782
+    .claude/skills/ast-grep/SKILL.md: sha256:a84b673582781080bc8b0424c7dff8fba53a26e53d64f78471e1e2a962452e70
     .claude/skills/ast-grep/references/rule_reference.md: sha256:9f6d2ba2f2dbde059f61f426c262abe943f548984496962c43c7cc6e44813ad6
   content_hash: sha256:606a5ff4093729267da84101c96f21a3a94a3120cadb379595402dcbf0a81be9
 - repo_url: cursor/plugins
   name: unslop
   host: github.com
-  resolved_commit: 180939f9e59cc9512e9330649175763e81fad16f
+  resolved_commit: 2776ddd2355d6d6c8747d3964600f28daf62f049
   resolved_ref: main
   version: unknown
   virtual_path: pstack/skills/unslop
@@ -647,13 +651,13 @@ dependencies:
   - .claude/skills/unslop
   - .claude/skills/unslop/SKILL.md
   deployed_file_hashes:
-    .agents/skills/unslop/SKILL.md: sha256:195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1
-    .claude/skills/unslop/SKILL.md: sha256:195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1
+    .agents/skills/unslop/SKILL.md: sha256:ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f
+    .claude/skills/unslop/SKILL.md: sha256:ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f
   content_hash: sha256:eca0ad9fa3a3867c83f3aaf3a058e247a569c8976a68ca423a569b93eb86de5d
 - repo_url: cursor/plugins
   name: thermos
   host: github.com
-  resolved_commit: 180939f9e59cc9512e9330649175763e81fad16f
+  resolved_commit: 2776ddd2355d6d6c8747d3964600f28daf62f049
   resolved_ref: main
   version: 1.0.0
   virtual_path: thermos
@@ -688,7 +692,7 @@ dependencies:
 - repo_url: github/awesome-copilot
   name: create-agentsmd
   host: github.com
-  resolved_commit: 7e408815ddcb64889a3683799a85399331cfd4ef
+  resolved_commit: 96543145e9cb97711020b57b9d88f968062c4fc7
   resolved_ref: main
   version: unknown
   virtual_path: skills/create-agentsmd
@@ -874,15 +878,15 @@ dependencies:
   - .claude/skills/grilling/SKILL.md
   - .claude/skills/grilling/agents/openai.yaml
   deployed_file_hashes:
-    .agents/skills/grilling/SKILL.md: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
+    .agents/skills/grilling/SKILL.md: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
     .agents/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
-    .claude/skills/grilling/SKILL.md: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
+    .claude/skills/grilling/SKILL.md: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
     .claude/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
   content_hash: sha256:823f08ad33368a9626991e6782f7ae14b958e39ef8503f6bdb3b98a58d237a58
 - repo_url: mountain-loop/yaak
   name: use-yaak
   host: github.com
-  resolved_commit: 87a30200f9f30ca6bb33a731b6c7b1ee43b8d10a
+  resolved_commit: 4ad053390160a3d29ad5b1c4c702c0fc41998c77
   resolved_ref: main
   version: unknown
   virtual_path: crates-cli/yaak-cli/skills/use-yaak
@@ -945,7 +949,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:5067113bb22ff5eb4b6e971bd7aa52000fbf0bd625c7d0bf1765cb4024b1da68
+  content_hash: sha256:e7a778745599729973cd6a07f0c90be3355e9785f650680daece8905fe0f617d
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/container-behavior.md
@@ -963,7 +967,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:a2c90a46ae65197955c988972d942425cc80ac6ec0bc4744827ef6206ac9750e
+  content_hash: sha256:2333ea80100012554a3891048f237b6aeacf9e5f9d8b54d8b10c4cf639897813
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/index.md
@@ -972,7 +976,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:6323d0edb988ada38596508c520efc99ae8f9ab8f3954f5bfbfe8ee373e0afc7
+  content_hash: sha256:952ca4608d36dcb0db9a36aed865f9cdb5e85583480cd85e9e364327be460ecb
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/item-behavior.md
@@ -999,7 +1003,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:42bee8a81fbfda57cb99457078040da3858be789ab42e371567e2c4d08a14515
+  content_hash: sha256:96a2eeb05283eb5c99b751b4bf68769b59462e2d0bb70170260325004240e673
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md
@@ -1008,7 +1012,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:97b1e85bc765b97c1930014a554977abddb12bfd0d638b13ab75932dc287a6d0
+  content_hash: sha256:f6fb9a8d962dc7053fa5a1a20234d96fd0eeb9d4252fc98c40826353816815ab
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/item-properties.md
@@ -1029,15 +1033,6 @@ deployments:
   content_hash: sha256:1e79df59c053569d5376a618c414b793670fdf35e337d7c8aecce81bf09f90d7
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/adaptive/references/android/develop/ui/compose/tooling/debug.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/jetpack-compose/adaptive
-  active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:ba62982a079cd1535f904bc784d4a64b1c77bd9ccede9f1e675c48fa44a95397
-- kind: project-relative
-  target: agent-skills
   value: .agents/skills/adaptive/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md
   runtime: null
   scope: project
@@ -1045,6 +1040,60 @@ deployments:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
   content_hash: sha256:e4781cf0fc691f92c202400a07ebc80424666681f9547e757f660388252cdb29
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/adaptive/references/android/guide/navigation/navigation-3/save-state.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:88f4e8e8831368f58fba9dc28f2cb40a0dcf0a627df5c09eb5b2a837486f9d6f
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/adaptive/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:4b4ada7a50201bcf9ab90b0d9f00cc2ceb16513d1de7f63c12d634318a2ec20d
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/adaptive/references/custom_cursors.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:a6673e5540ea54e73c871a1e28e47c73b5f8e7cbc5a28bde18acd8ff3d6fd2fe
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/adaptive/references/foldable-tabletop.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:5133e364ce466df05a3c012565f237b6fa27f853dbc92d2d65982045c20f2a79
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/adaptive/references/keyboard_shortcuts.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:72c2876b4c805f00b00c948f00f0e41d9a3d2c9207a38262f45cd2ab03327513
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/adaptive/references/tooltips.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:c87d96b2da4488cbbfd097a25a6b4557c48de055df96c7602bd7cb2966d2e4e9
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-cli
@@ -1062,25 +1111,7 @@ deployments:
   owners:
   - android/skills/devtools/android-cli
   active_owner: android/skills/devtools/android-cli
-  content_hash: sha256:93bef1a066f4cc04ee6e02c7770f1b741aa43b2ca250b77e5626f0fb26cc75a0
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/android-cli/references/interact.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/devtools/android-cli
-  active_owner: android/skills/devtools/android-cli
-  content_hash: sha256:86eaab56b5ba8de103632292ce446fb99170cab07d775e3f348a7e49e8b165dd
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/android-cli/references/journeys.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/devtools/android-cli
-  active_owner: android/skills/devtools/android-cli
-  content_hash: sha256:cd570a549f4785fadf1f131edcc47d4e692d7eebc37d28a79019cb569f055c86
+  content_hash: sha256:2d35bb178b30581a9d4a31c30cf4895861a095863a9d8434a134fd10c2fca0b3
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-intent-security
@@ -1098,7 +1129,7 @@ deployments:
   owners:
   - android/skills/security/android-intent-security
   active_owner: android/skills/security/android-intent-security
-  content_hash: sha256:116afe4bfd3c0153ed25eb472faabdbedc81f09dfcae19466501915ca23c5156
+  content_hash: sha256:5f1c8dfed64b3da008e04ffb4c013e469f49f2758e0ce76bb031b7666b9140d4
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler
@@ -1116,7 +1147,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:6385aeb41e96271fa6295ead577fd03e3b21e0be380f8ca6a20fb13d46feff4c
+  content_hash: sha256:d3083b151de83707950ac4edd68e84a11d153bd83d334e5315a44d45ce13b6be
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/analysis/analysis_orchestrator.md
@@ -1125,7 +1156,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:cd70825d9ed6f6dabf999561b5c69971695cd649001721191b5c829fec80035a
+  content_hash: sha256:363ef7842f71b69ab46e86de6a1b262f6852b763d3958b7dd5fff58f9484898b
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md
@@ -1134,7 +1165,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:e0eadf266207020eb91c4a682e22d48baaa2774fa36b1c260f9c04b222e6786d
+  content_hash: sha256:ab547b6219e58c51eca8712b1baa7f8d0a3392d6fe40ac09b16a711b7a956dc6
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md
@@ -1143,79 +1174,61 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:7a017bb1b6be37c96ec6a8eafd9425e1cd2a4001cc5dc1dcf0c9fe4953b6007a
+  content_hash: sha256:e2a1f1041e437ead24dfea2dcd745bf0a308639f763b2c76076ca39094263ed3
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/guiding_principles.md
+  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_cpu.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:f7d735f3a34b87fe62cad35f12b564f8c76d6216efce3320a8739ae653bdde90
+  content_hash: sha256:fd536d521436049f3ff04f6178128be2734f40f97e838f069bae6d8766257c4b
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/domain_hints_template.md
+  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_graphics.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:3fef8a7bed88a3e11f33ea538a3cb13643e9c9336a9ed1ee027a839737622aaf
+  content_hash: sha256:d2bd17c046cb8a6ecd8c81c736087c013fb908dce5d2b276d6d6ee354676d657
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_cpu.md
+  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_io.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:32db6b750fa37595002e3abe42976615adf6d1cc6326e05977946cee6cea6e97
+  content_hash: sha256:559da3bf6824a96122e6e755827b51669e4e42618f90ed2d81b12ee75f943c8e
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_graphics.md
+  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_ipc.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:dc7136e9ee20c2c343a8a11a18817378f2e982762334136fe36ebfc0371d64e7
+  content_hash: sha256:ea5f15cb53251b86ef04eafe464a61455a1bd67583a90bf6df9f9b7bc04636e3
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_io.md
+  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_memory.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:2f832c34053a9a4c816629efe4a46afb4af1923e0b55b4951bf06891ff81be51
+  content_hash: sha256:c02cf981a091c7c69c0c42e91e7783efe37c6b133734831868de5947e623ee29
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_ipc.md
+  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_power.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:ad593787b03e995043d8a6897ffd9021824b4646b1d417e18524ae1dba2be147
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_memory.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/profilers/android-profiler
-  active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:127c42e239ffc0ddca9fb8e90185892d5f66e007d1feb14da0ab23c57f72d664
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_power.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/profilers/android-profiler
-  active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:07fb29dc89f25a7784330b841394699bc16bc93a9431d9a42029fc7d6afa8328
+  content_hash: sha256:d1cf6f2681506b43ca3c3f57389bc86d9c232faa5fe3abb5e7adf3cd831070c7
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md
@@ -1224,7 +1237,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:835fc1eb32badcf0022fe6f988d504cf36a11d91a15a2fa1f5799eb13862f467
+  content_hash: sha256:b6a00fb47db4233f94b3cb75fc22d696e96cb90aa7b7ae625557fa5235e00d6f
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md
@@ -1233,7 +1246,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:6db01df73f8c7601ff77cdb5b839d6d78187d2add34646d8007119d7923b8b44
+  content_hash: sha256:ce763b46ebaaf8c5f1a6d40979fb2291b6e64112f42d2d589ade4b4ea473389f
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/recording/recording_orchestrator.md
@@ -1242,7 +1255,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:26a08ecd6f0ed8f80961d46b97db9420699565ea04f81970f74cdc44bf5fc010
+  content_hash: sha256:ff9cbcf9b2876d6aaa4d749ce4ceaa5fa128d2a0807fd026f27b9b2270033d2c
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/perfetto_trace_recording.md
@@ -1251,7 +1264,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:1525b6f471e0930c9ea202e73b5ce69ddf9b88fa9a28e8934a0bf1cc7e82c718
+  content_hash: sha256:20c49c7759ec7124ea065b8ddc388cc1b5344c5d16b36e7c3970d7f1a7207282
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/app_jank.pftxt
@@ -1269,7 +1282,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:f3185d9d2f73c3123d70f15ef928f130d5a8a221bf5bb8e438a86d1d54707db1
+  content_hash: sha256:62b0a152896bd4a99e4296770baff539c05bf79692818b33fa6d2043bc2a4092
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/java_heap_dump.pftxt
@@ -1323,7 +1336,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:edaeba29593f49a0d789dc29300354372fea2674060c2b64283c9768a8ae2ff1
+  content_hash: sha256:9e0c9db5859dd619a96c3885f9c210af26fe321d46d02936825f593ee7b13d75
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/references/env_setup.md
@@ -1332,7 +1345,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:28d10c202ccf759cc7c07649968f3a390d5d984d31b9639d6dac0cd8920a6ee9
+  content_hash: sha256:30ed3d16abbcbe381399339f13798b84f52e273cb2555fafa7b5be8da4a3b7a2
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/references/perfetto/setup.md
@@ -1341,7 +1354,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:a0bd2461f7d24f36a15fb078273e6850c49e820844a1e777427cc7377332b5c0
+  content_hash: sha256:8e5e1d7ec95bf848ac3d2f70acde12a3324865e212527c9b7dc0e7bbcc4ffc4b
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/android-profiler/references/perfetto/sql.md
@@ -1350,7 +1363,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:ab667eaeba9243884df539fadb43989ad75f5285553fef7af9364740ce00b1a6
+  content_hash: sha256:1a85db538f8c3e300cc8c9b6cf45ba52c8df8e9e32de41481e4021f8ce19db0e
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/ast-grep
@@ -1368,7 +1381,7 @@ deployments:
   owners:
   - ast-grep/agent-skill/ast-grep/skills/ast-grep
   active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
-  content_hash: sha256:a18b68ab555758b85915937cf252d70b0261f930a07ce52095e7cafbbd304782
+  content_hash: sha256:a84b673582781080bc8b0424c7dff8fba53a26e53d64f78471e1e2a962452e70
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/ast-grep/references/rule_reference.md
@@ -1503,7 +1516,7 @@ deployments:
   owners:
   - mattpocock/skills/skills/productivity/grilling
   active_owner: mattpocock/skills/skills/productivity/grilling
-  content_hash: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
+  content_hash: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/grilling/agents/openai.yaml
@@ -1683,7 +1696,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:e5f448fc82a30e3a5efdb154dcc32fa77b806291d7fa571f201f3fb5530973fa
+  content_hash: sha256:e2bc8ec434bc104f71ef753ca21665678b00db8f14ef3fd36847ab85b313b4af
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/index.md
@@ -1746,7 +1759,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:24ac29f14deb7912df58cc1bb504b65e9f31b30dd7daa35a3446f2682a8e57a5
+  content_hash: sha256:63d7fe5d044bd0d9c4dbb913b47ecaf2d7677305ac94c51c9295ebabfc1ef76f
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/common-ui.md
@@ -1782,7 +1795,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:9fbfccbf29e03d24de0caa667c826d8971984e5c6b5aba2e3ed9c057357c2fac
+  content_hash: sha256:96c0a9a617fffc4e5e9113da2b55fd1bd8bbe40593c836425a9dc2984854d0b0
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-staticuri.md
@@ -1854,7 +1867,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:1c306c7f687148c9455d6df7be1f692dda9308b85f0ab40b400b9e0926a898a2
+  content_hash: sha256:a11572b32f8a72ea6736db0ccea44eb94f575dd272c9246bdf24d1b76c31f539
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-koin.md
@@ -1863,7 +1876,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:6d8a7925dba9eb06d7e0fbcb9aa92f025cb58fdc09b42c0496f52cf77266f6cd
+  content_hash: sha256:591bd833b2b725d9e2e8f5ca5658a825c7d2f589c6c5d3103066e320a82e4fb9
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/multiple-backstacks.md
@@ -1872,7 +1885,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:571f6147f90e1b16aa883ef790b27b6bce58fc7250158077f1d5e5624470fca4
+  content_hash: sha256:ee3300492f924914c649e157f3e72ce67af1b3b2fb356465a86b0b37e7b47d11
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/passingarguments.md
@@ -2169,16 +2182,7 @@ deployments:
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:896f499155dcb4e8808c43e771d1f3f0b89c520c1bdb4aca36d91d743fc7ca74
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/r8-analyzer/references/CONFIGURATION-ANALYZER.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/performance/r8-analyzer
-  active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:7c2cf0537fab3db2f1dde6aef31c3b416f188ab18cccbf12a2c0eebcbaac9b35
+  content_hash: sha256:b6001b06ff0ebcbe87b98534a239c8c22b818b97681972db50d5b26466d2bf06
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/r8-analyzer/references/CONFIGURATION.md
@@ -2187,34 +2191,25 @@ deployments:
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:c7bbacde8b8c047be16896f0fc9a55aa805c1dd8abc51c42339deeb3b3a173f1
+  content_hash: sha256:61669860168d5c1f9628f4eb49d68b28e06d60f301a550107d96c030a1389ab2
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/r8-analyzer/references/KEEP-RULES-IMPACT-HIERARCHY.md
+  value: .agents/skills/r8-analyzer/references/FULL_BUILD_CONFIG_ANALYZER.md
   runtime: null
   scope: project
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:d383eb1673fb6e5ce9b50a633160b0b249529ec61922527302c7cc4bc2f6097e
+  content_hash: sha256:e35ee7cebcf2c2bff5f17b5691ad9ac3a58bc2755ae5d7c3f326a9911d3e6f06
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/r8-analyzer/references/REDUNDANT-RULES.md
+  value: .agents/skills/r8-analyzer/references/INSPECT-RULES.md
   runtime: null
   scope: project
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:282ac09478adc085612d1333229a7a61adabe5c4977807cd2a20e69bb3927bb0
-- kind: project-relative
-  target: agent-skills
-  value: .agents/skills/r8-analyzer/references/REFLECTION-GUIDE.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/performance/r8-analyzer
-  active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:68ce8bdd6f29614b1c19093a9a3c7663ed96dec2740159dcaa718fac27647d69
+  content_hash: sha256:35c2c579ab8693365ed9caba4b08e70228484d3d98e74efe143047e8df9996c4
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/r8-analyzer/references/REPORT_FORMAT.md
@@ -2223,7 +2218,7 @@ deployments:
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:6db6de4b91db7e0e21f22967c24a7f535bfdcfa728f06bf91802983ded4fdee2
+  content_hash: sha256:34f11005ccc09e7198fedcb2e56f270127c5e8ac6e95c5fce6e4d9b52a55c323
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/r8-analyzer/references/android/topic/performance/app-optimization/enable-app-optimization.md
@@ -2235,13 +2230,31 @@ deployments:
   content_hash: sha256:560048d6c973301d60c4ee058147f16043c50e5490f6e464c45754a38a7a92bb
 - kind: project-relative
   target: agent-skills
-  value: .agents/skills/r8-analyzer/references/android/training/testing/other-components/ui-automator.md
+  value: .agents/skills/r8-analyzer/scripts/analyze.py
   runtime: null
   scope: project
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:60c0c0675cae082561d7ca94a02520251bc3e77131e207c609d4faa23ab89c98
+  content_hash: sha256:59b55ac94cc1509e244792edeef26111b048d130eb74b6eb4f14ad5f1f30473b
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/r8-analyzer/scripts/convert_pb_to_json.py
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/performance/r8-analyzer
+  active_owner: android/skills/performance/r8-analyzer
+  content_hash: sha256:06397052c96d80cc0ffd7077faf197555c2e9c9363a7fff59ae84f28169998e2
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/r8-analyzer/scripts/keep_radius_pb2.py
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/performance/r8-analyzer
+  active_owner: android/skills/performance/r8-analyzer
+  content_hash: sha256:37f0f038d7870c71b8d3cdd5b9b9361d79bde265e2754e3ffd511f53107a2e1a
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/show-me
@@ -2286,7 +2299,7 @@ deployments:
   owners:
   - android/skills/testing/testing-setup
   active_owner: android/skills/testing/testing-setup
-  content_hash: sha256:7a249ae3a4d8d74caaebe31a9bc936afc557ba153b9c0080e3df3b23fd0c0dd2
+  content_hash: sha256:613970834fedb22c5f85bbc900e600e9a17cd953157af5a7e953e5938d7c2457
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/testing-setup/references/android/develop/ui/compose/testing/common-patterns.md
@@ -2295,7 +2308,7 @@ deployments:
   owners:
   - android/skills/testing/testing-setup
   active_owner: android/skills/testing/testing-setup
-  content_hash: sha256:6e382fbf008b8a0b218d6f798b96dc16d31701eae5ef5753e26e7f25ca110471
+  content_hash: sha256:57fc697835d875cae7179d1b164db371e1b8c37881719fb32be51c09fa5c8c35
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md
@@ -2313,7 +2326,7 @@ deployments:
   owners:
   - android/skills/testing/testing-setup
   active_owner: android/skills/testing/testing-setup
-  content_hash: sha256:4a18a18c1cec8685fdb736c69622e7315f39e1a612570fb4838072a60154bdc6
+  content_hash: sha256:d9b9c86efe82e0aa841f43435e4a29466794e75dd452e84a29fdc4f332a4d699
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/testing-setup/references/android/training/dependency-injection/hilt-testing.md
@@ -2394,7 +2407,7 @@ deployments:
   owners:
   - cursor/plugins/pstack/skills/unslop
   active_owner: cursor/plugins/pstack/skills/unslop
-  content_hash: sha256:195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1
+  content_hash: sha256:ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/use-yaak
@@ -2448,7 +2461,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:5067113bb22ff5eb4b6e971bd7aa52000fbf0bd625c7d0bf1765cb4024b1da68
+  content_hash: sha256:e7a778745599729973cd6a07f0c90be3355e9785f650680daece8905fe0f617d
 - kind: project-relative
   target: claude
   value: .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/container-behavior.md
@@ -2466,7 +2479,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:a2c90a46ae65197955c988972d942425cc80ac6ec0bc4744827ef6206ac9750e
+  content_hash: sha256:2333ea80100012554a3891048f237b6aeacf9e5f9d8b54d8b10c4cf639897813
 - kind: project-relative
   target: claude
   value: .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/index.md
@@ -2475,7 +2488,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:6323d0edb988ada38596508c520efc99ae8f9ab8f3954f5bfbfe8ee373e0afc7
+  content_hash: sha256:952ca4608d36dcb0db9a36aed865f9cdb5e85583480cd85e9e364327be460ecb
 - kind: project-relative
   target: claude
   value: .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/flexbox/item-behavior.md
@@ -2502,7 +2515,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:42bee8a81fbfda57cb99457078040da3858be789ab42e371567e2c4d08a14515
+  content_hash: sha256:96a2eeb05283eb5c99b751b4bf68769b59462e2d0bb70170260325004240e673
 - kind: project-relative
   target: claude
   value: .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/index.md
@@ -2511,7 +2524,7 @@ deployments:
   owners:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:97b1e85bc765b97c1930014a554977abddb12bfd0d638b13ab75932dc287a6d0
+  content_hash: sha256:f6fb9a8d962dc7053fa5a1a20234d96fd0eeb9d4252fc98c40826353816815ab
 - kind: project-relative
   target: claude
   value: .claude/skills/adaptive/references/android/develop/ui/compose/layouts/adaptive/grid/item-properties.md
@@ -2532,15 +2545,6 @@ deployments:
   content_hash: sha256:1e79df59c053569d5376a618c414b793670fdf35e337d7c8aecce81bf09f90d7
 - kind: project-relative
   target: claude
-  value: .claude/skills/adaptive/references/android/develop/ui/compose/tooling/debug.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/jetpack-compose/adaptive
-  active_owner: android/skills/jetpack-compose/adaptive
-  content_hash: sha256:ba62982a079cd1535f904bc784d4a64b1c77bd9ccede9f1e675c48fa44a95397
-- kind: project-relative
-  target: claude
   value: .claude/skills/adaptive/references/android/guide/navigation/navigation-3/recipes/material-listdetail.md
   runtime: null
   scope: project
@@ -2548,6 +2552,60 @@ deployments:
   - android/skills/jetpack-compose/adaptive
   active_owner: android/skills/jetpack-compose/adaptive
   content_hash: sha256:e4781cf0fc691f92c202400a07ebc80424666681f9547e757f660388252cdb29
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adaptive/references/android/guide/navigation/navigation-3/save-state.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:88f4e8e8831368f58fba9dc28f2cb40a0dcf0a627df5c09eb5b2a837486f9d6f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adaptive/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:4b4ada7a50201bcf9ab90b0d9f00cc2ceb16513d1de7f63c12d634318a2ec20d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adaptive/references/custom_cursors.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:a6673e5540ea54e73c871a1e28e47c73b5f8e7cbc5a28bde18acd8ff3d6fd2fe
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adaptive/references/foldable-tabletop.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:5133e364ce466df05a3c012565f237b6fa27f853dbc92d2d65982045c20f2a79
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adaptive/references/keyboard_shortcuts.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:72c2876b4c805f00b00c948f00f0e41d9a3d2c9207a38262f45cd2ab03327513
+- kind: project-relative
+  target: claude
+  value: .claude/skills/adaptive/references/tooltips.md
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/jetpack-compose/adaptive
+  active_owner: android/skills/jetpack-compose/adaptive
+  content_hash: sha256:c87d96b2da4488cbbfd097a25a6b4557c48de055df96c7602bd7cb2966d2e4e9
 - kind: project-relative
   target: claude
   value: .claude/skills/android-cli
@@ -2565,25 +2623,7 @@ deployments:
   owners:
   - android/skills/devtools/android-cli
   active_owner: android/skills/devtools/android-cli
-  content_hash: sha256:93bef1a066f4cc04ee6e02c7770f1b741aa43b2ca250b77e5626f0fb26cc75a0
-- kind: project-relative
-  target: claude
-  value: .claude/skills/android-cli/references/interact.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/devtools/android-cli
-  active_owner: android/skills/devtools/android-cli
-  content_hash: sha256:86eaab56b5ba8de103632292ce446fb99170cab07d775e3f348a7e49e8b165dd
-- kind: project-relative
-  target: claude
-  value: .claude/skills/android-cli/references/journeys.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/devtools/android-cli
-  active_owner: android/skills/devtools/android-cli
-  content_hash: sha256:cd570a549f4785fadf1f131edcc47d4e692d7eebc37d28a79019cb569f055c86
+  content_hash: sha256:2d35bb178b30581a9d4a31c30cf4895861a095863a9d8434a134fd10c2fca0b3
 - kind: project-relative
   target: claude
   value: .claude/skills/android-intent-security
@@ -2601,7 +2641,7 @@ deployments:
   owners:
   - android/skills/security/android-intent-security
   active_owner: android/skills/security/android-intent-security
-  content_hash: sha256:116afe4bfd3c0153ed25eb472faabdbedc81f09dfcae19466501915ca23c5156
+  content_hash: sha256:5f1c8dfed64b3da008e04ffb4c013e469f49f2758e0ce76bb031b7666b9140d4
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler
@@ -2619,7 +2659,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:6385aeb41e96271fa6295ead577fd03e3b21e0be380f8ca6a20fb13d46feff4c
+  content_hash: sha256:d3083b151de83707950ac4edd68e84a11d153bd83d334e5315a44d45ce13b6be
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/analysis/analysis_orchestrator.md
@@ -2628,7 +2668,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:cd70825d9ed6f6dabf999561b5c69971695cd649001721191b5c829fec80035a
+  content_hash: sha256:363ef7842f71b69ab46e86de6a1b262f6852b763d3958b7dd5fff58f9484898b
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/analysis/workflows/perfetto-sql/perfetto_sql.md
@@ -2637,7 +2677,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:e0eadf266207020eb91c4a682e22d48baaa2774fa36b1c260f9c04b222e6786d
+  content_hash: sha256:ab547b6219e58c51eca8712b1baa7f8d0a3392d6fe40ac09b16a711b7a956dc6
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/perfetto_trace_analysis.md
@@ -2646,79 +2686,61 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:7a017bb1b6be37c96ec6a8eafd9425e1cd2a4001cc5dc1dcf0c9fe4953b6007a
+  content_hash: sha256:e2a1f1041e437ead24dfea2dcd745bf0a308639f763b2c76076ca39094263ed3
 - kind: project-relative
   target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/guiding_principles.md
+  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_cpu.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:f7d735f3a34b87fe62cad35f12b564f8c76d6216efce3320a8739ae653bdde90
+  content_hash: sha256:fd536d521436049f3ff04f6178128be2734f40f97e838f069bae6d8766257c4b
 - kind: project-relative
   target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/domain_hints_template.md
+  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_graphics.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:3fef8a7bed88a3e11f33ea538a3cb13643e9c9336a9ed1ee027a839737622aaf
+  content_hash: sha256:d2bd17c046cb8a6ecd8c81c736087c013fb908dce5d2b276d6d6ee354676d657
 - kind: project-relative
   target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_cpu.md
+  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_io.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:32db6b750fa37595002e3abe42976615adf6d1cc6326e05977946cee6cea6e97
+  content_hash: sha256:559da3bf6824a96122e6e755827b51669e4e42618f90ed2d81b12ee75f943c8e
 - kind: project-relative
   target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_graphics.md
+  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_ipc.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:dc7136e9ee20c2c343a8a11a18817378f2e982762334136fe36ebfc0371d64e7
+  content_hash: sha256:ea5f15cb53251b86ef04eafe464a61455a1bd67583a90bf6df9f9b7bc04636e3
 - kind: project-relative
   target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_io.md
+  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_memory.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:2f832c34053a9a4c816629efe4a46afb4af1923e0b55b4951bf06891ff81be51
+  content_hash: sha256:c02cf981a091c7c69c0c42e91e7783efe37c6b133734831868de5947e623ee29
 - kind: project-relative
   target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_ipc.md
+  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/hints_power.md
   runtime: null
   scope: project
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:ad593787b03e995043d8a6897ffd9021824b4646b1d417e18524ae1dba2be147
-- kind: project-relative
-  target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_memory.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/profilers/android-profiler
-  active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:127c42e239ffc0ddca9fb8e90185892d5f66e007d1feb14da0ab23c57f72d664
-- kind: project-relative
-  target: claude
-  value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/hints/subsystems/hints_power.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/profilers/android-profiler
-  active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:07fb29dc89f25a7784330b841394699bc16bc93a9431d9a42029fc7d6afa8328
+  content_hash: sha256:d1cf6f2681506b43ca3c3f57389bc86d9c232faa5fe3abb5e7adf3cd831070c7
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/per_candidate_analysis.md
@@ -2727,7 +2749,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:835fc1eb32badcf0022fe6f988d504cf36a11d91a15a2fa1f5799eb13862f467
+  content_hash: sha256:b6a00fb47db4233f94b3cb75fc22d696e96cb90aa7b7ae625557fa5235e00d6f
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/analysis/workflows/perfetto-trace-analysis/references/triage.md
@@ -2736,7 +2758,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:6db01df73f8c7601ff77cdb5b839d6d78187d2add34646d8007119d7923b8b44
+  content_hash: sha256:ce763b46ebaaf8c5f1a6d40979fb2291b6e64112f42d2d589ade4b4ea473389f
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/recording/recording_orchestrator.md
@@ -2745,7 +2767,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:26a08ecd6f0ed8f80961d46b97db9420699565ea04f81970f74cdc44bf5fc010
+  content_hash: sha256:ff9cbcf9b2876d6aaa4d749ce4ceaa5fa128d2a0807fd026f27b9b2270033d2c
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/perfetto_trace_recording.md
@@ -2754,7 +2776,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:1525b6f471e0930c9ea202e73b5ce69ddf9b88fa9a28e8934a0bf1cc7e82c718
+  content_hash: sha256:20c49c7759ec7124ea065b8ddc388cc1b5344c5d16b36e7c3970d7f1a7207282
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/app_jank.pftxt
@@ -2772,7 +2794,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:f3185d9d2f73c3123d70f15ef928f130d5a8a221bf5bb8e438a86d1d54707db1
+  content_hash: sha256:62b0a152896bd4a99e4296770baff539c05bf79692818b33fa6d2043bc2a4092
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/recording/workflows/perfetto-trace-recording/references/example-configs/java_heap_dump.pftxt
@@ -2826,7 +2848,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:edaeba29593f49a0d789dc29300354372fea2674060c2b64283c9768a8ae2ff1
+  content_hash: sha256:9e0c9db5859dd619a96c3885f9c210af26fe321d46d02936825f593ee7b13d75
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/references/env_setup.md
@@ -2835,7 +2857,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:28d10c202ccf759cc7c07649968f3a390d5d984d31b9639d6dac0cd8920a6ee9
+  content_hash: sha256:30ed3d16abbcbe381399339f13798b84f52e273cb2555fafa7b5be8da4a3b7a2
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/references/perfetto/setup.md
@@ -2844,7 +2866,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:a0bd2461f7d24f36a15fb078273e6850c49e820844a1e777427cc7377332b5c0
+  content_hash: sha256:8e5e1d7ec95bf848ac3d2f70acde12a3324865e212527c9b7dc0e7bbcc4ffc4b
 - kind: project-relative
   target: claude
   value: .claude/skills/android-profiler/references/perfetto/sql.md
@@ -2853,7 +2875,7 @@ deployments:
   owners:
   - android/skills/profilers/android-profiler
   active_owner: android/skills/profilers/android-profiler
-  content_hash: sha256:ab667eaeba9243884df539fadb43989ad75f5285553fef7af9364740ce00b1a6
+  content_hash: sha256:1a85db538f8c3e300cc8c9b6cf45ba52c8df8e9e32de41481e4021f8ce19db0e
 - kind: project-relative
   target: claude
   value: .claude/skills/ast-grep
@@ -2871,7 +2893,7 @@ deployments:
   owners:
   - ast-grep/agent-skill/ast-grep/skills/ast-grep
   active_owner: ast-grep/agent-skill/ast-grep/skills/ast-grep
-  content_hash: sha256:a18b68ab555758b85915937cf252d70b0261f930a07ce52095e7cafbbd304782
+  content_hash: sha256:a84b673582781080bc8b0424c7dff8fba53a26e53d64f78471e1e2a962452e70
 - kind: project-relative
   target: claude
   value: .claude/skills/ast-grep/references/rule_reference.md
@@ -3006,7 +3028,7 @@ deployments:
   owners:
   - mattpocock/skills/skills/productivity/grilling
   active_owner: mattpocock/skills/skills/productivity/grilling
-  content_hash: sha256:10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2
+  content_hash: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
 - kind: project-relative
   target: claude
   value: .claude/skills/grilling/agents/openai.yaml
@@ -3186,7 +3208,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:e5f448fc82a30e3a5efdb154dcc32fa77b806291d7fa571f201f3fb5530973fa
+  content_hash: sha256:e2bc8ec434bc104f71ef753ca21665678b00db8f14ef3fd36847ab85b313b4af
 - kind: project-relative
   target: claude
   value: .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/index.md
@@ -3249,7 +3271,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:24ac29f14deb7912df58cc1bb504b65e9f31b30dd7daa35a3446f2682a8e57a5
+  content_hash: sha256:63d7fe5d044bd0d9c4dbb913b47ecaf2d7677305ac94c51c9295ebabfc1ef76f
 - kind: project-relative
   target: claude
   value: .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/common-ui.md
@@ -3285,7 +3307,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:9fbfccbf29e03d24de0caa667c826d8971984e5c6b5aba2e3ed9c057357c2fac
+  content_hash: sha256:96c0a9a617fffc4e5e9113da2b55fd1bd8bbe40593c836425a9dc2984854d0b0
 - kind: project-relative
   target: claude
   value: .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/deeplinks-staticuri.md
@@ -3357,7 +3379,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:1c306c7f687148c9455d6df7be1f692dda9308b85f0ab40b400b9e0926a898a2
+  content_hash: sha256:a11572b32f8a72ea6736db0ccea44eb94f575dd272c9246bdf24d1b76c31f539
 - kind: project-relative
   target: claude
   value: .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/modular-koin.md
@@ -3366,7 +3388,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:6d8a7925dba9eb06d7e0fbcb9aa92f025cb58fdc09b42c0496f52cf77266f6cd
+  content_hash: sha256:591bd833b2b725d9e2e8f5ca5658a825c7d2f589c6c5d3103066e320a82e4fb9
 - kind: project-relative
   target: claude
   value: .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/multiple-backstacks.md
@@ -3375,7 +3397,7 @@ deployments:
   owners:
   - android/skills/navigation/navigation-3
   active_owner: android/skills/navigation/navigation-3
-  content_hash: sha256:571f6147f90e1b16aa883ef790b27b6bce58fc7250158077f1d5e5624470fca4
+  content_hash: sha256:ee3300492f924914c649e157f3e72ce67af1b3b2fb356465a86b0b37e7b47d11
 - kind: project-relative
   target: claude
   value: .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/passingarguments.md
@@ -3672,16 +3694,7 @@ deployments:
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:896f499155dcb4e8808c43e771d1f3f0b89c520c1bdb4aca36d91d743fc7ca74
-- kind: project-relative
-  target: claude
-  value: .claude/skills/r8-analyzer/references/CONFIGURATION-ANALYZER.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/performance/r8-analyzer
-  active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:7c2cf0537fab3db2f1dde6aef31c3b416f188ab18cccbf12a2c0eebcbaac9b35
+  content_hash: sha256:b6001b06ff0ebcbe87b98534a239c8c22b818b97681972db50d5b26466d2bf06
 - kind: project-relative
   target: claude
   value: .claude/skills/r8-analyzer/references/CONFIGURATION.md
@@ -3690,34 +3703,25 @@ deployments:
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:c7bbacde8b8c047be16896f0fc9a55aa805c1dd8abc51c42339deeb3b3a173f1
+  content_hash: sha256:61669860168d5c1f9628f4eb49d68b28e06d60f301a550107d96c030a1389ab2
 - kind: project-relative
   target: claude
-  value: .claude/skills/r8-analyzer/references/KEEP-RULES-IMPACT-HIERARCHY.md
+  value: .claude/skills/r8-analyzer/references/FULL_BUILD_CONFIG_ANALYZER.md
   runtime: null
   scope: project
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:d383eb1673fb6e5ce9b50a633160b0b249529ec61922527302c7cc4bc2f6097e
+  content_hash: sha256:e35ee7cebcf2c2bff5f17b5691ad9ac3a58bc2755ae5d7c3f326a9911d3e6f06
 - kind: project-relative
   target: claude
-  value: .claude/skills/r8-analyzer/references/REDUNDANT-RULES.md
+  value: .claude/skills/r8-analyzer/references/INSPECT-RULES.md
   runtime: null
   scope: project
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:282ac09478adc085612d1333229a7a61adabe5c4977807cd2a20e69bb3927bb0
-- kind: project-relative
-  target: claude
-  value: .claude/skills/r8-analyzer/references/REFLECTION-GUIDE.md
-  runtime: null
-  scope: project
-  owners:
-  - android/skills/performance/r8-analyzer
-  active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:68ce8bdd6f29614b1c19093a9a3c7663ed96dec2740159dcaa718fac27647d69
+  content_hash: sha256:35c2c579ab8693365ed9caba4b08e70228484d3d98e74efe143047e8df9996c4
 - kind: project-relative
   target: claude
   value: .claude/skills/r8-analyzer/references/REPORT_FORMAT.md
@@ -3726,7 +3730,7 @@ deployments:
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:6db6de4b91db7e0e21f22967c24a7f535bfdcfa728f06bf91802983ded4fdee2
+  content_hash: sha256:34f11005ccc09e7198fedcb2e56f270127c5e8ac6e95c5fce6e4d9b52a55c323
 - kind: project-relative
   target: claude
   value: .claude/skills/r8-analyzer/references/android/topic/performance/app-optimization/enable-app-optimization.md
@@ -3738,13 +3742,31 @@ deployments:
   content_hash: sha256:560048d6c973301d60c4ee058147f16043c50e5490f6e464c45754a38a7a92bb
 - kind: project-relative
   target: claude
-  value: .claude/skills/r8-analyzer/references/android/training/testing/other-components/ui-automator.md
+  value: .claude/skills/r8-analyzer/scripts/analyze.py
   runtime: null
   scope: project
   owners:
   - android/skills/performance/r8-analyzer
   active_owner: android/skills/performance/r8-analyzer
-  content_hash: sha256:60c0c0675cae082561d7ca94a02520251bc3e77131e207c609d4faa23ab89c98
+  content_hash: sha256:59b55ac94cc1509e244792edeef26111b048d130eb74b6eb4f14ad5f1f30473b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/r8-analyzer/scripts/convert_pb_to_json.py
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/performance/r8-analyzer
+  active_owner: android/skills/performance/r8-analyzer
+  content_hash: sha256:06397052c96d80cc0ffd7077faf197555c2e9c9363a7fff59ae84f28169998e2
+- kind: project-relative
+  target: claude
+  value: .claude/skills/r8-analyzer/scripts/keep_radius_pb2.py
+  runtime: null
+  scope: project
+  owners:
+  - android/skills/performance/r8-analyzer
+  active_owner: android/skills/performance/r8-analyzer
+  content_hash: sha256:37f0f038d7870c71b8d3cdd5b9b9361d79bde265e2754e3ffd511f53107a2e1a
 - kind: project-relative
   target: claude
   value: .claude/skills/show-me
@@ -3789,7 +3811,7 @@ deployments:
   owners:
   - android/skills/testing/testing-setup
   active_owner: android/skills/testing/testing-setup
-  content_hash: sha256:7a249ae3a4d8d74caaebe31a9bc936afc557ba153b9c0080e3df3b23fd0c0dd2
+  content_hash: sha256:613970834fedb22c5f85bbc900e600e9a17cd953157af5a7e953e5938d7c2457
 - kind: project-relative
   target: claude
   value: .claude/skills/testing-setup/references/android/develop/ui/compose/testing/common-patterns.md
@@ -3798,7 +3820,7 @@ deployments:
   owners:
   - android/skills/testing/testing-setup
   active_owner: android/skills/testing/testing-setup
-  content_hash: sha256:6e382fbf008b8a0b218d6f798b96dc16d31701eae5ef5753e26e7f25ca110471
+  content_hash: sha256:57fc697835d875cae7179d1b164db371e1b8c37881719fb32be51c09fa5c8c35
 - kind: project-relative
   target: claude
   value: .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing-with-testsuites.md
@@ -3816,7 +3838,7 @@ deployments:
   owners:
   - android/skills/testing/testing-setup
   active_owner: android/skills/testing/testing-setup
-  content_hash: sha256:4a18a18c1cec8685fdb736c69622e7315f39e1a612570fb4838072a60154bdc6
+  content_hash: sha256:d9b9c86efe82e0aa841f43435e4a29466794e75dd452e84a29fdc4f332a4d699
 - kind: project-relative
   target: claude
   value: .claude/skills/testing-setup/references/android/training/dependency-injection/hilt-testing.md
@@ -3897,7 +3919,7 @@ deployments:
   owners:
   - cursor/plugins/pstack/skills/unslop
   active_owner: cursor/plugins/pstack/skills/unslop
-  content_hash: sha256:195411d320b5b328f9f642baf59757ed19aaf0931c0838740e0aca273d538dc1
+  content_hash: sha256:ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f
 - kind: project-relative
   target: claude
   value: .claude/skills/use-yaak

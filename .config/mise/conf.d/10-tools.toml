@@ -1,7 +1,7 @@
 [tools]
 1password = "latest"
 act = "latest"
-apm = "latest"
+apm = "0.35.0"
 bat = "latest"
 bun = "latest"
 deno = "latest"
