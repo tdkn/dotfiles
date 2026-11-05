@@ -350,6 +350,7 @@ AGENTS.override.md
 
 # Claude
 **/.claude/settings.local.json
+**/.claude/launch.json
 **/CLAUDE.local.md
 **/.claude/.cc-writes/
 **/.claude/worktrees/
