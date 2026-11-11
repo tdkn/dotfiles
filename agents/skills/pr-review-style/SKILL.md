@@ -17,8 +17,8 @@ repository instructions, the user's request, and the review procedure in use.
 
 A review is a Summary plus inline comments. Labels, placement, and the
 first-line format are fixed. Body length and supporting format fit the content.
-Write in the language of the PR description and existing reviews, and keep
-labels in English.
+Write in the language of the PR description and existing reviews, except for
+the fixed Summary when there are no findings, and keep labels in English.
 
 ## Tone
 
@@ -44,10 +44,7 @@ It never changes a label, blurs a fact, or hides what must happen before merge.
 
 ## Summary
 
-- Open with one sentence stating the review's overall outcome, taking the
-  highest item below that applies. The list gives the meaning, not the
-  wording: write "There is one point I'd like you to address before merge.",
-  not "Changes required before merge."
+- Determine the overall outcome using the highest applicable item below:
   - Changes required before merge. A comment carries `[BLOCKING]`.
   - Verdict on hold. A limit on the review side, which no answer from the
     author can resolve, keeps the verdict from being settled. Next, state what
@@ -58,12 +55,18 @@ It never changes a label, blurs a fact, or hides what must happen before merge.
   - Optional comments only. Every comment is `[IMO]`, `[NIT]`, or an `[ASK]`
     without `[BLOCKING]`.
   - No findings. There are no comments.
-- A short thanks such as "Thanks for the fix." may lead in and does not count
-  toward the sentence limit. Skip praise that is generic or not backed by the
-  review.
-- After the opening sentence, add only what the author needs to act on the
-  review, such as an assumption the findings depend on. Keep the Summary to one
-  to three sentences in total, with no habitual headings or bullet lists.
+- When the outcome is no findings, write exactly `LGTM :+1:` as the Summary.
+- For other outcomes, open with one sentence stating the review's overall
+  outcome. The list gives the meaning, not the wording: write "There is one
+  point I'd like you to address before merge.", not "Changes required before
+  merge."
+- For outcomes other than no findings, a short thanks such as "Thanks for the
+  fix." may lead in and does not count toward the sentence limit. Skip praise
+  that is generic or not backed by the review.
+- For those outcomes, after the opening sentence, add only what the author
+  needs to act on the review, such as an assumption the findings depend on.
+  Keep the Summary to one to three sentences, with no habitual headings or
+  bullet lists.
 - Do not repeat inline content, titles, counts, categories, or per-file lists.
   Do not list what the PR changes, which checks found nothing, or what the
   review did or did not check, such as tests not run. Report the review's
