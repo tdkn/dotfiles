@@ -59,6 +59,8 @@
   Prefer narrow prefix approvals such as `["but", "status"]`, `["but", "diff"]`,
   `["but", "commit"]`, `["but", "squash"]`, and `["but", "reword"]`;
   do not request a broad `["but"]` prefix rule.
+- Before writing, amending, or rewording a commit message,
+  load the `commit-message-style` skill and follow it.
 
 ## GitHub
 

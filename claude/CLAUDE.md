@@ -53,6 +53,8 @@
 ## Git
 
 - Use GitButler CLI (`but`) as the default version-control interface.
+- Before writing, amending, or rewording a commit message,
+  load the `commit-message-style` skill and follow it.
 
 ## GitHub
 
