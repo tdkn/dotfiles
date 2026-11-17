@@ -1,6 +1,7 @@
 # Packages
 
-The bootstrap runs a `packages` task that mise selects by architecture.
+The bootstrap runs a `packages` task that mise selects by architecture and
+installs apps declared under `[bootstrap.packages]`.
 
 ## Homebrew on Apple Silicon
 
@@ -36,4 +37,18 @@ installs the missing ones.
 ```sh
 port installed
 port outdated
+```
+
+## macOS apps on Intel
+
+`[bootstrap.packages]` in `.config/mise/config.macos-x64.toml` lists apps
+installed by mise from Homebrew cask metadata. This does not require Homebrew,
+but mise uses `sudo` to create a Homebrew-style prefix at `/opt/homebrew` and
+records installed casks under `/opt/homebrew/Caskroom`. The Tailscale
+package installer also requires administrator authentication. See
+[Tailscale](tailscale.md) for its first-run setup and update behavior.
+
+```sh
+mise bootstrap packages apply --manager brew-cask --dry-run
+mise bootstrap packages apply --manager brew-cask
 ```
