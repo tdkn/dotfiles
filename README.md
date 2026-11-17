@@ -44,10 +44,15 @@ If an existing installation has a symlinked `~/.gitconfig`, migrate it to a
 regular file before applying the bootstrap. See [Git configuration](#git-configuration).
 If `~/.apm` is a symlink, remove it first. See [Agent Skills](#agent-skills).
 
-Trust, review, and apply the bootstrap. `MISE_AUTO_ENV=true` is needed on the
-first run only: it loads the config for this machine's architecture, which
-defines the `packages` task. Later runs get the setting from the linked
-`miserc.toml`.
+The bootstrap writes macOS defaults in `com.apple.universalaccess`, which
+requires Full Disk Access for the terminal app. Grant it under Privacy &
+Security in System Settings before applying.
+
+Trust, review, and apply the bootstrap from the repository directory. Until the
+first apply links the config into `~/.config/mise`, mise finds it only there.
+`MISE_AUTO_ENV=true` is needed on the first run only: it loads the config for
+this machine's architecture, which defines the `packages` task. Later runs get
+the setting from the linked `miserc.toml`.
 
 ```sh
 export MISE_AUTO_ENV=true
