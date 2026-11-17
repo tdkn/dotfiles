@@ -43,8 +43,11 @@ this repository.
 - Preview bootstrap changes: `mise bootstrap --dry-run --force-dotfiles`
 - Apply bootstrap changes: `mise bootstrap --yes --force-dotfiles`
 - On a machine without `~/.config/mise/miserc.toml`, prefix these commands with
-  `MISE_AUTO_ENV=true`. mise reads `miserc.toml` at startup, so the first
-  bootstrap cannot rely on the link it creates.
+  `MISE_AUTO_ENV=true` and run them from the repository directory. mise reads
+  `miserc.toml` at startup, so the first bootstrap cannot rely on the links it
+  creates.
+- The terminal app needs Full Disk Access to write the
+  `com.apple.universalaccess` defaults.
 - Check all declared bootstrap state: `mise bootstrap status --missing`
   This includes dotfile links and edits, macOS settings, services, user settings,
   and tools. Check Brewfile packages separately with the command below.
