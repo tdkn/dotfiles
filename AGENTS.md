@@ -46,8 +46,7 @@ this repository.
   `MISE_AUTO_ENV=true` and run them from the repository directory. mise reads
   `miserc.toml` at startup, so the first bootstrap cannot rely on the links it
   creates.
-- The terminal app needs Full Disk Access to write the
-  `com.apple.universalaccess` defaults.
+- The terminal app needs Full Disk Access to apply some macOS settings.
 - Check all declared bootstrap state: `mise bootstrap status --missing`
   This includes dotfile links and edits, macOS settings, services, user settings,
   and tools. Check Brewfile packages separately with the command below.
@@ -78,6 +77,9 @@ and login shell state.
 - For zsh, keep `zsh/profile.zsh` and `zsh/zshrc` as loaders. Put login-shell
   setup in `zsh/profile.d/*.zsh` and interactive shell setup in
   `zsh/rc.d/*.zsh`.
+- Keep `README.md` short: the overview, the quick start, and everyday commands.
+  Put prerequisites, migrations, workarounds, and per-topic details in
+  `docs/*.md` and link them from the README.
 - When changing assistant instructions, keep each tool-specific file internally
   consistent. Do not copy private local paths, secrets, tokens, hostnames, cache
   paths, or session logs into committed files.
