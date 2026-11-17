@@ -21,11 +21,14 @@ sudo installer -pkg "$tmp/$pkg" -target /
 [tasks.packages]
 description = "Install missing MacPorts ports"
 # sudo prompts for a password when a port is missing.
+# A fresh MacPorts install has no ports tree, so selfupdate syncs it first.
 interactive = true
 run = """
 missing=""
-for p in git gh tmux; do
+for p in git gh tmux curl git-extras; do
   /opt/local/bin/port -q installed "$p" | grep -q '(active)' || missing="$missing $p"
 done
-[ -z "$missing" ] || sudo /opt/local/bin/port -N install $missing
+[ -z "$missing" ] && exit 0
+sudo /opt/local/bin/port selfupdate
+sudo /opt/local/bin/port -N install $missing
 """
