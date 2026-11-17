@@ -23,12 +23,46 @@ description = "Install missing MacPorts ports"
 # sudo prompts for a password when a port is missing.
 # A fresh MacPorts install has no ports tree, so selfupdate syncs it first.
 interactive = true
+#
+# One port per line, installed in list order, with variants after the name.
+# A port counts as installed when its active version has every + variant
+# and none of the - variants.
+#
+# curl comes first so git does not pull it in with default variants.
+# http3 needs gnutls instead of ssl; sectrust uses the macOS keychain.
 run = """
+ports='
+curl -ssl +gnutls +http3 +sectrust
+git
+gh
+tmux
+git-extras
+'
+# Lines look like "  curl @8.23.0_1+gnutls+http3 (active)".
+installed=$(/opt/local/bin/port -q installed active)
 missing=""
-for p in git gh tmux curl git-extras; do
-  /opt/local/bin/port -q installed "$p" | grep -q '(active)' || missing="$missing $p"
-done
+while read -r name variants; do
+  [ -n "$name" ] || continue
+  # Trailing "+" lets each variant match as "+name+" without prefix matches.
+  active=$(printf '%s\\n' "$installed" | grep "^  $name @" | sed 's/ (active)$/+/')
+  ok=1
+  if [ -z "$active" ]; then
+    ok=""
+  fi
+  for v in $variants; do
+    case "$v" in
+      +*) case "$active" in *"$v+"*) ;; *) ok="" ;; esac ;;
+      -*) case "$active" in *"+${v#-}+"*) ok="" ;; esac ;;
+    esac
+  done
+  if [ -z "$ok" ]; then
+    missing="$missing $name $variants"
+  fi
+done <<EOF
+$ports
+EOF
 [ -z "$missing" ] && exit 0
 sudo /opt/local/bin/port selfupdate
+# Variants after a port name apply only to that port.
 sudo /opt/local/bin/port -N install $missing
 """
