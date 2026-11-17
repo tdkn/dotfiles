@@ -1,3 +1,23 @@
+# The installer may append PATH lines to ~/.zprofile. Running before dotfiles
+# keeps that edit on a regular file instead of the symlink into this repository.
+# Only the first install uses the pinned version; `port selfupdate` updates
+# MacPorts afterwards.
+[bootstrap.hooks.pre-dotfiles]
+description = "Install MacPorts when it is missing"
+run = """
+[ -x /opt/local/bin/port ] && exit 0
+case "$(sw_vers -productVersion)" in
+  13.*) ;;
+  *) echo "The pinned MacPorts installer is for macOS 13; install MacPorts manually." >&2; exit 1 ;;
+esac
+pkg=MacPorts-2.12.7-13-Ventura.pkg
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
+curl -fsSL -o "$tmp/$pkg" "https://github.com/macports/macports-base/releases/download/v2.12.7/$pkg"
+echo "89c71950329c073e8be9e0ace89081b73d021a00deaa2b885ce0974ed06990fe  $tmp/$pkg" | shasum -a 256 -c -
+sudo installer -pkg "$tmp/$pkg" -target /
+"""
+
 [tasks.packages]
 description = "Install missing MacPorts ports"
 # sudo prompts for a password when a port is missing.

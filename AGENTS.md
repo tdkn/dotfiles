@@ -14,7 +14,9 @@ Key areas:
 - `.config/mise/miserc.toml`: enables `auto_env`, which loads
   `config.macos-arm64.toml` or `config.macos-x64.toml` for the running mise
   binary. Each defines the `packages` task that the bootstrap task runs:
-  Homebrew on Apple Silicon and MacPorts on Intel.
+  Homebrew on Apple Silicon and MacPorts on Intel. The Intel file also installs
+  MacPorts from a pinned, checksum-verified package in a `pre-dotfiles` hook
+  when `port` is missing.
 - `homebrew/Brewfile`: Homebrew formulae and casks installed by the `packages`
   task on Apple Silicon.
 - `zsh/`: `.zprofile`, `.zshrc`, and sourced profile/rc fragments.
@@ -154,9 +156,9 @@ tests.
   When migrating a symlink, preserve local settings in a regular file before
   applying the block. Replace an existing shared include rather than keeping
   both, to avoid loading shared settings twice.
-- Treat `git/config`, assistant instruction files, shell startup files, and
-  Homebrew casks as sensitive because they affect authentication, command
-  execution, and installed applications.
+- Treat `git/config`, assistant instruction files, shell startup files,
+  Homebrew casks, and the MacPorts installer hook as sensitive because they
+  affect authentication, command execution, and installed applications.
 
 ## Pull Request Guidelines
 
