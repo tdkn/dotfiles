@@ -1,0 +1,11 @@
+[tasks.packages]
+description = "Install missing MacPorts ports"
+# sudo prompts for a password when a port is missing.
+interactive = true
+run = """
+missing=""
+for p in git gh tmux; do
+  /opt/local/bin/port -q installed "$p" | grep -q '(active)' || missing="$missing $p"
+done
+[ -z "$missing" ] || sudo /opt/local/bin/port -N install $missing
+"""
