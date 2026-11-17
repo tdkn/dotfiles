@@ -1,11 +1,13 @@
 # dotfiles
 
-A reproducible macOS development environment powered by mise. Homebrew manages
-packages on Apple Silicon, and MacPorts manages them on Intel.
+A reproducible macOS development environment powered by
+[mise](https://mise.jdx.dev/). One bootstrap links the dotfiles, installs
+packages and tools, and applies macOS settings. Homebrew manages packages on
+Apple Silicon, and MacPorts manages them on Intel.
 
 ## Quick Start
 
-Clone the repository and create the stable `~/.dotfiles` root.
+Clone the repository and link it as `~/.dotfiles`.
 
 ```sh
 mkdir -p ~/ghq/github.com/tdkn
@@ -14,45 +16,15 @@ cd ~/ghq/github.com/tdkn/dotfiles
 ln -sfn ~/ghq/github.com/tdkn/dotfiles ~/.dotfiles
 ```
 
-Install the latest mise with the official installer. It installs the binary
-to `~/.local/bin/mise`, and `zsh/profile.d/40-local-bin.zsh` adds that
-directory to `PATH` once the bootstrap links the zsh profile.
+Install mise 2026.10.8 or later with the official installer.
 
 ```sh
 curl -fsSL https://mise.run | sh
 export PATH="$HOME/.local/bin:$PATH"
-mise --version
 ```
 
-Update mise with `mise self-update`. mise 2026.10.8 or later is required.
-
-If mise was installed with Homebrew, remove that copy after installing the
-official binary so only one `mise` stays on `PATH`:
-
-```sh
-brew uninstall mise
-```
-
-On an Intel Mac, install the Xcode Command Line Tools before the bootstrap. On
-macOS 13, the bootstrap installs [MacPorts](https://www.macports.org/) when it
-is missing; on other versions, install it manually first. The bootstrap then
-installs ports there, and the Brewfile applies to Apple Silicon only. The
-MacPorts installer may add `PATH` lines to `~/.zprofile`; the bootstrap
-replaces that file with the managed profile, which adds the MacPorts paths.
-
-If an existing installation has a symlinked `~/.gitconfig`, migrate it to a
-regular file before applying the bootstrap. See [Git configuration](#git-configuration).
-If `~/.apm` is a symlink, remove it first. See [Agent Skills](#agent-skills).
-
-The bootstrap writes macOS defaults in `com.apple.universalaccess`, which
-requires Full Disk Access for the terminal app. Grant it under Privacy &
-Security in System Settings before applying.
-
-Trust, review, and apply the bootstrap from the repository directory. Until the
-first apply links the config into `~/.config/mise`, mise finds it only there.
-`MISE_AUTO_ENV=true` is needed on the first run only: it loads the config for
-this machine's architecture, which defines the `packages` task. Later runs get
-the setting from the linked `miserc.toml`.
+Trust, review, and apply the bootstrap from the repository directory.
+`MISE_AUTO_ENV=true` is needed on the first run only.
 
 ```sh
 export MISE_AUTO_ENV=true
@@ -61,141 +33,27 @@ mise bootstrap --dry-run --force-dotfiles
 mise bootstrap --yes --force-dotfiles
 ```
 
+Read [Setup](docs/setup.md) before the first bootstrap on an Intel Mac or on
+a machine that already has dotfiles.
+
 ## Usage
 
-Use mise to inspect or refresh the environment.
+Rerun the bootstrap after changing the configuration, and check the
+environment at any time.
 
 ```sh
 mise bootstrap --dry-run --force-dotfiles
 mise bootstrap --yes --force-dotfiles
 mise bootstrap status --missing
-mise brew-sync
-brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile
 mise doctor
 ```
 
-Run `mise brew-sync` after changing Homebrew formulae, casks, or Mac App Store
-apps, then review the Brewfile diff before committing.
+## Documentation
 
-The Homebrew commands apply to Apple Silicon. On Intel, the ports are listed in
-`.config/mise/config.macos-x64.toml`; check them with `port installed` and
-`port outdated`.
-
-## Agent Skills
-
-Skills come from two places. Locally authored skills live in `agents/skills/`
-and mise symlinks them into the agent skill directories, so editing one takes
-effect immediately and shows up as an unstaged change here. Third-party skills
-are declared in `apm/apm.yml` and installed by
-[apm](https://microsoft.github.io/apm) into the same directories.
-
-apm refuses a symlinked `~/.apm`, so mise copies `apm/apm.yml` and
-`apm/apm.lock.yaml` into a regular `~/.apm` directory. The bootstrap task runs
-`apm install -g --frozen` using the committed lockfile. Frozen installation can
-deploy files before reporting an error; it does not change the lockfile.
-
-Add a local skill by creating `agents/skills/<name>/SKILL.md`, then rerun the
-bootstrap or apply the dotfiles:
-
-```sh
-mise dotfiles apply
-```
-
-Two glob mappings in `.config/mise/conf.d/40-dotfiles.toml` link every local
-skill directory into both `~/.agents/skills/` and `~/.claude/skills/`. New skills
-need no individual mapping. apm installs third-party skills alongside these links.
-
-Add a third-party skill in `apm/apm.yml` with its upstream branch as a ref,
-such as `#main`. Copy the manifest, install, and save the updated lockfile:
-
-```sh
-mise dotfiles apply --force --yes ~/.apm/apm.yml
-apm install -g
-mise dot add ~/.apm/apm.lock.yaml
-```
-
-Review and commit the `apm/apm.lock.yaml` diff.
-
-Dependabot checks these refs weekly and opens pull requests that update the
-lockfile. Rerun the bootstrap after merging an update to install the skills.
-
-To update skills to their latest upstream commits manually, use the task below.
-apm shows an update plan and asks for confirmation. The task reinstalls the
-resolved skills before saving the lockfile; review and commit the diff.
-
-```sh
-mise run skills-update
-```
-
-Skills removed from their upstream repository are not kept at an old commit.
-An update that reports `Subdirectory '...' not found in repository` points to
-one. Uninstall it and save both files back before updating again:
-
-```sh
-apm uninstall -g <package>
-mise dot add ~/.apm/apm.yml ~/.apm/apm.lock.yaml
-```
-
-If `~/.apm` is still a symlink to `apm/`, replace it with a regular directory
-and remove the files apm left in the repository:
-
-```sh
-rm ~/.apm
-mise bootstrap --yes --force-dotfiles
-rm -rf ~/.dotfiles/apm/apm_modules ~/.dotfiles/apm/config.json
-```
-
-The GitButler skill ships with the `but` binary rather than through apm, so it
-is installed separately with `but skill install --global`. The bootstrap task
-updates it when a `brew upgrade` leaves it behind the `but` version, and skips
-the check on a machine without `but`.
-
-apm covers the user-scope skills described here. The
-[skills](https://skills.sh/) CLI stays installed for project-scoped skills in
-individual repositories.
-
-## Git configuration
-
-mise manages this multiline include in a marker block in the regular local
-`~/.gitconfig`:
-
-```ini
-[include]
-	path = ~/.dotfiles/git/config
-```
-
-Keep the entire block, including its markers, at the top so local settings
-override shared defaults. On first apply to an existing file, mise appends the
-missing block; move it to the top once. Subsequent applies replace it in place.
-`git config --global` writes local settings; edit `git/config` for shared
-settings. Replace any existing shared include with the block to avoid loading
-shared settings twice.
-
-To migrate an existing symlink, save its contents, replace the link with a
-regular file without changing `git/config`, and retain only intended local
-overrides before applying the bootstrap. Review existing regular files for
-copied shared values too, since those values can override later shared changes.
-Check which file supplies a setting with:
-
-```sh
-git config --show-origin --get <key>
-```
-
-## Git Signing
-
-Git commit and tag signing use 1Password's SSH signing program. Create an
-Ed25519 SSH key in 1Password, enable the SSH Agent, and add the public key to
-GitHub as a signing key.
-
-Keep the signing key in a local include file:
-
-```ini
-[user]
-	signingkey = ssh-ed25519 ...
-```
-
-Save it as `~/.config/git/1password-signing.config`, then rerun the bootstrap.
-The GitHub verified email must match the configured Git commit email.
+- [Setup](docs/setup.md): requirements, Intel Macs, and existing installations.
+- [Packages](docs/packages.md): Homebrew and MacPorts packages.
+- [Agent skills](docs/agent-skills.md): local and third-party agent skills.
+- [Git](docs/git.md): shared Git configuration and commit signing.
 
 ## License
 
