@@ -18,6 +18,9 @@ echo "89c71950329c073e8be9e0ace89081b73d021a00deaa2b885ce0974ed06990fe  $tmp/$pk
 sudo installer -pkg "$tmp/$pkg" -target /
 """
 
+[bootstrap.packages]
+"brew-cask:tailscale-app" = "latest"
+
 [tasks.packages]
 description = "Install missing MacPorts ports"
 # sudo prompts for a password when a port is missing.

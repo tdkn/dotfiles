@@ -51,7 +51,8 @@ mise doctor
 ## Documentation
 
 - [Setup](docs/setup.md): requirements, Intel Macs, and existing installations.
-- [Packages](docs/packages.md): Homebrew and MacPorts packages.
+- [Packages](docs/packages.md): Homebrew, MacPorts, and macOS apps.
+- [Tailscale](docs/tailscale.md): setup and connectivity between Macs.
 - [Agent skills](docs/agent-skills.md): local and third-party agent skills.
 - [Git](docs/git.md): shared Git configuration and commit signing.
 
