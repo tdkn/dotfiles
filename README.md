@@ -33,10 +33,11 @@ official binary so only one `mise` stays on `PATH`:
 brew uninstall mise
 ```
 
-On an Intel Mac, install the Xcode Command Line Tools and
-[MacPorts](https://www.macports.org/install.php) before the bootstrap. The
-bootstrap installs ports there, and the Brewfile applies to Apple Silicon only.
-The MacPorts installer may add `PATH` lines to `~/.zprofile`; the bootstrap
+On an Intel Mac, install the Xcode Command Line Tools before the bootstrap. On
+macOS 13, the bootstrap installs [MacPorts](https://www.macports.org/) when it
+is missing; on other versions, install it manually first. The bootstrap then
+installs ports there, and the Brewfile applies to Apple Silicon only. The
+MacPorts installer may add `PATH` lines to `~/.zprofile`; the bootstrap
 replaces that file with the managed profile, which adds the MacPorts paths.
 
 If an existing installation has a symlinked `~/.gitconfig`, migrate it to a
