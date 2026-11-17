@@ -1,6 +1,7 @@
 # dotfiles
 
-A reproducible macOS development environment powered by mise and Homebrew.
+A reproducible macOS development environment powered by mise. Homebrew manages
+packages on Apple Silicon, and MacPorts manages them on Intel.
 
 ## Quick Start
 
@@ -23,8 +24,7 @@ export PATH="$HOME/.local/bin:$PATH"
 mise --version
 ```
 
-Update mise with `mise self-update`. mise 2026.9.3 or later is required to
-prepend the managed Git include.
+Update mise with `mise self-update`. mise 2026.10.8 or later is required.
 
 If mise was installed with Homebrew, remove that copy after installing the
 official binary so only one `mise` stays on `PATH`:
@@ -33,13 +33,23 @@ official binary so only one `mise` stays on `PATH`:
 brew uninstall mise
 ```
 
+On an Intel Mac, install the Xcode Command Line Tools and
+[MacPorts](https://www.macports.org/install.php) before the bootstrap. The
+bootstrap installs ports there, and the Brewfile applies to Apple Silicon only.
+The MacPorts installer may add `PATH` lines to `~/.zprofile`; the bootstrap
+replaces that file with the managed profile, which adds the MacPorts paths.
+
 If an existing installation has a symlinked `~/.gitconfig`, migrate it to a
 regular file before applying the bootstrap. See [Git configuration](#git-configuration).
 If `~/.apm` is a symlink, remove it first. See [Agent Skills](#agent-skills).
 
-Trust, review, and apply the bootstrap.
+Trust, review, and apply the bootstrap. `MISE_AUTO_ENV=true` is needed on the
+first run only: it loads the config for this machine's architecture, which
+defines the `packages` task. Later runs get the setting from the linked
+`miserc.toml`.
 
 ```sh
+export MISE_AUTO_ENV=true
 mise trust --all
 mise bootstrap --dry-run --force-dotfiles
 mise bootstrap --yes --force-dotfiles
@@ -60,6 +70,10 @@ mise doctor
 
 Run `mise brew-sync` after changing Homebrew formulae, casks, or Mac App Store
 apps, then review the Brewfile diff before committing.
+
+The Homebrew commands apply to Apple Silicon. On Intel, the ports are listed in
+`.config/mise/config.macos-x64.toml`; check them with `port installed` and
+`port outdated`.
 
 ## Agent Skills
 
@@ -127,7 +141,8 @@ rm -rf ~/.dotfiles/apm/apm_modules ~/.dotfiles/apm/config.json
 
 The GitButler skill ships with the `but` binary rather than through apm, so it
 is installed separately with `but skill install --global`. The bootstrap task
-updates it when a `brew upgrade` leaves it behind the `but` version.
+updates it when a `brew upgrade` leaves it behind the `but` version, and skips
+the check on a machine without `but`.
 
 apm covers the user-scope skills described here. The
 [skills](https://skills.sh/) CLI stays installed for project-scoped skills in

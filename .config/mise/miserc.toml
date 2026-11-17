@@ -1,0 +1,3 @@
+# mise reads this before it discovers config files, so the setting cannot live
+# in config.toml. It loads config.<os>-<arch>.toml for the running mise binary.
+auto_env = true

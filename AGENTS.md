@@ -3,16 +3,20 @@
 ## Project Overview
 
 This repository contains dotfiles for a reproducible macOS development
-environment managed by mise and Homebrew. The root is intended to be symlinked
-as `~/.dotfiles`, and mise manages the individual symlinks into the home
-directory.
+environment managed by mise. Homebrew manages packages on Apple Silicon, and
+MacPorts manages them on Intel. The root is intended to be symlinked as
+`~/.dotfiles`, and mise manages the individual symlinks into the home directory.
 
 Key areas:
 
 - `.config/mise/config.toml` and `.config/mise/conf.d/*.toml`: mise settings,
   tool versions, shell aliases, bootstrap steps, dotfile symlinks, and tasks.
-- `homebrew/Brewfile`: Homebrew formulae and casks installed by the bootstrap
-  task.
+- `.config/mise/miserc.toml`: enables `auto_env`, which loads
+  `config.macos-arm64.toml` or `config.macos-x64.toml` for the running mise
+  binary. Each defines the `packages` task that the bootstrap task runs:
+  Homebrew on Apple Silicon and MacPorts on Intel.
+- `homebrew/Brewfile`: Homebrew formulae and casks installed by the `packages`
+  task on Apple Silicon.
 - `zsh/`: `.zprofile`, `.zshrc`, and sourced profile/rc fragments.
 - `git/`: shared Git config and global ignore rules.
 - `ghostty/`: Ghostty terminal configuration.
@@ -30,22 +34,26 @@ this repository.
 
 ## Setup Commands
 
-- Install mise 2026.9.3 or newer with the official installer:
+- Install mise 2026.10.8 or newer with the official installer:
   `curl -fsSL https://mise.run | sh`
   It installs to `~/.local/bin/mise`; update it with `mise self-update`.
 - Trust local mise configuration: `mise trust --all`
 - Preview bootstrap changes: `mise bootstrap --dry-run --force-dotfiles`
 - Apply bootstrap changes: `mise bootstrap --yes --force-dotfiles`
+- On a machine without `~/.config/mise/miserc.toml`, prefix these commands with
+  `MISE_AUTO_ENV=true`. mise reads `miserc.toml` at startup, so the first
+  bootstrap cannot rely on the link it creates.
 - Check all declared bootstrap state: `mise bootstrap status --missing`
   This includes dotfile links and edits, macOS settings, services, user settings,
   and tools. Check Brewfile packages separately with the command below.
 - Check Homebrew dependencies without installing:
   `brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile`
+- Check MacPorts ports on Intel: `port installed` and `port outdated`
 - Inspect mise health: `mise doctor`
 
 Use the dry-run/status commands before applying bootstrap changes. The
-bootstrap can change symlinks, Homebrew packages, macOS defaults, and login shell
-state.
+bootstrap can change symlinks, Homebrew or MacPorts packages, macOS defaults,
+and login shell state.
 
 ## Development Workflow
 
@@ -55,9 +63,13 @@ state.
   when adding, moving, or removing tracked configuration files.
 - Update `.config/mise/conf.d/10-tools.toml` for mise-managed runtimes and CLI
   tools. The configured npm package manager is `pnpm`.
-- Update `.config/mise/conf.d/50-tasks.toml` for bootstrap task behavior.
-- Update `homebrew/Brewfile` for Homebrew-managed packages; do not add ad hoc
-  install scripts unless they are needed outside Homebrew or mise.
+- Update `.config/mise/conf.d/50-tasks.toml` for bootstrap task behavior, and
+  `.config/mise/config.macos-<arch>.toml` for the `packages` task of one
+  architecture.
+- Update `homebrew/Brewfile` for Homebrew-managed packages and the port list in
+  `.config/mise/config.macos-x64.toml` for MacPorts-managed ones; do not add
+  ad hoc install scripts unless they are needed outside those package managers
+  or mise.
 - For zsh, keep `zsh/profile.zsh` and `zsh/zshrc` as loaders. Put login-shell
   setup in `zsh/profile.d/*.zsh` and interactive shell setup in
   `zsh/rc.d/*.zsh`.
@@ -102,6 +114,8 @@ Run the smallest relevant checks for the files you changed:
 - Dotfile mapping sanity: `mise dotfiles status --missing`
 - Homebrew changes:
   `brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile`
+- Intel task selection, checked from an Apple Silicon machine:
+  `MISE_AUTO_ENV=false MISE_ENV=macos-x64 mise run --skip-tools --dry-run bootstrap`
 - mise config changes: `mise doctor`
 - Karabiner configuration:
   `'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --lint-complex-modifications karabiner/karabiner.json`
