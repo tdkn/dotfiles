@@ -41,8 +41,3 @@ cask "spotify"
 cask "xcodes-app"
 cask "yaak"
 cask "zed"
-mas "1Password for Safari", id: 1569813296
-mas "Raycast Companion", id: 6738274497
-mas "Slack", id: 803453959
-mas "TestFlight", id: 899247664
-mas "Velja", id: 1607635845

@@ -4,15 +4,29 @@ The bootstrap runs a `packages` task that mise selects by architecture.
 
 ## Homebrew on Apple Silicon
 
-`homebrew/Brewfile` lists the formulae, casks, and Mac App Store apps.
+`homebrew/Brewfile` lists the formulae and casks.
 
 ```sh
 mise brew-sync
 brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile
 ```
 
-Run `mise brew-sync` after changing Homebrew formulae, casks, or Mac App Store
-apps, then review the Brewfile diff before committing.
+Run `mise brew-sync` after changing Homebrew formulae or casks, then review
+the Brewfile diff before committing.
+
+## Mac App Store on Apple Silicon
+
+`[bootstrap.packages]` in `.config/mise/config.macos-arm64.toml` lists the
+Mac App Store apps as `mas:<id>` entries. Find an ID with `mas search <name>`.
+
+```sh
+mise bootstrap packages apply --manager mas --dry-run
+mise bootstrap packages apply --manager mas
+```
+
+The App Store must be signed in. mise installs `mas` from `[tools]` after the
+built-in packages, so a fresh machine needs a second `mise bootstrap` to install
+these apps. Removing an entry does not uninstall the app.
 
 ## MacPorts on Intel
 

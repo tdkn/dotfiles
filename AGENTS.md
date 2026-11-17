@@ -70,10 +70,11 @@ and login shell state.
 - Update `.config/mise/conf.d/50-tasks.toml` for bootstrap task behavior, and
   `.config/mise/config.macos-<arch>.toml` for the `packages` task of one
   architecture.
-- Update `homebrew/Brewfile` for Homebrew-managed packages and the port list in
-  `.config/mise/config.macos-x64.toml` for MacPorts-managed ones; do not add
-  ad hoc install scripts unless they are needed outside those package managers
-  or mise.
+- Update `homebrew/Brewfile` for Homebrew-managed packages,
+  `[bootstrap.packages]` in `.config/mise/config.macos-arm64.toml` for
+  Mac App Store apps, and the port list in `.config/mise/config.macos-x64.toml`
+  for MacPorts-managed ones; do not add ad hoc install scripts unless they are
+  needed outside those package managers or mise.
 - For zsh, keep `zsh/profile.zsh` and `zsh/zshrc` as loaders. Put login-shell
   setup in `zsh/profile.d/*.zsh` and interactive shell setup in
   `zsh/rc.d/*.zsh`.

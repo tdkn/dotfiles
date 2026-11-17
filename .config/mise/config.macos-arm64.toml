@@ -4,3 +4,14 @@ run = """
 HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile ||
   HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew bundle install --no-upgrade --file ~/.config/homebrew/Brewfile
 """
+
+# mas comes from [tools], which bootstrap installs after built-in packages, so a
+# fresh machine needs a second `mise bootstrap` to install these apps.
+# mise never uninstalls App Store apps removed from this list.
+[bootstrap.packages]
+"mas:1569813296" = "latest" # 1Password for Safari
+"mas:6738274497" = "latest" # Raycast Companion
+"mas:803453959" = "latest" # Slack
+"mas:899247664" = "latest" # TestFlight
+"mas:1607635845" = "latest" # Velja
+"mas:1668083311" = "latest" # Whisper Transcription
