@@ -20,9 +20,9 @@ brew uninstall mise
 Run the first bootstrap from the repository directory. Until the first apply
 links the config into `~/.config/mise`, mise finds it only there.
 
-`MISE_AUTO_ENV=true` loads the config for this machine's architecture, which
-defines the `packages` task. Later runs get the setting from the linked
-`miserc.toml`, so the variable is needed on the first run only.
+`MISE_AUTO_ENV=true` loads the package configuration for this machine's
+architecture. Later runs get the setting from the linked `miserc.toml`,
+so the variable is needed on the first run only.
 
 The bootstrap applies macOS settings, and some of them require Full Disk
 Access for the terminal app. Grant it under Privacy & Security in System
@@ -31,8 +31,9 @@ Settings before applying.
 ## Intel Macs
 
 Install the Xcode Command Line Tools before the bootstrap. On macOS 13, the
-bootstrap installs [MacPorts](https://www.macports.org/) when it is missing;
-on other versions, install it manually first.
+bootstrap installs [MacPorts](https://www.macports.org/) when it is missing
+and syncs the ports tree before installing any ports. On other macOS versions,
+install MacPorts manually first.
 
 The MacPorts installer may add `PATH` lines to `~/.zprofile`. The bootstrap
 replaces that file with the managed profile, which adds the MacPorts paths.
@@ -55,8 +56,7 @@ mise dotfiles apply ~/.config/ghostty/config.ghostty
 ```
 
 If an existing file conflicts with the mapping, review it before passing
-`--force` to replace it. On Intel, applying even one dotfile runs the MacPorts
-setup hook. A dry run prints the hook without running it.
+`--force` to replace it.
 
 For macOS preferences:
 

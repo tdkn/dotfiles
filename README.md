@@ -16,7 +16,7 @@ cd ~/ghq/github.com/tdkn/dotfiles
 ln -sfn ~/ghq/github.com/tdkn/dotfiles ~/.dotfiles
 ```
 
-Install mise 2026.10.8 or later with the official installer.
+Install mise 2026.11.11 or later with the official installer.
 
 ```sh
 curl -fsSL https://mise.run | sh

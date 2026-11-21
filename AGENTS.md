@@ -13,10 +13,10 @@ Key areas:
   tool versions, shell aliases, bootstrap steps, dotfile symlinks, and tasks.
 - `.config/mise/miserc.toml`: enables `auto_env`, which loads
   `config.macos-arm64.toml` or `config.macos-x64.toml` for the running mise
-  binary. Each defines the `packages` task that the bootstrap task runs:
-  Homebrew on Apple Silicon and MacPorts on Intel. The Intel file also installs
-  MacPorts from a pinned, checksum-verified package in a `pre-dotfiles` hook
-  when `port` is missing.
+  binary. Apple Silicon defines a `packages` task for Homebrew, and Intel
+  declares ports under `[bootstrap.packages]`. The Intel `pre-packages`
+  hook installs MacPorts from a pinned, checksum-verified package when
+  `port` is missing and syncs the initial ports tree.
 - `homebrew/Brewfile`: Homebrew formulae and casks installed by the `packages`
   task on Apple Silicon.
 - `zsh/`: `.zprofile`, `.zshrc`, and sourced profile/rc fragments.
@@ -36,7 +36,7 @@ this repository.
 
 ## Setup Commands
 
-- Install mise 2026.10.8 or newer with the official installer:
+- Install mise 2026.11.11 or newer with the official installer:
   `curl -fsSL https://mise.run | sh`
   It installs to `~/.local/bin/mise`; update it with `mise self-update`.
 - Trust local mise configuration: `mise trust --all`
@@ -67,14 +67,13 @@ and login shell state.
   when adding, moving, or removing tracked configuration files.
 - Update `.config/mise/conf.d/10-tools.toml` for mise-managed runtimes and CLI
   tools. The configured npm package manager is `pnpm`.
-- Update `.config/mise/conf.d/50-tasks.toml` for bootstrap task behavior, and
-  `.config/mise/config.macos-<arch>.toml` for the `packages` task of one
-  architecture.
+- Update `.config/mise/conf.d/50-tasks.toml` for shared bootstrap task behavior
+  and `.config/mise/config.macos-arm64.toml` for the Homebrew `packages` task.
 - Update `homebrew/Brewfile` for Homebrew-managed packages,
   `[bootstrap.packages]` in `.config/mise/config.macos-arm64.toml` for
-  Mac App Store apps, and the port list in `.config/mise/config.macos-x64.toml`
-  for MacPorts-managed ones; do not add ad hoc install scripts unless they are
-  needed outside those package managers or mise.
+  Mac App Store apps, and `[bootstrap.packages]` in
+  `.config/mise/config.macos-x64.toml` for MacPorts ports. Use install scripts
+  for setup that falls outside package managers and mise.
 - For zsh, keep `zsh/profile.zsh` and `zsh/zshrc` as loaders. Put login-shell
   setup in `zsh/profile.d/*.zsh` and interactive shell setup in
   `zsh/rc.d/*.zsh`.
@@ -122,8 +121,8 @@ Run the smallest relevant checks for the files you changed:
 - Dotfile mapping sanity: `mise dotfiles status --missing`
 - Homebrew changes:
   `brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile`
-- Intel task selection, checked from an Apple Silicon machine:
-  `MISE_AUTO_ENV=false MISE_ENV=macos-x64 mise run --skip-tools --dry-run bootstrap`
+- Intel package selection, checked from an Apple Silicon machine:
+  `MISE_AUTO_ENV=false MISE_ENV=macos-x64 mise bootstrap --only packages --dry-run`
 - mise config changes: `mise doctor`
 - Karabiner configuration:
   `'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --lint-complex-modifications karabiner/karabiner.json`

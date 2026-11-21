@@ -1,7 +1,7 @@
 # Packages
 
-The bootstrap runs a `packages` task that mise selects by architecture and
-installs apps declared under `[bootstrap.packages]`.
+The bootstrap runs the Homebrew `packages` task on Apple Silicon and
+installs the ports and apps declared under `[bootstrap.packages]`.
 
 ## Homebrew on Apple Silicon
 
@@ -33,13 +33,19 @@ Removing an entry does not uninstall the app.
 
 ## MacPorts on Intel
 
-The ports are listed in `.config/mise/config.macos-x64.toml`. The bootstrap
-installs the missing ones.
+The Intel config lists ports as `macports:<name>` entries. Bootstrap installs
+missing ports with the default variants and leaves active installations in place,
+including `curl` installed with custom variants.
 
 ```sh
+mise bootstrap packages status
 port installed
 port outdated
 ```
+
+Use `mise bootstrap --only packages --update` to refresh the ports tree
+before installing missing ports. Use `sudo port selfupdate` to update
+MacPorts itself.
 
 ## macOS apps on Intel
 

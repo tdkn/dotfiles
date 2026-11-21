@@ -1,7 +1,6 @@
 [tasks.bootstrap]
+depends = [{ task = "packages", optional = true }]
 run = [
-  # config.macos-<arch>.toml defines `packages` for that machine's package manager.
-  { task = "packages" },
   "apm install -g --frozen",
   # GitButler ships its skill with the `but` binary, so it drifts after `brew upgrade`.
   """

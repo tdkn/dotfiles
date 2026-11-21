@@ -1,9 +1,7 @@
 # The installer may append PATH lines to ~/.zprofile. Running before dotfiles
 # keeps that edit on a regular file instead of the symlink into this repository.
-# Only the first install uses the pinned version; `port selfupdate` updates
-# MacPorts afterwards.
-[bootstrap.hooks.pre-dotfiles]
-description = "Install MacPorts when it is missing"
+[bootstrap.hooks.pre-packages]
+description = "Install MacPorts and sync its initial ports tree"
 run = """
 [ -x /opt/local/bin/port ] && exit 0
 case "$(sw_vers -productVersion)" in
@@ -16,56 +14,13 @@ trap 'rm -rf "$tmp"' EXIT
 curl -fsSL -o "$tmp/$pkg" "https://github.com/macports/macports-base/releases/download/v2.12.7/$pkg"
 echo "89c71950329c073e8be9e0ace89081b73d021a00deaa2b885ce0974ed06990fe  $tmp/$pkg" | shasum -a 256 -c -
 sudo installer -pkg "$tmp/$pkg" -target /
+sudo /opt/local/bin/port -N sync
 """
 
 [bootstrap.packages]
 "brew-cask:tailscale-app" = "latest"
-
-[tasks.packages]
-description = "Install missing MacPorts ports"
-# sudo prompts for a password when a port is missing.
-# A fresh MacPorts install has no ports tree, so selfupdate syncs it first.
-interactive = true
-#
-# One port per line, installed in list order, with variants after the name.
-# A port counts as installed when its active version has every + variant
-# and none of the - variants.
-#
-# curl comes first so git does not pull it in with default variants.
-# http3 needs gnutls instead of ssl; sectrust uses the macOS keychain.
-run = """
-ports='
-curl -ssl +gnutls +http3 +sectrust
-git
-gh
-tmux
-git-extras
-'
-# Lines look like "  curl @8.23.0_1+gnutls+http3 (active)".
-installed=$(/opt/local/bin/port -q installed active)
-missing=""
-while read -r name variants; do
-  [ -n "$name" ] || continue
-  # Trailing "+" lets each variant match as "+name+" without prefix matches.
-  active=$(printf '%s\\n' "$installed" | grep "^  $name @" | sed 's/ (active)$/+/')
-  ok=1
-  if [ -z "$active" ]; then
-    ok=""
-  fi
-  for v in $variants; do
-    case "$v" in
-      +*) case "$active" in *"$v+"*) ;; *) ok="" ;; esac ;;
-      -*) case "$active" in *"+${v#-}+"*) ok="" ;; esac ;;
-    esac
-  done
-  if [ -z "$ok" ]; then
-    missing="$missing $name $variants"
-  fi
-done <<EOF
-$ports
-EOF
-[ -z "$missing" ] && exit 0
-sudo /opt/local/bin/port selfupdate
-# Variants after a port name apply only to that port.
-sudo /opt/local/bin/port -N install $missing
-"""
+"macports:curl" = "latest"
+"macports:gh" = "latest"
+"macports:git" = "latest"
+"macports:git-extras" = "latest"
+"macports:tmux" = "latest"
