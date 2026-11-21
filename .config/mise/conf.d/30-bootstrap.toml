@@ -2,6 +2,7 @@
 show_pathbar = true
 show_status_bar = true
 preferred_view_style = "list"
+sort_folders_first = true
 
 [bootstrap.macos.dock]
 autohide = true
@@ -10,6 +11,10 @@ mru_spaces = false
 [bootstrap.macos.trackpad]
 tap_to_click = true
 three_finger_drag = true
+
+[bootstrap.macos.keyboard]
+initial_key_repeat = 15
+key_repeat = 1
 
 [bootstrap.macos.defaults]
 ".GlobalPreferences"."com.apple.mouse.scaling" = 2.0
@@ -20,14 +25,11 @@ three_finger_drag = true
 "com.apple.dock".showMissionControlGestureEnabled = true
 "com.apple.dock".showhidden = true
 "com.apple.driver.AppleBluetoothMultitouch.trackpad".TrackpadRightClick = true
-"com.apple.finder"._FXSortFoldersFirst = true
 "com.apple.universalaccess".closeViewScrollWheelToggle = true
 "com.apple.universalaccess".mouseDriverCursorSize = 2.0
 NSGlobalDomain."com.apple.sound.beep.feedback" = 1
 NSGlobalDomain.AppleKeyboardUIMode = 2
 NSGlobalDomain.AppleShowAllExtensions = true
-NSGlobalDomain.InitialKeyRepeat = 15
-NSGlobalDomain.KeyRepeat = 1
 
 [bootstrap.user]
 login_shell = "/bin/zsh"
