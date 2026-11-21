@@ -1,7 +1,6 @@
 # Setup
 
-Details for the first bootstrap. The [Quick Start](../README.md#quick-start)
-lists the commands.
+The [Quick Start](../README.md#quick-start) lists the initial bootstrap commands.
 
 ## mise
 
@@ -44,3 +43,24 @@ replaces that file with the managed profile, which adds the MacPorts paths.
   the bootstrap. See [Git](git.md#shared-configuration).
 - If `~/.apm` is a symlink, remove it first. See
   [Agent skills](agent-skills.md#migrating-a-symlinked-apm).
+
+## Apply individual changes
+
+After editing a dotfile mapping or a macOS preference, preview and apply the
+affected configuration. For a dotfile, pass the destination path:
+
+```sh
+mise dotfiles apply --dry-run ~/.config/ghostty/config.ghostty
+mise dotfiles apply ~/.config/ghostty/config.ghostty
+```
+
+If an existing file conflicts with the mapping, review it before passing
+`--force` to replace it. On Intel, applying even one dotfile runs the MacPorts
+setup hook. A dry run prints the hook without running it.
+
+For macOS preferences:
+
+```sh
+mise bootstrap macos defaults apply --dry-run
+mise bootstrap macos defaults apply
+```

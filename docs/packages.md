@@ -20,14 +20,16 @@ the Brewfile diff before committing.
 `[bootstrap.packages]` in `.config/mise/config.macos-arm64.toml` lists the
 Mac App Store apps as `mas:<id>` entries. Find an ID with `mas search <name>`.
 
+On a fresh Mac, run the initial bootstrap to install `mas`. The package phase
+runs before mise installs tools, so it skips these apps if `mas` is unavailable.
+After signing in to the App Store, preview and apply the App Store packages:
+
 ```sh
 mise bootstrap packages apply --manager mas --dry-run
 mise bootstrap packages apply --manager mas
 ```
 
-The App Store must be signed in. mise installs `mas` from `[tools]` after the
-built-in packages, so a fresh machine needs a second `mise bootstrap` to install
-these apps. Removing an entry does not uninstall the app.
+Removing an entry does not uninstall the app.
 
 ## MacPorts on Intel
 

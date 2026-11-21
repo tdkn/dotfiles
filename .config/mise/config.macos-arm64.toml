@@ -6,7 +6,7 @@ HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew bundle check --no-upgrade --fil
 """
 
 # mas comes from [tools], which bootstrap installs after built-in packages, so a
-# fresh machine needs a second `mise bootstrap` to install these apps.
+# fresh machine needs a separate `mise bootstrap packages apply --manager mas`.
 # mise never uninstalls App Store apps removed from this list.
 [bootstrap.packages]
 "mas:1569813296" = "latest" # 1Password for Safari
