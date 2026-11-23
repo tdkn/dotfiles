@@ -68,6 +68,24 @@ is installed separately with `but skill install --global`. The bootstrap task
 updates it when a `brew upgrade` leaves it behind the `but` version, and skips
 the check on a machine without `but`.
 
+## Yaak skill
+
+The `use-yaak` skill ships with the Yaak CLI (`npm:@yaakapp/cli` in mise), so
+it is installed with `yaak agent install` rather than through apm. The command
+writes `use-yaak/` into each detected agent skill directory under `~/.agents`,
+`~/.claude`, `~/.codex`, `~/.cursor`, and `~/.opencode`. It stamps the CLI
+version into the skill and overwrites local edits. Nothing runs it automatically,
+including Yaak Desktop and CLI upgrades. After upgrading the CLI, `yaak --help`
+reports whether the skill is out of date; rerun the command then:
+
+```sh
+yaak agent install
+```
+
+Do not add `use-yaak` to `apm/apm.yml`. apm would track the same files,
+and the next `yaak agent install` would make `apm install -g --frozen`
+fail with `no trustworthy local deployment baseline`.
+
 ## Migrating a symlinked `~/.apm`
 
 If `~/.apm` is still a symlink to `apm/`, replace it with a regular directory

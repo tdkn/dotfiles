@@ -108,6 +108,9 @@ immediately and show up as unstaged changes in this repository.
 - Do not pin a third-party skill that its upstream repository removed. Run
   `apm uninstall -g <package>`, then
   `mise dot add ~/.apm/apm.yml ~/.apm/apm.lock.yaml`.
+- Skills that ship with a CLI are installed by that CLI, not apm:
+  `but skill install --global` for GitButler and `yaak agent install` for Yaak.
+  Do not add them to `apm/apm.yml`; see `docs/agent-skills.md`.
 - Skills under `.agents/skills/` are scoped to this repository and are not
   distributed globally.
 

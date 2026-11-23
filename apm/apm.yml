@@ -16,7 +16,6 @@ dependencies:
     - humanlayer/skills/plugins/show-me/skills/show-me#main
     - mattpocock/skills/skills/productivity/grill-me#main
     - mattpocock/skills/skills/productivity/grilling#main
-    - mountain-loop/yaak/crates-cli/yaak-cli/skills/use-yaak#main
     - shadcn/improve/skills/improve#main
     - cursor/plugins/thermos#main
     - cursor/plugins/pstack/skills/unslop#main
