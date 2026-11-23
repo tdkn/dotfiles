@@ -1,7 +1,7 @@
 [tools]
 1password = "latest"
 act = "latest"
-apm = "0.35.0"
+apm = "0.36.1"
 "aqua:ast-grep/ast-grep" = "latest"
 "aqua:neovim/neovim" = "latest"
 "aqua:openai/codex" = "latest"
