@@ -1,0 +1,9 @@
+[tools]
+betterleaks = "2.0.0-rc.11"
+hk = "2.13.0"
+
+[tasks.install-hooks]
+description = "Install the repository's hk pre-commit hook"
+# GitButler runs hook files but not Git's config-based hooks,
+# which hk installs by default on Git 2.54 and newer.
+run = "hk install --legacy --mise"

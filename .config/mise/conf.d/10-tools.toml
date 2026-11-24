@@ -1,11 +1,12 @@
 [tools]
-1password = "latest"
+1password-cli = "latest"
 act = "latest"
 apm = "0.36.1"
 "aqua:ast-grep/ast-grep" = "latest"
 "aqua:neovim/neovim" = "latest"
 "aqua:openai/codex" = "latest"
 bat = "latest"
+betterleaks = "latest"
 bun = "latest"
 deno = "latest"
 fd = "latest"
