@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-11-24T05:17:51.919528+00:00'
+generated_at: '2026-11-24T05:23:27.584793+00:00'
 apm_version: 0.36.1
 dependencies:
 - repo_url: android/skills
@@ -981,6 +981,32 @@ dependencies:
     source: plugins/obsidian/LICENSE
     hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
 - repo_url: obsidianmd/obsidian-skills
+  name: knap
+  host: github.com
+  resolved_commit: b110b2f8e9eb1f287892f937050dfd40af862cbb
+  resolved_ref: main
+  version: unknown
+  virtual_path: plugins/obsidian/skills/knap
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/knap
+  - .agents/skills/knap/LICENSE
+  - .agents/skills/knap/SKILL.md
+  - .claude/skills/knap
+  - .claude/skills/knap/LICENSE
+  - .claude/skills/knap/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/knap/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+    .agents/skills/knap/SKILL.md: sha256:252d2146d9acc76e1b184bd75e4212a3eae3a8b2a77ad8c578b1d8d6a813e22a
+    .claude/skills/knap/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+    .claude/skills/knap/SKILL.md: sha256:252d2146d9acc76e1b184bd75e4212a3eae3a8b2a77ad8c578b1d8d6a813e22a
+  content_hash: sha256:39fb55befa73faf23a941e305de5b256d63c1af2f666e29463028ea157b6a8da
+  carried_licenses:
+  - path: LICENSE
+    source: plugins/obsidian/LICENSE
+    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+- repo_url: obsidianmd/obsidian-skills
   name: obsidian-bases
   host: github.com
   resolved_commit: b110b2f8e9eb1f287892f937050dfd40af862cbb
@@ -1032,6 +1058,32 @@ dependencies:
     .claude/skills/obsidian-cli/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
     .claude/skills/obsidian-cli/SKILL.md: sha256:28f66289b1cf1d245807766d4dafb6f5f76eadc986fe4a7f224da51f50aa7524
   content_hash: sha256:e3bf3bbdceb49c4a56a00c3ddede4cfc34388b6295ede7df0958722fe47e2333
+  carried_licenses:
+  - path: LICENSE
+    source: plugins/obsidian/LICENSE
+    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+- repo_url: obsidianmd/obsidian-skills
+  name: obsidian-headless
+  host: github.com
+  resolved_commit: b110b2f8e9eb1f287892f937050dfd40af862cbb
+  resolved_ref: main
+  version: unknown
+  virtual_path: plugins/obsidian/skills/obsidian-headless
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/obsidian-headless
+  - .agents/skills/obsidian-headless/LICENSE
+  - .agents/skills/obsidian-headless/SKILL.md
+  - .claude/skills/obsidian-headless
+  - .claude/skills/obsidian-headless/LICENSE
+  - .claude/skills/obsidian-headless/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/obsidian-headless/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+    .agents/skills/obsidian-headless/SKILL.md: sha256:8baf2318c12a085e260684ccb4f95012d7d8217f677188f58b1de22f31db4754
+    .claude/skills/obsidian-headless/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+    .claude/skills/obsidian-headless/SKILL.md: sha256:8baf2318c12a085e260684ccb4f95012d7d8217f677188f58b1de22f31db4754
+  content_hash: sha256:4f3702e57c1aee33ff3e8d7c61882f9a50e48d5151812162bec47a24bed2d162
   carried_licenses:
   - path: LICENSE
     source: plugins/obsidian/LICENSE
@@ -1880,6 +1932,33 @@ deployments:
   content_hash: sha256:f5ce15a4b74643122396265e8c37c828874a4005794de2aee7030662968768eb
 - kind: project-relative
   target: agent-skills
+  value: .agents/skills/knap
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/knap/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  content_hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/knap/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  content_hash: sha256:252d2146d9acc76e1b184bd75e4212a3eae3a8b2a77ad8c578b1d8d6a813e22a
+- kind: project-relative
+  target: agent-skills
   value: .agents/skills/migrate-xml-views-to-jetpack-compose
   runtime: null
   scope: project
@@ -2301,6 +2380,33 @@ deployments:
   - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
   active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
   content_hash: sha256:28f66289b1cf1d245807766d4dafb6f5f76eadc986fe4a7f224da51f50aa7524
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/obsidian-headless
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  content_hash: null
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/obsidian-headless/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  content_hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+- kind: project-relative
+  target: agent-skills
+  value: .agents/skills/obsidian-headless/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  content_hash: sha256:8baf2318c12a085e260684ccb4f95012d7d8217f677188f58b1de22f31db4754
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/obsidian-markdown
@@ -3590,6 +3696,33 @@ deployments:
   content_hash: sha256:f5ce15a4b74643122396265e8c37c828874a4005794de2aee7030662968768eb
 - kind: project-relative
   target: claude
+  value: .claude/skills/knap
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/knap/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  content_hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+- kind: project-relative
+  target: claude
+  value: .claude/skills/knap/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/knap
+  content_hash: sha256:252d2146d9acc76e1b184bd75e4212a3eae3a8b2a77ad8c578b1d8d6a813e22a
+- kind: project-relative
+  target: claude
   value: .claude/skills/migrate-xml-views-to-jetpack-compose
   runtime: null
   scope: project
@@ -4011,6 +4144,33 @@ deployments:
   - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
   active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
   content_hash: sha256:28f66289b1cf1d245807766d4dafb6f5f76eadc986fe4a7f224da51f50aa7524
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-headless
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-headless/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  content_hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-headless/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless
+  content_hash: sha256:8baf2318c12a085e260684ccb4f95012d7d8217f677188f58b1de22f31db4754
 - kind: project-relative
   target: claude
   value: .claude/skills/obsidian-markdown
