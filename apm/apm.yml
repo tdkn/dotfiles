@@ -31,6 +31,8 @@ dependencies:
     - android/skills/testing/testing-setup#main
     - obsidianmd/obsidian-skills/plugins/obsidian/skills/defuddle#main
     - obsidianmd/obsidian-skills/plugins/obsidian/skills/json-canvas#main
+    - obsidianmd/obsidian-skills/plugins/obsidian/skills/knap#main
     - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-bases#main
     - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli#main
+    - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-headless#main
     - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown#main
