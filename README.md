@@ -54,7 +54,7 @@ mise doctor
 - [Packages](docs/packages.md): Homebrew, MacPorts, and macOS apps.
 - [Tailscale](docs/tailscale.md): setup and connectivity between Macs.
 - [Agent skills](docs/agent-skills.md): local and third-party agent skills.
-- [Git](docs/git.md): shared Git configuration and commit signing.
+- [Git](docs/git.md): shared Git configuration, commit signing, and secret scanning.
 
 ## License
 

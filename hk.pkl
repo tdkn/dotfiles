@@ -1,0 +1,17 @@
+amends "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Config.pkl"
+
+hooks {
+  ["pre-commit"] {
+    steps {
+      ["betterleaks"] {
+        shell = "bash -e -o pipefail -c"
+        // Scans the staged diff. Builtins.betterleaks reads working-tree files instead.
+        check =
+          #"""
+          git diff --cached --no-ext-diff --no-textconv --no-color --src-prefix=a/ --dst-prefix=b/ |
+            betterleaks stdin --git-diff --redact --no-banner --validate=false --analyze=false
+          """#
+      }
+    }
+  }
+}
