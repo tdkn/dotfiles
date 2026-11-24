@@ -29,8 +29,8 @@ dependencies:
     - android/skills/security/android-intent-security#main
     - android/skills/system/edge-to-edge#main
     - android/skills/testing/testing-setup#main
-    - kepano/obsidian-skills/skills/defuddle#main
-    - kepano/obsidian-skills/skills/json-canvas#main
-    - kepano/obsidian-skills/skills/obsidian-bases#main
-    - kepano/obsidian-skills/skills/obsidian-cli#main
-    - kepano/obsidian-skills/skills/obsidian-markdown#main
+    - obsidianmd/obsidian-skills/plugins/obsidian/skills/defuddle#main
+    - obsidianmd/obsidian-skills/plugins/obsidian/skills/json-canvas#main
+    - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-bases#main
+    - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli#main
+    - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown#main
