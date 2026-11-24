@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="Check that a fresh frozen install matches the apm lockfile"
+set -euo pipefail
+
+# apm installs under $HOME, so a scratch home leaves the real one untouched.
+home=$(mktemp -d)
+trap 'rm -rf "$home"' EXIT
+mkdir "$home/.apm"
+cp apm/apm.yml apm/apm.lock.yaml "$home/.apm/"
+HOME="$home" apm install -g --frozen

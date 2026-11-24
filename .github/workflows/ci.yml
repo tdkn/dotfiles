@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  # mise also reads .config/mise here, which declares the whole workstation toolset.
+  MISE_ENABLE_TOOLS: apm,betterleaks
+
+jobs:
+  apm-lockfile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: jdx/mise-action@v5.3.0
+      - run: mise run ci:apm-lockfile
+
+  secrets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          # The merge commit and its parents, so HEAD^1 is the base branch.
+          fetch-depth: 2
+      - uses: jdx/mise-action@v5.3.0
+      - run: mise run ci:secrets
