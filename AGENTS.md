@@ -3,9 +3,10 @@
 ## Project Overview
 
 This repository contains dotfiles for a reproducible macOS development
-environment managed by mise. Homebrew manages packages on Apple Silicon, and
-MacPorts manages them on Intel. The root is intended to be symlinked as
-`~/.dotfiles`, and mise manages the individual symlinks into the home directory.
+environment managed by mise. Homebrew installs formulae on Apple Silicon,
+MacPorts installs ports on Intel, and mise installs casks on both. The root is
+intended to be symlinked as `~/.dotfiles`, and mise manages the individual
+symlinks into the home directory.
 
 Key areas:
 
@@ -17,8 +18,10 @@ Key areas:
   declares ports under `[bootstrap.packages]`. The Intel `pre-packages`
   hook installs MacPorts from a pinned, checksum-verified package when
   `port` is missing and syncs the initial ports tree.
-- `homebrew/Brewfile`: Homebrew formulae and casks installed by the `packages`
-  task on Apple Silicon.
+- `homebrew/Brewfile` lists the formulae installed by the Apple Silicon
+  `packages` task and recorded by `mise brew-sync`.
+- `.config/mise/conf.d/35-casks.toml` declares the apps and fonts installed
+  by mise's `brew-cask` manager. The `env` field selects the architectures.
 - `zsh/`: `.zprofile`, `.zshrc`, and sourced profile/rc fragments.
 - `git/`: shared Git config and global ignore rules.
 - `ghostty/`: Ghostty terminal configuration.
@@ -49,7 +52,7 @@ this repository.
 - The terminal app needs Full Disk Access to apply some macOS settings.
 - Check all declared bootstrap state: `mise bootstrap status --missing`
   This includes dotfile links and edits, macOS settings, services, user settings,
-  and tools. Check Brewfile packages separately with the command below.
+  and tools. Check Brewfile formulae separately with the command below.
 - Check Homebrew dependencies without installing:
   `brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile`
 - Check MacPorts ports on Intel: `port installed` and `port outdated`
@@ -69,7 +72,8 @@ and login shell state.
   tools. The configured npm package manager is `pnpm`.
 - Update `.config/mise/conf.d/50-tasks.toml` for shared bootstrap task behavior
   and `.config/mise/config.macos-arm64.toml` for the Homebrew `packages` task.
-- Update `homebrew/Brewfile` for Homebrew-managed packages,
+- Update `homebrew/Brewfile` for Homebrew formulae,
+  `.config/mise/conf.d/35-casks.toml` for casks,
   `[bootstrap.packages]` in `.config/mise/config.macos-arm64.toml` for
   Mac App Store apps, and `[bootstrap.packages]` in
   `.config/mise/config.macos-x64.toml` for MacPorts ports. Use install scripts
@@ -124,6 +128,9 @@ Run the smallest relevant checks for the files you changed:
 - Dotfile mapping sanity: `mise dotfiles status --missing`
 - Homebrew changes:
   `brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile`
+- Preview cask changes with `mise bootstrap packages apply --manager brew-cask --dry-run`.
+  Set `MISE_AUTO_ENV=false MISE_ENV=macos-x64` to check the Intel selection
+  from Apple Silicon. For cask ownership, see [Packages](docs/packages.md).
 - Intel package selection, checked from an Apple Silicon machine:
   `MISE_AUTO_ENV=false MISE_ENV=macos-x64 mise bootstrap --only packages --dry-run`
 - mise config changes: `mise doctor`

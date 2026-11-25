@@ -1,5 +1,5 @@
 [tasks.packages]
-description = "Install Homebrew packages from the Brewfile"
+description = "Install Homebrew formulae from the Brewfile"
 run = """
 HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile ||
   HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew bundle install --no-upgrade --file ~/.config/homebrew/Brewfile

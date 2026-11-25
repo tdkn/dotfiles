@@ -1,9 +1,9 @@
 # dotfiles
 
-A reproducible macOS development environment powered by
-[mise](https://mise.jdx.dev/). One bootstrap links the dotfiles, installs
-packages and tools, and applies macOS settings. Homebrew manages packages on
-Apple Silicon, and MacPorts manages them on Intel.
+A reproducible macOS development environment powered by [mise](https://mise.jdx.dev/).
+One bootstrap links the dotfiles, installs packages and tools, and applies macOS
+settings. Homebrew installs formulae on Apple Silicon, MacPorts installs ports
+on Intel, and mise installs apps and fonts from casks on both architectures.
 
 ## Quick Start
 

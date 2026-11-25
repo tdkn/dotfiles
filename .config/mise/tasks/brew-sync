@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# The Brewfile lists the Apple Silicon packages, so only the Homebrew under
-# /opt/homebrew may rewrite it; an Intel Homebrew under /usr/local must not.
+# Only the Apple Silicon Homebrew may rewrite this formula list. An Intel Mac
+# can have a separate Homebrew installation under /usr/local.
 HOMEBREW_NO_AUTO_UPDATE=1 /opt/homebrew/bin/brew bundle dump \
   --file ~/.config/homebrew/Brewfile \
   --force \
   --no-describe \
   --formula \
-  --cask \
+  --no-cask \
   --no-tap

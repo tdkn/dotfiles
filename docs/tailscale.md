@@ -1,16 +1,16 @@
 # Tailscale
 
-The bootstrap installs the Standalone app through Homebrew on Apple Silicon
-and mise's `brew-cask` manager on Intel. Tailscale requires macOS 13 or later.
+On Apple Silicon and Intel, mise installs the Standalone app from the
+`tailscale-app` cask. Tailscale requires macOS 13 or later.
 
 ## Setup
 
-1. Run the [bootstrap](../README.md#quick-start) on each Mac. The Intel
+1. Run the [bootstrap](../README.md#quick-start) on each Mac. The
    package installer requires administrator authentication.
 2. Open Tailscale and allow the VPN configuration and the system extension,
-   which is approved in System Settings > Privacy & Security.
-   `tailscale` commands hang until it is allowed. Sign in to the same
-   tailnet and approve the devices in the admin console if needed.
+   following the prompts in System Settings. The `tailscale` command needs
+   the extension to connect. Sign in to the same tailnet and approve the
+   devices in the admin console if needed.
 3. Enable MagicDNS and give each device a distinct name. The package
    installer adds the `tailscale` command; if it is missing, install the
    command line integration from Tailscale Settings. Check connectivity
