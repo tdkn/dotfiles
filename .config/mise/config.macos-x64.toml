@@ -19,7 +19,5 @@ sudo /opt/local/bin/port -N sync
 
 [bootstrap.packages]
 "macports:curl" = "latest"
-"macports:gh" = "latest"
 "macports:git" = "latest"
 "macports:git-extras" = "latest"
-"macports:tmux" = "latest"
