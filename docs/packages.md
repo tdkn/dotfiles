@@ -1,19 +1,19 @@
 # Packages
 
-The bootstrap runs the Homebrew `packages` task on Apple Silicon and
-installs the ports and apps declared under `[bootstrap.packages]`.
+Bootstrap installs Homebrew formulae on Apple Silicon and MacPorts ports on
+Intel. On both architectures, mise installs casks from `[bootstrap.packages]`.
 
 ## Homebrew on Apple Silicon
 
-`homebrew/Brewfile` lists the formulae and casks.
+`homebrew/Brewfile` lists the formulae installed by the `packages` task.
 
 ```sh
 mise brew-sync
 brew bundle check --no-upgrade --file ~/.config/homebrew/Brewfile
 ```
 
-Run `mise brew-sync` after changing Homebrew formulae or casks, then review
-the Brewfile diff before committing.
+Run `mise brew-sync` after changing installed formulae, then review the
+Brewfile diff before committing.
 
 ## Mac App Store on Apple Silicon
 
@@ -47,16 +47,34 @@ Use `mise bootstrap --only packages --update` to refresh the ports tree
 before installing missing ports. Use `sudo port selfupdate` to update
 MacPorts itself.
 
-## macOS apps on Intel
+## macOS apps and fonts
 
-`[bootstrap.packages]` in `.config/mise/config.macos-x64.toml` lists apps
-installed by mise from Homebrew cask metadata. This does not require Homebrew,
-but mise uses `sudo` to create a Homebrew-style prefix at `/opt/homebrew` and
-records installed casks under `/opt/homebrew/Caskroom`. The Tailscale
-package installer also requires administrator authentication. See
-[Tailscale](tailscale.md) for its first-run setup and update behavior.
+Declare casks in `.config/mise/conf.d/35-casks.toml`. Use `os = "macos"` and
+set `env = "macos-arm64"` for Apple Silicon or `env = ["macos-arm64", "macos-x64"]`
+for both architectures. Before enabling an Intel cask, check that the vendor
+supports macOS 13 Ventura and that the cask can install without formula dependencies.
+
+mise reads Homebrew cask metadata and records its installations under
+`/opt/homebrew/Caskroom` on both architectures. Creating the prefix on a fresh
+Intel Mac and installing system packages can require administrator authentication.
+Login shells find cask commands in `/opt/homebrew/bin`, with MacPorts taking
+precedence on Intel. See [Tailscale](tailscale.md) for network extension setup.
 
 ```sh
 mise bootstrap packages apply --manager brew-cask --dry-run
 mise bootstrap packages apply --manager brew-cask
 ```
+
+`apply` and `upgrade` skip casks that mise detects as Homebrew-managed.
+Check `managed_by` in `mise bootstrap packages status --json` to see which
+manager owns a cask. [mise brew-cask documentation](https://mise.jdx.dev/bootstrap/packages/brew-cask.html#casks-installed-by-homebrew)
+
+### Updates
+
+```sh
+mise bootstrap packages upgrade --manager brew-cask --dry-run
+mise bootstrap packages upgrade --manager brew-cask
+```
+
+Apps marked `auto_updates` normally update themselves. After updating
+GitButler, bootstrap checks its bundled CLI skill.

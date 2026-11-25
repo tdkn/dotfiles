@@ -1,0 +1,31 @@
+[bootstrap.packages]
+"brew-cask:1password" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:apparency" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:chatgpt" = { os = "macos", env = "macos-arm64" }
+"brew-cask:claude" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:cursor" = { os = "macos", env = "macos-arm64" }
+"brew-cask:figma" = { os = "macos", env = "macos-arm64" }
+"brew-cask:font-fira-code" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:font-hack-nerd-font" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:font-monaspace" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:font-sauce-code-pro-nerd-font" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:font-symbols-only-nerd-font" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:ghostty" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:gitbutler" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:google-chrome" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:google-japanese-ime" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:jetbrains-toolbox" = { os = "macos", env = "macos-arm64" }
+"brew-cask:karabiner-elements" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:mac-mouse-fix" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:notion" = { os = "macos", env = "macos-arm64" }
+"brew-cask:obsidian" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:ogdesign-eagle" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:orbstack" = { os = "macos", env = "macos-arm64" }
+"brew-cask:raindropio" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:setapp" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:sf-symbols" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:spotify" = { os = "macos", env = "macos-arm64" }
+"brew-cask:tailscale-app" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:xcodes-app" = { os = "macos", env = "macos-arm64" }
+"brew-cask:yaak" = { os = "macos", env = ["macos-arm64", "macos-x64"] }
+"brew-cask:zed" = { os = "macos", env = ["macos-arm64", "macos-x64"] }

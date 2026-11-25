@@ -63,10 +63,10 @@ mise dot add ~/.apm/apm.yml ~/.apm/apm.lock.yaml
 
 ## GitButler skill
 
-The GitButler skill ships with the `but` binary rather than through apm, so it
-is installed separately with `but skill install --global`. The bootstrap task
-updates it when a `brew upgrade` leaves it behind the `but` version, and skips
-the check on a machine without `but`.
+GitButler ships its skill with the `but` binary. Install it with
+`but skill install --global`. After the mise-managed GitButler app updates,
+the bootstrap task brings the skill up to the installed CLI version.
+The task skips this check on a machine without `but`.
 
 ## Yaak skill
 

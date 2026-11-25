@@ -2,7 +2,7 @@
 depends = [{ task = "packages", optional = true }]
 run = [
   "apm install -g --frozen",
-  # GitButler ships its skill with the `but` binary, so it drifts after `brew upgrade`.
+  # GitButler ships its skill with the CLI and can update between bootstrap runs.
   """
 if command -v but >/dev/null 2>&1; then
   but skill check --global --update
