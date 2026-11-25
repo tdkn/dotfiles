@@ -1,6 +1,6 @@
 lockfile_version: '1'
-generated_at: '2026-11-24T05:23:27.584793+00:00'
-apm_version: 0.36.1
+generated_at: '2026-11-25T23:54:44.186100+00:00'
+apm_version: 0.34.0
 dependencies:
 - repo_url: android/skills
   name: android-cli
@@ -24,10 +24,6 @@ dependencies:
     .claude/skills/android-cli/LICENSE.txt: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
     .claude/skills/android-cli/SKILL.md: sha256:d53f24079877c8fc69b7a6115a77a76c8c7f40716ba089fd738c10514bf11d4c
   content_hash: sha256:472ace699351ba7974e1438c2dd41b2a8ec2310907f958b4532b59a59655f87b
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: adaptive
   host: github.com
@@ -114,10 +110,6 @@ dependencies:
     .claude/skills/adaptive/references/keyboard_shortcuts.md: sha256:72c2876b4c805f00b00c948f00f0e41d9a3d2c9207a38262f45cd2ab03327513
     .claude/skills/adaptive/references/tooltips.md: sha256:c87d96b2da4488cbbfd097a25a6b4557c48de055df96c7602bd7cb2966d2e4e9
   content_hash: sha256:51a6d5171b9a87329658d7d7d84a3a3af4f8f56a07b79da7cae0fb81e2455a9a
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: migrate-xml-views-to-jetpack-compose
   host: github.com
@@ -176,10 +168,6 @@ dependencies:
     .claude/skills/migrate-xml-views-to-jetpack-compose/references/identify-optimal-xml-candidate.md: sha256:acd036633dd2c1b0d286be9340f8565143f6700cb2fa8e3c04c0e10d886eb1ba
     .claude/skills/migrate-xml-views-to-jetpack-compose/references/xml-layout-migration.md: sha256:4bcd207629d430cedfc66db4a6b6ec5de17586a1cd243c51f875e53f66e24e03
   content_hash: sha256:57a078b98f2b2f4d8729da4d705294748bf3b9b27e23b929681a4f69ca55d4ac
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: navigation-3
   host: github.com
@@ -310,10 +298,6 @@ dependencies:
     .claude/skills/navigation-3/references/android/guide/navigation/navigation-3/recipes/scenes-twopane.md: sha256:d0cb99ae3054cf463a598fd348d3d9a07aa4b6805ab22121bdc11561a60b1f64
     .claude/skills/navigation-3/references/android/guide/navigation/type-safe-destinations.md: sha256:38177e9be4bf6394252308a3751b980f4bd5ff197aa0152784e6356cb78ed3ce
   content_hash: sha256:2c6e286bf9036cf700fbf62ffc9c2e78d379e46cf1004029f562db0a7395b697
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: r8-analyzer
   host: github.com
@@ -368,10 +352,6 @@ dependencies:
     .claude/skills/r8-analyzer/scripts/convert_pb_to_json.py: sha256:06397052c96d80cc0ffd7077faf197555c2e9c9363a7fff59ae84f28169998e2
     .claude/skills/r8-analyzer/scripts/keep_radius_pb2.py: sha256:37f0f038d7870c71b8d3cdd5b9b9361d79bde265e2754e3ffd511f53107a2e1a
   content_hash: sha256:ee619a43698c5f513cf0c72461ff334cd17ecc8a36a9cbd5bbeb0a8b80eee38f
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: play-policy-insights
   host: github.com
@@ -446,10 +426,6 @@ dependencies:
     .claude/skills/play-policy-insights/scripts/scanner.py: sha256:48b2f3058558501c35a8257288811c3f37f5420fb0a0fc38bee5a6c9e78ed50b
     .claude/skills/play-policy-insights/scripts/template_engine.py: sha256:766140144502ff1f3f84749df2fc93f634da0b9aa3160054eae8f5f922f5e467
   content_hash: sha256:9e8451c647f1648a14547bdadc3305aeed04b216e82389a95daab7d95f61d0ef
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: android-profiler
   host: github.com
@@ -574,10 +550,6 @@ dependencies:
     .claude/skills/android-profiler/references/perfetto/setup.md: sha256:5a8762eac4d576d15d30e1d222b7a771117611cd725be4bd7514194eded1f9c5
     .claude/skills/android-profiler/references/perfetto/sql.md: sha256:e1e3bb74f74f79ddd0ba45c1af71fba546febd053a69d0a6ff54de162635b190
   content_hash: sha256:36cf47c9445e7dd7816cb3b47221efc6895051ca8223631e360b8a9009fc4f04
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: android-intent-security
   host: github.com
@@ -600,10 +572,6 @@ dependencies:
     .claude/skills/android-intent-security/LICENSE.txt: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
     .claude/skills/android-intent-security/SKILL.md: sha256:42192fd36c206d5ff036093496bb05d51f1693c70fe1270fbbb1c82836aa614a
   content_hash: sha256:044ee71b08d6f9bcb769b60f8084bf8978f98b01e549c683e05fcf93b4e832e7
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: edge-to-edge
   host: github.com
@@ -626,10 +594,6 @@ dependencies:
     .claude/skills/edge-to-edge/LICENSE.txt: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
     .claude/skills/edge-to-edge/SKILL.md: sha256:4ca04cb6a5330b96e51410bc815f878b4ca642fba46fe5e1ad724c94e04d6eb8
   content_hash: sha256:7db3c09f145f5bad71b09da526dad46cb8b2ace56e62e87aa2ca7e81a0b4790e
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: android/skills
   name: testing-setup
   host: github.com
@@ -668,10 +632,6 @@ dependencies:
     .claude/skills/testing-setup/references/android/studio/preview/compose-screenshot-testing.md: sha256:331e7b2f11f87d7a9c8f633a69313649aac3020ffb984984117174f737f5460e
     .claude/skills/testing-setup/references/android/training/dependency-injection/hilt-testing.md: sha256:5e774a6ab09c0f469b4712ea8c468402b38dd4a19dce9570bacc49ad9af9c814
   content_hash: sha256:e9b4f903be2d9772bfb9bd340fd1d8955a3e92ec67659fb8da8ee965616af48d
-  carried_licenses:
-  - path: LICENSE.txt
-    source: LICENSE.txt
-    hash: sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
 - repo_url: anthropics/skills
   name: frontend-design
   host: github.com
@@ -738,10 +698,6 @@ dependencies:
     .claude/skills/unslop/LICENSE: sha256:bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e
     .claude/skills/unslop/SKILL.md: sha256:2b823fd069e031c1420180be8e0d4f5e2fd25bf2c428049e5c835c59a489b5e0
   content_hash: sha256:9bace43ba8cc2c76bfd18ce3f508381f490013cac2116d747553cfcd5cb44c88
-  carried_licenses:
-  - path: LICENSE
-    source: pstack/LICENSE
-    hash: sha256:bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e
 - repo_url: cursor/plugins
   name: thermos
   host: github.com
@@ -789,25 +745,6 @@ dependencies:
     .claude/skills/thermos/SKILL.md: sha256:c272effc404b126d34464e8a1dacec30f6757638db39088ca5afc58dd2c1f472
   content_hash: sha256:ee420ae5377749a6b453526774afd0b325a28911d99e073e86d10175d86e43d2
   declared_license: MIT
-  carried_licenses:
-  - path: .apm/skills/thermo-nuclear-code-quality-review/LICENSE
-    source: thermos/LICENSE
-    hash: sha256:702f5f331b56aff0e33d8c7826df5202559f894145eb70355c6477b55b5bb8a0
-  - path: .apm/skills/thermo-nuclear-review/LICENSE
-    source: thermos/LICENSE
-    hash: sha256:702f5f331b56aff0e33d8c7826df5202559f894145eb70355c6477b55b5bb8a0
-  - path: .apm/skills/thermos/LICENSE
-    source: thermos/LICENSE
-    hash: sha256:702f5f331b56aff0e33d8c7826df5202559f894145eb70355c6477b55b5bb8a0
-  - path: skills/thermo-nuclear-code-quality-review/LICENSE
-    source: thermos/LICENSE
-    hash: sha256:702f5f331b56aff0e33d8c7826df5202559f894145eb70355c6477b55b5bb8a0
-  - path: skills/thermo-nuclear-review/LICENSE
-    source: thermos/LICENSE
-    hash: sha256:702f5f331b56aff0e33d8c7826df5202559f894145eb70355c6477b55b5bb8a0
-  - path: skills/thermos/LICENSE
-    source: thermos/LICENSE
-    hash: sha256:702f5f331b56aff0e33d8c7826df5202559f894145eb70355c6477b55b5bb8a0
 - repo_url: github/awesome-copilot
   name: create-agentsmd
   host: github.com
@@ -830,10 +767,6 @@ dependencies:
     .claude/skills/create-agentsmd/LICENSE: sha256:e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823
     .claude/skills/create-agentsmd/SKILL.md: sha256:97b71d3f7c5e30e9f1740fcd7a45d4bf107b7887947cfd3ab92ac99dee294855
   content_hash: sha256:bfbdbb76b17cca970d1d624e36ce72b6847860d740581c8865da796c1fef8552
-  carried_licenses:
-  - path: LICENSE
-    source: LICENSE
-    hash: sha256:e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823
 - repo_url: humanlayer/skills
   name: show-me
   host: github.com
@@ -860,10 +793,6 @@ dependencies:
     .claude/skills/show-me/SKILL.md: sha256:434a2346cc95e313b0d367d477dda2e23ba642dd2181757415a09500664af100
     .claude/skills/show-me/agents/openai.yaml: sha256:a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94
   content_hash: sha256:2756b5bd62fd54b18e98e1f7a9b90855cd5d5b27935be516bb44720f824e6573
-  carried_licenses:
-  - path: LICENSE
-    source: LICENSE
-    hash: sha256:5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f
 - repo_url: mattpocock/skills
   name: grill-me
   host: github.com
@@ -890,10 +819,6 @@ dependencies:
     .claude/skills/grill-me/SKILL.md: sha256:caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637
     .claude/skills/grill-me/agents/openai.yaml: sha256:c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b
   content_hash: sha256:fe33aaa8e8dcd606107b1bfe3109f257b4a7e0f4907afd6506b62ccfb73cd1d3
-  carried_licenses:
-  - path: LICENSE
-    source: LICENSE
-    hash: sha256:0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5
 - repo_url: mattpocock/skills
   name: grilling
   host: github.com
@@ -920,10 +845,6 @@ dependencies:
     .claude/skills/grilling/SKILL.md: sha256:a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2
     .claude/skills/grilling/agents/openai.yaml: sha256:1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b
   content_hash: sha256:823f08ad33368a9626991e6782f7ae14b958e39ef8503f6bdb3b98a58d237a58
-  carried_licenses:
-  - path: LICENSE
-    source: LICENSE
-    hash: sha256:0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5
 - repo_url: obsidianmd/obsidian-skills
   name: defuddle
   host: github.com
@@ -946,10 +867,6 @@ dependencies:
     .claude/skills/defuddle/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
     .claude/skills/defuddle/SKILL.md: sha256:58902192d0433d133a35efc1b46cc49ceef891a465f9fd4e709d6e824c9561fb
   content_hash: sha256:b10f03b625f0820b47736067f0453c35d28cd8983a042e646705f33236435a13
-  carried_licenses:
-  - path: LICENSE
-    source: plugins/obsidian/LICENSE
-    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
 - repo_url: obsidianmd/obsidian-skills
   name: json-canvas
   host: github.com
@@ -976,10 +893,6 @@ dependencies:
     .claude/skills/json-canvas/SKILL.md: sha256:4db4e69eea910b598c249e41bcdda85a70856348adaf11c35371198e258d50a6
     .claude/skills/json-canvas/references/EXAMPLES.md: sha256:f5ce15a4b74643122396265e8c37c828874a4005794de2aee7030662968768eb
   content_hash: sha256:262cf2ca4ff8fc6cd05044b39d951122323c5f083a013ecb04b20d234f784533
-  carried_licenses:
-  - path: LICENSE
-    source: plugins/obsidian/LICENSE
-    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
 - repo_url: obsidianmd/obsidian-skills
   name: knap
   host: github.com
@@ -1002,10 +915,6 @@ dependencies:
     .claude/skills/knap/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
     .claude/skills/knap/SKILL.md: sha256:252d2146d9acc76e1b184bd75e4212a3eae3a8b2a77ad8c578b1d8d6a813e22a
   content_hash: sha256:39fb55befa73faf23a941e305de5b256d63c1af2f666e29463028ea157b6a8da
-  carried_licenses:
-  - path: LICENSE
-    source: plugins/obsidian/LICENSE
-    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-bases
   host: github.com
@@ -1032,10 +941,6 @@ dependencies:
     .claude/skills/obsidian-bases/SKILL.md: sha256:7a1659e2c00e7b74c8767002213dd977967ddd30dd15a7f33b693e783a4546e9
     .claude/skills/obsidian-bases/references/FUNCTIONS_REFERENCE.md: sha256:208fd63aead9bca1975626fea52605e6ab9434dc0529d923feb36b18b8877d3b
   content_hash: sha256:f373a0863ebb8fcf9b0c22f7cfcc017edd5c9ffff1d4c4fbba5bbae5322063f5
-  carried_licenses:
-  - path: LICENSE
-    source: plugins/obsidian/LICENSE
-    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-cli
   host: github.com
@@ -1058,14 +963,10 @@ dependencies:
     .claude/skills/obsidian-cli/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
     .claude/skills/obsidian-cli/SKILL.md: sha256:28f66289b1cf1d245807766d4dafb6f5f76eadc986fe4a7f224da51f50aa7524
   content_hash: sha256:e3bf3bbdceb49c4a56a00c3ddede4cfc34388b6295ede7df0958722fe47e2333
-  carried_licenses:
-  - path: LICENSE
-    source: plugins/obsidian/LICENSE
-    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-headless
   host: github.com
-  resolved_commit: b110b2f8e9eb1f287892f937050dfd40af862cbb
+  resolved_commit: 79e85b73ef041fdfb6437ab3824e2fe29eda9244
   resolved_ref: main
   version: unknown
   virtual_path: plugins/obsidian/skills/obsidian-headless
@@ -1083,11 +984,7 @@ dependencies:
     .agents/skills/obsidian-headless/SKILL.md: sha256:8baf2318c12a085e260684ccb4f95012d7d8217f677188f58b1de22f31db4754
     .claude/skills/obsidian-headless/LICENSE: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
     .claude/skills/obsidian-headless/SKILL.md: sha256:8baf2318c12a085e260684ccb4f95012d7d8217f677188f58b1de22f31db4754
-  content_hash: sha256:4f3702e57c1aee33ff3e8d7c61882f9a50e48d5151812162bec47a24bed2d162
-  carried_licenses:
-  - path: LICENSE
-    source: plugins/obsidian/LICENSE
-    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
+  content_hash: sha256:249b4f30372637035bed3e00d2cae645b7bd71355ea887b6030292ddc52504f4
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-markdown
   host: github.com
@@ -1122,10 +1019,6 @@ dependencies:
     .claude/skills/obsidian-markdown/references/EMBEDS.md: sha256:63b6205507e28fb58cf200bc348a2b139e50ae739743e2e6316732148973cb7a
     .claude/skills/obsidian-markdown/references/PROPERTIES.md: sha256:f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c
   content_hash: sha256:72036fef313b7dd1c3d7e1afa17ab747f7f925392f942f22eeb7b67c817c1973
-  carried_licenses:
-  - path: LICENSE
-    source: plugins/obsidian/LICENSE
-    hash: sha256:64c64d48361edfe8610016441bf593256ea9b67f133b00f47c55aa29ee878567
 - repo_url: shadcn/improve
   name: improve
   host: github.com
@@ -1160,10 +1053,6 @@ dependencies:
     .claude/skills/improve/references/closing-the-loop.md: sha256:5d526bb378e1783bbeb68d7af527776cbe98cde27a1aeccbd13e818e5b73b454
     .claude/skills/improve/references/plan-template.md: sha256:7be76dd3c29442288fa7cee4432fc6e95c2fdbf748c9b356344bf647c5f8722e
   content_hash: sha256:b4768ee5c11cd620dee9b8c5c29bae56ae625e44f061807863088d70a3afa621
-  carried_licenses:
-  - path: LICENSE.md
-    source: LICENSE.md
-    hash: sha256:00ff8408e93e2ecc4d90c0edeabdf434100c3aff50acc5d330e17eccd4a3faa5
 deployments:
 - kind: project-relative
   target: agent-skills
