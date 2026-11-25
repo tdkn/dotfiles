@@ -20,7 +20,5 @@ sudo /opt/local/bin/port -N sync
 [bootstrap.packages]
 "brew-cask:tailscale-app" = "latest"
 "macports:curl" = "latest"
-"macports:gh" = "latest"
 "macports:git" = "latest"
 "macports:git-extras" = "latest"
-"macports:tmux" = "latest"
